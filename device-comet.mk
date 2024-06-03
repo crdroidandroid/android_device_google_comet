@@ -14,9 +14,28 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR ?= device/google/comet-kernel
-TARGET_BOARD_KERNEL_HEADERS := device/google/comet-kernel/kernel-headers
+ifdef RELEASE_GOOGLE_COMET_RADIO_DIR
+RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_COMET_RADIO_DIR)
+endif
+ifdef RELEASE_GOOGLE_COMET_RADIOCFG_DIR
+RELEASE_GOOGLE_PRODUCT_RADIOCFG_DIR := $(RELEASE_GOOGLE_COMET_RADIOCFG_DIR)
+endif
+RELEASE_GOOGLE_BOOTLOADER_COMET_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_COMET_DIR)
+$(call soong_config_set,comet_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_COMET_DIR))
+
+TARGET_LINUX_KERNEL_VERSION ?= 6.1
+ifdef RELEASE_KERNEL_COMET_DIR
+TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_COMET_DIR)
+TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_COMET_DIR)/kernel-headers
+else
+TARGET_KERNEL_DIR ?= device/google/comet-kernels/6.1/24D1
+TARGET_BOARD_KERNEL_HEADERS ?= device/google/comet-kernels/6.1/24D1/kernel-headers
+endif
+
 TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_RIGHT
+
+LOCAL_PATH := device/google/comet
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     USE_UWBFIELDTESTQM := true
@@ -46,9 +65,12 @@ include device/google/comet/audio/comet/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
-include device/google/gs-common/touch/gti/gti_dual.mk
-include device/google/gs-common/touch/syna/syna19.mk
+include device/google/gs-common/touch/gti/predump_gti_dual.mk
 include device/google/gs-common/display/dump_second_display.mk
+
+# Increment the SVN for any official public releases
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.build.svn=1
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,comet)
@@ -75,13 +97,16 @@ PRODUCT_COPY_FILES += \
 
 ifeq ($(filter factory_comet, $(TARGET_PRODUCT)),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.xrr.version=2.1
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=20:120,30:60,:1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.headsup_ns=30000000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.timeout_ns=500000000
 endif
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.powerstats.entity_name=Inner-Display
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_hz=120 \
-    vendor.primarydisplay.op.ns_hz=60
+    vendor.primarydisplay.op.ns_hz=120
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.camera.debug.enable_software_post_sharpen_node=false
@@ -89,6 +114,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display Config
 PRODUCT_COPY_FILES += \
         device/google/comet/display/display_colordata_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal1.pb
+PRODUCT_PROPERTY_OVERRIDES += \
+	vendor.display.png.premultiplied=true
 
 # Coex Config
 PRODUCT_SOONG_NAMESPACES += device/google/comet/radio/coex
@@ -124,6 +151,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
 	device/google/comet/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
+#Thermal VT estimator
+PRODUCT_PACKAGES += \
+    libthermal_tflite_wrapper
+
 # Thermal Config
 ifeq (,$(TARGET_VENDOR_THERMAL_CONFIG_PATH))
 TARGET_VENDOR_THERMAL_CONFIG_PATH := device/google/comet/thermal
@@ -133,6 +164,13 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_backup_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_backup.json \
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_speaker_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_speaker_estimation_model.tflite \
+
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+	PRODUCT_COPY_FILES += \
+		$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_comet_wingboard.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_wingboard.json
+endif
 
 PRODUCT_PACKAGES += \
 	init_thermal_config
@@ -152,6 +190,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth Tx power caps
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_CE.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CE.csv \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
@@ -185,6 +224,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hfp.swb.supported=true
 
+# Support LE & Classic concurrent encryption (b/330704060)
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.ble.allow_enc_with_bredr=true
+
 # POF
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.finder.supported=true
@@ -214,6 +257,13 @@ endif
 # Audio CCA property
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.cca.enabled=false
+
+# HdMic Audio
+PRODUCT_SOONG_NAMESPACES += device/google/comet/audio/comet/prebuilt/libspeechenhancer
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.app.audio.gsenet.version=1
+PRODUCT_PACKAGES += \
+    libspeechenhancer
 
 # Keymaster HAL
 #LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
@@ -265,7 +315,7 @@ PRODUCT_PACKAGES += \
 # Graphics
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801152=80
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801152=true
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801153=1500
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801153=1000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801153=false
 
 # Trusty liboemcrypto.so
@@ -311,6 +361,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.als_feed_forward_supported=true \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
+# Allow external binning setting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.allow_external_binning_setting=true
+
 # Camera Vendor property
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
@@ -327,6 +381,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # remove ro.vendor.vibrator.hal.dbc.enable (needed for setting pm.activetimeout)
 # remove pm.activetimeout
 # ro.vendor.vibrator.hal.loc.coeff.folded currently unused
+$(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VERSION)))
 ACTUATOR_MODEL := luxshare_ict_081545
 ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
 PRODUCT_VENDOR_PROPERTIES += \
@@ -362,6 +417,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
         bluetooth.profile.ccp.server.enabled=true \
         bluetooth.profile.vcp.controller.enabled=true
 
+ifeq ($(RELEASE_PIXEL_BROADCAST_ENABLED), true)
+PRODUCT_PRODUCT_PROPERTIES += \
+	bluetooth.profile.bap.broadcast.assist.enabled=true \
+	bluetooth.profile.bap.broadcast.source.enabled=true
+endif
+
 # LE Audio switcher in developer options
 PRODUCT_PRODUCT_PROPERTIES += \
         ro.bluetooth.leaudio_switcher.supported=true \
@@ -392,15 +453,36 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.leaudio.allow_list=SM-R510
 
+# Battery Mitigation Config
+ifeq (,$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH))
+TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH := device/google/comet/battery_mitigation
+endif
+
+PRODUCT_COPY_FILES += \
+	$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH)/bm_config_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json
+
 # Exynos RIL and telephony
 # Support RIL Domain-selection
 SUPPORT_RIL_DOMAIN_SELECTION := true
-
-# Thread HAL
-PRODUCT_PACKAGES += \
-   com.google.comet.hardware.threadnetwork
 
 # ETM
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 $(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
 endif
+
+# Connectivity Resources Overlay
+PRODUCT_PACKAGES += \
+    ConnectivityResourcesOverlayCometOverride
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.thread_dispatcher.enabled=true
+
+# Thread HAL
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+   com.google.comet.hardware.threadnetwork
+endif
+
+# Camera concurrent foldable dual front feature support
+PRODUCT_PACKAGES += \
+    concurrent_foldable_dual_front_xml
