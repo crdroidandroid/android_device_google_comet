@@ -1,0 +1,2 @@
+allow grilservice_app gril_antenna_tuning_service:service_manager find;
+binder_call(grilservice_app, twoshay)
