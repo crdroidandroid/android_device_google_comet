@@ -1,2 +1,5 @@
 # Camera vendor property
 set_prop(vendor_init, vendor_camera_debug_prop)
+
+# setupwizard
+set_prop(vendor_init, setupwizard_feature_prop)
