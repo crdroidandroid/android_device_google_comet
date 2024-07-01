@@ -192,7 +192,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
-    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_CE.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CE.csv \
+    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
     $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # DCK properties based on target
@@ -223,6 +223,21 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Bluetooth Super Wide Band
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hfp.swb.supported=true
+
+# Override BQR mask to enable LE Audio Choppy report, remove BTRT logging
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.bqr.event_mask=295006 \
+    persist.bluetooth.bqr.vnd_quality_mask=29 \
+    persist.bluetooth.bqr.vnd_trace_mask=0 \
+    persist.bluetooth.vendor.btsnoop=true
+else
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.bqr.event_mask=295006 \
+    persist.bluetooth.bqr.vnd_quality_mask=16 \
+    persist.bluetooth.bqr.vnd_trace_mask=0 \
+    persist.bluetooth.vendor.btsnoop=false
+endif
 
 # Support LE & Classic concurrent encryption (b/330704060)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -327,6 +342,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Location
 PRODUCT_SOONG_NAMESPACES += device/google/comet/location
+# For GPS property
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
 
@@ -353,6 +370,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Camera Vendor property
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
+
+# Enable camera exif model/make reporting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.exif_reveal_make_model=true
 
 # Media Performance Class 14
 PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=34
@@ -437,6 +458,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # LE Audio Unicast Allowlist
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.leaudio.allow_list=SM-R510
+
+# Telephony Satellite Feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
 
 # Battery Mitigation Config
 ifeq (,$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH))

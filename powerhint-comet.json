@@ -189,7 +189,8 @@
       "Values": [
         "1280",
         "1100",
-        "1280 1100 1055"
+        "1280 1100 1055",
+        "1100 1055 1055"
       ],
       "DefaultIndex": 1,
       "ResetOnInit": true
@@ -477,6 +478,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "PowerHALLaunch",
+      "Path": "vendor.powerhal.is_launch",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "Type": "Property",
+      "ResetOnInit": true
+    },
+    {
       "Name": "BigTjOffset",
       "Path": "/sys/devices/platform/100a0000.BIG/offset_enabled",
       "Values": [
@@ -589,15 +600,6 @@
       "DefaultIndex": 0
     },
     {
-      "Name": "PMU_FORCE_LIMIT",
-      "Path": "/proc/vendor_sched/pmu_force_limited",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "DefaultIndex": 0
-    },
-    {
       "Name": "EM_Profile",
       "Path": "/sys/kernel/pixel_em/active_profile",
       "Values": [
@@ -624,14 +626,12 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/spc_threshold",
       "Values": [
         "76",
-        "70",
-        "40",
         "55",
-        "42",
-        "35",
+        "38",
+        "36",
+        "10",
         "30",
-        "20",
-        "0"
+        "28"
       ],
       "DefaultIndex": 0
     },
@@ -651,12 +651,11 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/sched_pixel/spc_threshold",
       "Values": [
         "59",
-        "50",
-        "32",
-        "15",
         "30",
         "20",
-        "18"
+        "2",
+        "18",
+        "15"
       ],
       "DefaultIndex": 0
     },
@@ -675,9 +674,10 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy7/sched_pixel/spc_threshold",
       "Values": [
         "62",
-        "50",
+        "0",
         "20",
-        "22"
+        "22",
+        "15"
       ],
       "DefaultIndex": 0
     },
@@ -840,6 +840,15 @@
         "67000"
       ],
       "ResetOnInit": true
+    },
+    {
+      "Name": "PA_KILL",
+      "Path": "/sys/kernel/vendor_mm/pa_kill/reclaim_kb",
+      "Values": [
+        "102400",
+        "0"
+      ],
+      "ResetOnInit": false
     }
   ],
   "Actions": [
@@ -1134,6 +1143,12 @@
       "Value": "1"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "PowerHALLaunch",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
       "PowerHint": "LAUNCH_EXTEND",
       "Node": "CPUSkipMask",
       "Duration": 2000,
@@ -1308,6 +1323,13 @@
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
+      "Node": "PA_KILL",
+      "EnableProperty": "vendor.powerhal.is_launch",
+      "Duration": 0,
+      "Value": "102400"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUSkipMask",
       "Duration": 1000,
       "Value": "0x0"
@@ -1478,19 +1500,19 @@
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 3000,
-      "Value": "40"
+      "Value": "10"
     },
     {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 3000,
-      "Value": "15"
+      "Value": "2"
     },
     {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 3000,
-      "Value": "20"
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
@@ -1790,7 +1812,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "20"
+      "Value": "36"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1802,7 +1824,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "30"
+      "Value": "15"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1814,17 +1836,11 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "20"
+      "Value": "15"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_POLL",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "PMU_FORCE_LIMIT",
       "Duration": 0,
       "Value": "1"
     },
@@ -1838,7 +1854,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "CPUDVFSHeadroom",
       "Duration": 0,
-      "Value": "1100"
+      "Value": "1100 1055 1055"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1934,7 +1950,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "55"
+      "Value": "38"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -1946,7 +1962,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "32"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -1968,12 +1984,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "PMU_FORCE_LIMIT",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "EM_Profile",
       "Duration": 0,
       "Value": "cam2"
@@ -1988,19 +1998,13 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CPUDVFSHeadroom",
       "Duration": 0,
-      "Value": "1100"
+      "Value": "1100 1055 1055"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CDPreferHighCap",
       "Duration": 0,
       "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
-      "Value": "1548000"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2102,7 +2106,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "55"
+      "Value": "30"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2114,7 +2118,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "30"
+      "Value": "18"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2126,17 +2130,11 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "22"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_POLL",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "PMU_FORCE_LIMIT",
       "Duration": 0,
       "Value": "1"
     },
@@ -2448,12 +2446,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
-      "Node": "PMU_FORCE_LIMIT",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
       "Node": "PMU_LIT_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1328000"
@@ -2654,12 +2646,6 @@
     },
     {
       "PowerHint": "LOW_POWER",
-      "Node": "PMU_FORCE_LIMIT",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "LOW_POWER",
       "Node": "BigTjOffset",
       "Duration": 0,
       "Value": "1"
@@ -2782,12 +2768,6 @@
       "Node": "PMU_POLL",
       "Duration": 0,
       "Value": "1"
-    },
-    {
-      "PowerHint": "THERMAL_VIRTUAL-SKIN-HINT_LIGHT",
-      "Node": "PMU_FORCE_LIMIT",
-      "Duration": 0,
-      "Value": "0"
     },
     {
       "PowerHint": "THERMAL_VIRTUAL-SKIN-HINT_LIGHT",
@@ -3081,7 +3061,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "55"
+      "Value": "28"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3093,7 +3073,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "30"
+      "Value": "18"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3105,17 +3085,11 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "22"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_POLL",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
-      "Node": "PMU_FORCE_LIMIT",
       "Duration": 0,
       "Value": "1"
     },
