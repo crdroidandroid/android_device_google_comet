@@ -69,8 +69,34 @@ include device/google/gs-common/touch/gti/predump_gti_dual.mk
 include device/google/gs-common/display/dump_second_display.mk
 
 # Increment the SVN for any official public releases
+ifdef RELEASE_SVN_COMET
+TARGET_SVN ?= $(RELEASE_SVN_COMET)
+else
+# Set this for older releases that don't use build flag
+TARGET_SVN ?= 04
+endif
+
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=1
+    ro.vendor.build.svn=$(TARGET_SVN)
+
+# Set device family property for SMR
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.device_family=CT3
+
+# Set build properties for SMR builds
+ifeq ($(RELEASE_IS_SMR), true)
+    ifneq (,$(RELEASE_BASE_OS_COMET))
+        PRODUCT_BASE_OS := $(RELEASE_BASE_OS_COMET)
+    endif
+endif
+
+# Set build properties for EMR builds
+ifeq ($(RELEASE_IS_EMR), true)
+    ifneq (,$(RELEASE_BASE_OS_COMET))
+        PRODUCT_PROPERTY_OVERRIDES += \
+        ro.build.version.emergency_base_os=$(RELEASE_BASE_OS_COMET)
+    endif
+endif
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,comet)
@@ -403,6 +429,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.vibrator.hal.context.cooldowntime=1600 \
     persist.vendor.vibrator.hal.context.settlingtime=5000
 
+# Override Output Distortion Gain
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.hapticgenerator.distortion.output.gain=0.45
+
 # Hinge angle sensor
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.sensor.hinge_angle.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hinge_angle.xml
@@ -490,9 +520,25 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Thread HAL
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
-   com.google.comet.hardware.threadnetwork
+   com.google.comet.hardware.threadnetwork \
+   ThreadNetworkDemoApp
 endif
 
 # Camera concurrent foldable dual front feature support
 PRODUCT_PACKAGES += \
     concurrent_foldable_dual_front_xml
+
+# Bluetooth device id
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.device_id.product_id=20499
+
+# Set support for LEA multicodec
+PRODUCT_PRODUCT_PROPERTIES +=\
+    bluetooth.core.le_audio.codec_extension_aidl.enabled=true
+
+# LE Audio configuration scenarios
+PRODUCT_COPY_FILES += \
+    device/google/comet/bluetooth/audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json
+
+PRODUCT_COPY_FILES += \
+    device/google/comet/bluetooth/audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json
