@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+SHIPPING_API_LEVEL := 34
+
 ifdef RELEASE_GOOGLE_COMET_RADIO_DIR
 RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_COMET_RADIO_DIR)
 endif
@@ -63,10 +65,10 @@ endif
 
 include device/google/comet/audio/comet/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/predump_gti_dual.mk
 include device/google/gs-common/display/dump_second_display.mk
+include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
 ifdef RELEASE_SVN_COMET
@@ -138,8 +140,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.camera.debug.enable_software_post_sharpen_node=false
 
 # Display Config
-PRODUCT_COPY_FILES += \
-        device/google/comet/display/display_colordata_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal1.pb
 PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.display.png.premultiplied=true
 
@@ -284,10 +284,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_transaural_enabled_default=false \
        persist.vendor.audio.spatializer.speaker_enabled=true
 
-# declare use of stereo spatialization
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.stereo_spatialization_enabled=true
-
 ifneq ($(USE_AUDIO_HAL_AIDL),true)
 # HIDL Sound Dose
 PRODUCT_PACKAGES += \
@@ -339,6 +335,10 @@ PRODUCT_PACKAGES += \
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
     device/google/comet/powerstats/comet
+
+# UWB Overlay
+PRODUCT_PACKAGES += \
+	UwbOverlayCT3
 
 # WiFi Overlay
 PRODUCT_PACKAGES += \
@@ -401,8 +401,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
 
-# Media Performance Class 14
-PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=34
+# Media Performance Class 15
+PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=35
 
 # OIS with system imu
 PRODUCT_VENDOR_PROPERTIES += \
@@ -487,7 +487,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # LE Audio Unicast Allowlist
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.leaudio.allow_list=SM-R510
+    persist.bluetooth.leaudio.allow_list=SM-R510,WF-1000XM5
 
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
@@ -510,27 +510,22 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 $(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
 endif
 
-# Connectivity Resources Overlay
+# Connectivity Resources Overlay for Thread host settings
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCometOverride
 
+# Thread Dispatcher enablement in Bluetooth HAL
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.thread_dispatcher.enabled=true
-
-# Thread HAL
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-   com.google.comet.hardware.threadnetwork \
-   ThreadNetworkDemoApp
-endif
+    persist.bluetooth.thread_dispatcher.enabled=false
 
 # Camera concurrent foldable dual front feature support
 PRODUCT_PACKAGES += \
     concurrent_foldable_dual_front_xml
 
 # Bluetooth device id
+# Comet: 0x4113
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20499
+    bluetooth.device_id.product_id=16659
 
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES +=\
