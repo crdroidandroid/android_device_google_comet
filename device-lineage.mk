@@ -10,6 +10,9 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-lineage
 PRODUCT_PACKAGES += \
     ANGLE
 
+# Camera
+$(call inherit-product-if-exists, vendor/google/camera/config.mk)
+
 # EUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
