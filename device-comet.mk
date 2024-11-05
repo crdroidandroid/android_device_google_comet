@@ -26,7 +26,12 @@ RELEASE_GOOGLE_BOOTLOADER_COMET_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
 RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_COMET_DIR)
 $(call soong_config_set,comet_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_COMET_DIR))
 
+ifdef RELEASE_KERNEL_COMET_VERSION
+TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_COMET_VERSION)
+else
 TARGET_LINUX_KERNEL_VERSION ?= 6.1
+endif
+
 ifdef RELEASE_KERNEL_COMET_DIR
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_COMET_DIR)
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_COMET_DIR)/kernel-headers
@@ -401,8 +406,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
 
-# Media Performance Class 15
-PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=35
+# Media Performance Class 14
+PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=34
 
 # OIS with system imu
 PRODUCT_VENDOR_PROPERTIES += \
@@ -453,11 +458,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
         bluetooth.profile.ccp.server.enabled=true \
         bluetooth.profile.vcp.controller.enabled=true
 
-ifeq ($(RELEASE_PIXEL_BROADCAST_ENABLED), true)
+# Bluetooth LE Audio Broadcast
 PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.bap.broadcast.assist.enabled=true \
 	bluetooth.profile.bap.broadcast.source.enabled=true
-endif
 
 # LE Audio switcher in developer options
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -488,6 +492,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # LE Audio Unicast Allowlist
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.leaudio.allow_list=SM-R510,WF-1000XM5
+
+SUPPORT_VENDOR_SATELLITE_SERVICE := true
 
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \

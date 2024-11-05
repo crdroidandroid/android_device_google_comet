@@ -333,7 +333,6 @@
       "Path": "/proc/vendor_sched/groups/ta/uclamp_min",
       "Values": [
         "765",
-        "600",
         "1"
       ],
       "ResetOnInit": true
@@ -348,10 +347,20 @@
       "ResetOnInit": true
     },
     {
+      "Name": "TAUclampMinOnNiceHighValue",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_high_value",
+      "Values": [
+        "765",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "TAUclampMinOnNiceMidValue",
       "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_mid_value",
       "Values": [
         "600",
+        "590",
         "0"
       ],
       "ResetOnInit": true
@@ -360,6 +369,7 @@
       "Name": "TAUclampMinOnNiceHighPrio",
       "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_high_prio",
       "Values": [
+        "110",
         "119",
         "120"
       ],
@@ -370,6 +380,7 @@
       "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_mid_prio",
       "Values": [
         "128",
+        "139",
         "130"
       ],
       "ResetOnInit": true
@@ -478,6 +489,15 @@
     {
       "Name": "TAPreferIdle",
       "Path": "/proc/vendor_sched/groups/ta/prefer_idle",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAAutoPreferFit",
+      "Path": "/proc/vendor_sched/groups/ta/auto_prefer_fit",
       "Values": [
         "1",
         "0"
@@ -938,6 +958,7 @@
         "102400",
         "0"
       ],
+      "WriteOnly": true,
       "ResetOnInit": false
     },
     {
@@ -1043,12 +1064,6 @@
       "Node": "BGUClampMaxBoost",
       "Duration": 5000,
       "Value": "512"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TAUClampBoost",
-      "Duration": 5000,
-      "Value": "765"
     },
     {
       "PowerHint": "LAUNCH",
@@ -1235,15 +1250,45 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "TAAutoPreferFit",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "TAPreferredIdleMaskHigh",
       "Duration": 5000,
       "Value": "0xff"
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "TAPreferredIdleMaskMid",
+      "Node": "TAUclampMinOnNiceEnable",
       "Duration": 5000,
-      "Value": "0xff"
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceHighValue",
+       "Duration": 5000,
+       "Value": "765"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceHighPrio",
+      "Duration": 5000,
+      "Value": "110"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceMidValue",
+       "Duration": 5000,
+       "Value": "590"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceMidPrio",
+      "Duration": 5000,
+      "Value": "139"
     },
     {
       "PowerHint": "LAUNCH",
@@ -1755,6 +1800,24 @@
       "Value": "0"
     },
     {
+      "PowerHint": "CAMERA_MULTICAM_BOOST",
+      "Node": "CDPreferIdle",
+      "Duration": 100,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_MULTICAM_BOOST",
+      "Node": "AutoPreferIdle",
+      "Duration": 100,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_MULTICAM_BOOST",
+      "Node": "PMU_POLL",
+      "Duration": 100,
+      "Value": "0"
+    },
+    {
       "PowerHint": "GCA_CAMERA_SHOT_BIGCPU_RANK1",
       "Node": "TAPreferHighCap",
       "Duration": 3000,
@@ -2074,6 +2137,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "AutoPreferIdle",
       "Duration": 0,
       "Value": "0"
@@ -2257,6 +2326,12 @@
       "Node": "TAPreferIdle",
       "Duration": 0,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2452,6 +2527,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "MemFreq",
       "Duration": 0,
       "Value": "1352000"
@@ -2503,6 +2584,18 @@
       "Node": "MaxLoadBalanceInterval",
       "Duration": 0,
       "Value": "4"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_LOW",
+      "Node": "TAPreferIdle",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_LOW",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
@@ -2665,6 +2758,12 @@
       "Node": "TAPreferIdle",
       "Duration": 0,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
@@ -3265,7 +3364,7 @@
       "PowerHint": "GAME",
       "Node": "AutoPreferIdle",
       "Duration": 0,
-      "Value": "0"
+      "Value": "1"
     },
     {
       "PowerHint": "GAME",
@@ -3530,6 +3629,12 @@
       "Node": "TAPreferIdle",
       "Duration": 0,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
