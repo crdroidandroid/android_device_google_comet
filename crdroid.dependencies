@@ -1,0 +1,25 @@
+[
+  {
+    "repository": "crdroidandroid/android_device_google_zumapro",
+    "target_path": "device/google/zumapro"
+  },
+  {
+    "repository": "crdroidandroid/android_packages_apps_PixelParts",
+    "target_path": "packages/apps/PixelParts"
+  },
+  {
+    "repository": "crdroidandroid/proprietary_vendor_google_camera",
+    "target_path": "vendor/google/camera",
+    "remote": "crdroid-gitlab"
+  },
+  {
+    "repository": "LineageOS/android_device_google_comet-kernels",
+    "target_path": "device/google/comet-kernels",
+    "branch": "lineage-23.0"
+  },
+  {
+    "repository": "TheMuppets/proprietary_vendor_google_comet",
+    "target_path": "vendor/google/comet",
+    "branch": "lineage-23.0"
+  }
+]
