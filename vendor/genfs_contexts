@@ -19,6 +19,7 @@ genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/panel_model
 genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/backlight/panel0-backlight/als_table u:object_r:sysfs_write_leds:s0
 genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/error_count_te                       u:object_r:sysfs_display:s0
 genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/error_count_unknown                  u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/power_mode                           u:object_r:sysfs_display:s0
 genfscon sysfs /devices/platform/19471000.drmdecon/dqe1/atc                                               u:object_r:sysfs_display:s0
 
 # Battery
