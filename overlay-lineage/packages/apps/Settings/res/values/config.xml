@@ -53,4 +53,7 @@
 
     <!-- The smallest value of current width of the window when the split should be used. -->
     <integer name="config_activity_embed_split_min_cur_dp">600</integer>
+
+    <!-- Show Now Playing -->
+    <bool name="config_show_now_playing">true</bool>
 </resources>
