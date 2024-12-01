@@ -21,6 +21,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# Face unlock
+$(call inherit-product-if-exists, vendor/google/faceunlock/config.mk)
+
 # Fold extensions
 PRODUCT_SYSTEM_SERVER_JARS += \
     system_ext:comet-services

@@ -13,6 +13,11 @@
     "remote": "crdroid-gitlab"
   },
   {
+    "repository": "crdroidandroid/proprietary_vendor_google_faceunlock",
+    "target_path": "vendor/google/faceunlock",
+    "remote": "crdroid-gitlab"
+  },
+  {
     "repository": "device/google/comet-kernels/6.1",
     "target_path": "device/google/comet-kernels/6.1",
     "remote": "aosp-comet",
