@@ -56,10 +56,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	init_thermal_config
 
-# Bluetotoh Auto On feature
-PRODUCT_PRODUCT_PROPERTIES +=\
-    bluetooth.server.automatic_turn_on=true
-
 # Bluetooth AAC VBR
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true
