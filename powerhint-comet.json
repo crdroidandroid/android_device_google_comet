@@ -3482,13 +3482,15 @@
       "PowerHint": "GAME",
       "Node": "AutoMigrationMarginsEnable",
       "Duration": 0,
-      "Value": "1"
+      "Value": "1",
+      "EnableProperty": "vendor.powerhal.amm_enabled"
     },
     {
       "PowerHint": "GAME",
       "Node": "AutoDvfsHeadroomEnable",
       "Duration": 0,
-      "Value": "1"
+      "Value": "1",
+      "EnableProperty": "vendor.powerhal.amm_enabled"
     },
     {
       "PowerHint": "GAME",
@@ -3807,6 +3809,18 @@
       "Node": "MIFTargetLoad",
       "Duration": 0,
       "Value": "20 80"
+    },
+    {
+      "PowerHint": "DISABLE_AMM",
+      "Node": "AutoMigrationMarginsEnable",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISABLE_AMM",
+      "Node": "AutoDvfsHeadroomEnable",
+      "Duration": 0,
+      "Value": "0"
     }
   ],
   "GpuSysfsPath" : "/sys/devices/platform/1f000000.mali",
