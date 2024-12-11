@@ -1351,7 +1351,7 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "TARampupMultiplier",
-      "Duration": 0,
+      "Duration": 5000,
       "Value": "4"
     },
     {
@@ -1447,7 +1447,7 @@
     {
       "PowerHint": "LAUNCH_EXTEND",
       "Node": "TARampupMultiplier",
-      "Duration": 0,
+      "Duration": 2000,
       "Value": "4"
     },
     {
