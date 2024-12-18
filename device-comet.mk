@@ -415,8 +415,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Haptics
 # Placeholders for updates later, need to update:
-# remove ro.vendor.vibrator.hal.dbc.enable (needed for setting pm.activetimeout)
-# remove pm.activetimeout
 # ro.vendor.vibrator.hal.loc.coeff.folded currently unused
 $(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VERSION)))
 ACTUATOR_MODEL := luxshare_ict_081545
@@ -426,8 +424,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.vibrator.hal.device.mass=0.2605 \
     ro.vendor.vibrator.hal.loc.coeff.folded=3.15 \
     ro.vendor.vibrator.hal.loc.coeff=2.58 \
-    ro.vendor.vibrator.hal.dbc.enable=1 \
-    ro.vendor.vibrator.hal.pm.activetimeout=5 \
     persist.vendor.vibrator.hal.context.enable=false \
     persist.vendor.vibrator.hal.context.scale=60 \
     persist.vendor.vibrator.hal.context.fade=true \
