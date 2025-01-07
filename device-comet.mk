@@ -197,6 +197,7 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_backup_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_backup.json \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_speaker_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_speaker_estimation_model.tflite \
+        $(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_lpm_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_lpm.json \
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 	PRODUCT_COPY_FILES += \

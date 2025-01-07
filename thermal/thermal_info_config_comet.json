@@ -4,6 +4,11 @@
             "Name": "battery",
             "Type": "BATTERY",
             "HotThreshold": ["NAN", "NAN", "NAN", "NAN", "NAN", "NAN", "60.0"],
+            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.9],
+            "SendCallback": true,
+            "TripPointIgnorable": true,
+            "PollingDelay": 60000,
+            "PassiveDelay": 60000,
             "Multiplier": 0.001
         },
         {
