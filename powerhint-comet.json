@@ -889,6 +889,26 @@
       "Type": "Property"
     },
     {
+      "Name": "ntc_critical_trip",
+      "Path": "/dev/thermal/tz-by-name/charger_therm/trip_point_1_temp",
+      "Values": [
+        "64000",
+        "72000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "ntc_hot_trip",
+      "Path": "/dev/thermal/tz-by-name/charger_therm/trip_point_2_temp",
+      "Values": [
+        "66000",
+        "74000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "MIFTargetLoad",
       "Path": "/sys/class/devfreq/17000010.devfreq_mif/interactive/target_load",
       "Values": [
@@ -3425,6 +3445,18 @@
       "Node": "Dex2oatThreads",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "THERMAL_ShutdownMode_EMERGENCY",
+      "Node": "ntc_critical_trip",
+      "Duration": 0,
+      "Value": "72000"
+    },
+    {
+      "PowerHint": "THERMAL_ShutdownMode_EMERGENCY",
+      "Node": "ntc_hot_trip",
+      "Duration": 0,
+      "Value": "74000"
     },
     {
       "PowerHint": "GAME",
