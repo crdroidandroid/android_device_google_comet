@@ -24,6 +24,3 @@ PRODUCT_DEVICE := comet
 PRODUCT_MODEL := AOSP on comet
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
-
-DEVICE_MANIFEST_FILE := \
-	device/google/comet/manifest.xml
