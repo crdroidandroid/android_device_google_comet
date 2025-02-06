@@ -1,0 +1,81 @@
+{
+    "Include": ["thermal_info_config.json"],
+    "Sensors":[
+        {
+            "Name":"SkinShutdownModeHighPower",
+            "Type":"UNKNOWN",
+            "VirtualSensor":true,
+            "Formula":"COUNT_THRESHOLD",
+            "Combination":["VIRTUAL-SKIN", "PARTIAL_SYSTEM_POWER"],
+            "CombinationType":["SENSOR", "ODPM"],
+            "Coefficient":[57000.0, 1000.0],
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", "NAN", "NAN", 2.0],
+            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9],
+            "Multiplier":1
+        },
+        {
+            "Name":"BatteryShutdownModeHighPower",
+            "Type":"UNKNOWN",
+            "VirtualSensor":true,
+            "Formula":"COUNT_THRESHOLD",
+            "Combination":["battery", "PARTIAL_SYSTEM_POWER"],
+            "CombinationType":["SENSOR", "ODPM"],
+            "Coefficient":[60000.0, 1000.0],
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", "NAN", "NAN", 2.0],
+            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9],
+            "Multiplier":1
+        },
+        {
+            "Name":"battery",
+            "Type":"BATTERY",
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", "NAN", 60.0, 65.0],
+            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 1.9],
+            "SeverityReference": "BatteryShutdownModeHighPower",
+            "SendCallback": true,
+            "TripPointIgnorable": true,
+            "PollingDelay": 60000,
+            "PassiveDelay": 60000,
+            "Multiplier":0.001
+        },
+        {
+            "Name":"ShutdownMode",
+            "Type":"UNKNOWN",
+            "VirtualSensor":true,
+            "TriggerSensor": ["soc_therm", "rffe_therm", "charger_therm", "modem_therm", "gnss_tcxo_therm"],
+            "Formula":"WEIGHTED_AVG",
+            "Combination":["VIRTUAL-SKIN"],
+            "Coefficient":[1.0],
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", "NAN", 57.0, "NAN"],
+            "HotHysteresis":[0.0, 1.9, 1.9, 1.9, 1.9, 5.9, 1.9],
+            "SeverityReference": "battery",
+            "Multiplier":0.001,
+            "SendCallback": true,
+            "SendPowerHint": true,
+            "PollingDelay":300000,
+            "PassiveDelay":7000
+        },
+        {
+            "Name": "VIRTUAL-SKIN",
+            "Type": "SKIN",
+            "Version": "2.3",
+            "VirtualSensor": true,
+            "TriggerSensor": ["soc_therm", "rffe_therm", "charger_therm", "modem_therm", "gnss_tcxo_therm"],
+            "Formula": "MAXIMUM",
+            "Combination": ["VIRTUAL-SKIN-LEGACY"],
+            "Coefficient": [1.0],
+            "HotThreshold": ["NAN", 39.0, 43.0, 45.0, 46.5, 53.0, 65.0],
+            "HotHysteresis": [0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
+            "SeverityReference": "SkinShutdownModeHighPower",
+            "Multiplier": 0.001,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000,
+            "SendCallback": true,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "gxp-cooling",
+                    "LimitInfo": [0, 0, 0, 0, 0, 99, 99]
+                }
+            ]
+        }
+    ]
+}

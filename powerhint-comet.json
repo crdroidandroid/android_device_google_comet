@@ -889,6 +889,26 @@
       "Type": "Property"
     },
     {
+      "Name": "ntc_critical_trip",
+      "Path": "/dev/thermal/tz-by-name/charger_therm/trip_point_1_temp",
+      "Values": [
+        "64000",
+        "72000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "ntc_hot_trip",
+      "Path": "/dev/thermal/tz-by-name/charger_therm/trip_point_2_temp",
+      "Values": [
+        "66000",
+        "74000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "MIFTargetLoad",
       "Path": "/sys/class/devfreq/17000010.devfreq_mif/interactive/target_load",
       "Values": [
@@ -994,6 +1014,16 @@
       "ResetOnInit": false
     },
     {
+      "Name": "AAModeProperty",
+      "Path": "vendor.powerhal.mode.aa",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true,
+      "Type": "Property"
+    },
+    {
       "Name": "KswapdUclaimMin",
       "Path": "/sys/kernel/vendor_mm/kswapd_uclamp_min",
       "Values": [
@@ -1011,6 +1041,16 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
+    },
+    {
+      "Name": "SYSTEM_UI_ADPF_PROFILES",
+      "Path": "<AdpfConfig>:SYSTEM_UI",
+      "Values": [
+        "SYSTEM_UI_PROFILE"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
     }
   ],
   "Actions": [
@@ -3204,6 +3244,12 @@
       "Value": "1"
     },
     {
+      "PowerHint": "AUTOMOTIVE_PROJECTION",
+      "Node": "AAModeProperty",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
       "PowerHint": "DISPLAY_IDLE",
       "Node": "FGPreferIdle",
       "Duration": 0,
@@ -3243,6 +3289,18 @@
       "Node": "CPUBigClusterResponseTimeMs",
       "Duration": 0,
       "Value": "170"
+    },
+    {
+      "PowerHint": "DISPLAY_IDLE",
+      "Type": "MaskHint",
+      "Value":"DISPLAY_UPDATE_IMMINENT",
+      "EnableProperty": "vendor.powerhal.mode.aa"
+    },
+    {
+      "PowerHint": "DISPLAY_IDLE",
+      "Type": "MaskHint",
+      "Value":"CPU_LOAD_RESET",
+      "EnableProperty": "vendor.powerhal.mode.aa"
     },
     {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
@@ -3387,6 +3445,18 @@
       "Node": "Dex2oatThreads",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "THERMAL_ShutdownMode_EMERGENCY",
+      "Node": "ntc_critical_trip",
+      "Duration": 0,
+      "Value": "72000"
+    },
+    {
+      "PowerHint": "THERMAL_ShutdownMode_EMERGENCY",
+      "Node": "ntc_hot_trip",
+      "Duration": 0,
+      "Value": "74000"
     },
     {
       "PowerHint": "GAME",
@@ -3922,79 +3992,42 @@
       "GpuCapacityBoostMax": 25000
     },
     {
-      "Name": "UiHighBoostWithoutPid",
-      "PID_On": false,
-      "PID_Po": 0,
-      "PID_Pu": 0,
-      "PID_I": 0,
-      "PID_I_Init": 0,
-      "PID_I_High": 0,
-      "PID_I_Low": 0,
-      "PID_Do": 0,
-      "PID_Du": 0,
-      "SamplingWindow_P": 1,
-      "SamplingWindow_I": 1,
-      "SamplingWindow_D": 1,
+      "Name": "SYSTEM_UI_PROFILE",
+      "PID_On": true,
+      "PID_Po": 2.0,
+      "PID_Pu": 0.5,
+      "PID_I": 0.0,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -30,
+      "PID_Do": 500.0,
+      "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 250,
-      "UclampMin_High": 196,
-      "UclampMin_Low": 196,
+      "UclampMin_Init": 231,
+      "UclampMin_LoadUp": 730,
+      "UclampMin_LoadReset": 730,
+      "UclampMin_High": 480,
+      "UclampMin_Low": 2,
       "UclampMax_EfficientBase": 500,
       "UclampMax_EfficientOffset": 200,
-      "ReportingRateLimitNs": 1,
-      "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0,
-      "GpuBoost": false
-    },
-    {
-      "Name": "UiLowBoostWithoutPid",
-      "PID_On": false,
-      "PID_Po": 0,
-      "PID_Pu": 0,
-      "PID_I": 0,
-      "PID_I_Init": 0,
-      "PID_I_High": 0,
-      "PID_I_Low": 0,
-      "PID_Do": 0,
-      "PID_Du": 0,
       "SamplingWindow_P": 1,
-      "SamplingWindow_I": 1,
+      "SamplingWindow_I": 0,
       "SamplingWindow_D": 1,
-      "UclampMin_On": true,
-      "UclampMin_Init": 250,
-      "UclampMin_High": 52,
-      "UclampMin_Low": 52,
-      "UclampMax_EfficientBase": 500,
-      "UclampMax_EfficientOffset": 200,
-      "ReportingRateLimitNs": 1,
+      "ReportingRateLimitNs": 166666660,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0,
-      "GpuBoost": false
-    },
-    {
-      "Name": "UiLowNoneBoost",
-      "PID_On": false,
-      "PID_Po": 0,
-      "PID_Pu": 0,
-      "PID_I": 0,
-      "PID_I_Init": 0,
-      "PID_I_High": 0,
-      "PID_I_Low": 0,
-      "PID_Do": 0,
-      "PID_Du": 0,
-      "SamplingWindow_P": 1,
-      "SamplingWindow_I": 1,
-      "SamplingWindow_D": 1,
-      "UclampMin_On": true,
-      "UclampMin_Init": 250,
-      "UclampMin_High": 0,
-      "UclampMin_Low": 0,
-      "UclampMax_EfficientBase": 500,
-      "UclampMax_EfficientOffset": 200,
-      "ReportingRateLimitNs": 1,
-      "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0,
-      "GpuBoost": false
+      "StaleTimeFactor": 15.0,
+      "HeuristicBoost_On": true,
+      "HBoostModerateJankThreshold": 2,
+      "HBoostOffMaxAvgDurRatio": 4.0,
+      "HBoostSevereJankPidPu": 0.3,
+      "HBoostSevereJankThreshold": 8,
+      "HBoostUclampMinCeilingRange": [480, 722],
+      "HBoostUclampMinFloorRange": [230, 410],
+      "JankCheckTimeFactor": 1.2,
+      "LowFrameRateThreshold": 25,
+      "MaxRecordsNum": 300,
+      "GpuBoost": true,
+      "GpuCapacityBoostMax": 25000
     }
   ]
 }
