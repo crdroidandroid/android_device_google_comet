@@ -5,6 +5,7 @@ bin/acpi
 bin/awk
 bin/base64
 bin/basename
+bin/blkdiscard
 bin/blockdev
 bin/boringssl_self_test64
 bin/brctl
@@ -101,11 +102,11 @@ bin/hw/android.hardware.power-service.pixel-libperfmgr
 bin/hw/android.hardware.power.stats-service.pixel
 bin/hw/android.hardware.secure_element-service.thales
 bin/hw/android.hardware.security.keymint-service.rust.trusty
+bin/hw/android.hardware.security.secretkeeper.trusty
 bin/hw/android.hardware.sensors-service.multihal
 bin/hw/android.hardware.thermal-service.pixel
 bin/hw/android.hardware.usb-service
 bin/hw/android.hardware.usb.gadget-service
-bin/hw/android.hardware.vibrator-service.cs40l26
 bin/hw/android.hardware.wifi-service
 bin/hw/disable_contaminant_detection.sh
 bin/hw/hostapd
@@ -342,11 +343,11 @@ etc/init/android.hardware.power-service.pixel-libperfmgr.rc
 etc/init/android.hardware.power.stats-service.pixel.rc
 etc/init/android.hardware.secure_element_gto.rc
 etc/init/android.hardware.security.keymint-service.rust.trusty.rc
+etc/init/android.hardware.security.secretkeeper.trusty.rc
 etc/init/android.hardware.sensors-service-multihal.rc
 etc/init/android.hardware.thermal-service.pixel.rc
 etc/init/android.hardware.usb-service-i2c6.rc
 etc/init/android.hardware.usb.gadget-service.rc
-etc/init/android.hardware.vibrator-service.cs40l26.rc
 etc/init/android.hardware.wifi-service.rc
 etc/init/android.hardware.wifi.supplicant-service.rc
 etc/init/atrace_categories.rc
@@ -357,6 +358,7 @@ etc/init/health-storage-default.rc
 etc/init/hostapd.android.rc
 etc/init/hw/init.comet.rc
 etc/init/hw/init.efs.rc
+etc/init/hw/init.persist.rc
 etc/init/hw/init.zuma.soc.rc
 etc/init/hw/init.zumapro.board.rc
 etc/init/hw/init.zumapro.soc.rc
@@ -367,12 +369,16 @@ etc/init/init.display_logbuffer.rc
 etc/init/init.fingerprint.dump.rc
 etc/init/init.module.rc
 etc/init/init.pixel-mm-gs.rc
+etc/init/init.pixel-perf.rc
 etc/init/init.pixel.rc
 etc/init/init.power-gs.rc
 etc/init/init.storage.rc
 etc/init/init.touch.gti0.rc
 etc/init/init.touch.gti1.rc
 etc/init/init.touch.predump.rc
+etc/init/libg3a_gabc.rc
+etc/init/libg3a_gaf.rc
+etc/init/libg3a_ghawb.rc
 etc/init/memtrack.rc
 etc/init/nfc-service-default.rc
 etc/init/pixel-mm-gki.rc
@@ -381,6 +387,9 @@ etc/init/pixelstats-vendor.zumapro.rc
 etc/init/rebalance_interrupts-vendor.gs101.rc
 etc/init/vndservicemanager.rc
 etc/le_audio_codec_capabilities.xml
+etc/libg3a_standalone_gabc_rc
+etc/libg3a_standalone_gaf_rc
+etc/libg3a_standalone_ghawb_rc
 etc/libnfc-hal-st.conf
 etc/libse-gto-hal.conf
 etc/linker.config.pb
@@ -421,7 +430,7 @@ etc/permissions/android.hardware.camera.full.xml
 etc/permissions/android.hardware.camera.raw.xml
 etc/permissions/android.hardware.context_hub.xml
 etc/permissions/android.hardware.device_unique_attestation.xml
-etc/permissions/android.hardware.hardware_keystore.xml
+etc/permissions/android.hardware.hardware_keystore_V3.xml
 etc/permissions/android.hardware.keystore.app_attest_key.xml
 etc/permissions/android.hardware.nfc.ese.xml
 etc/permissions/android.hardware.nfc.hce.xml
@@ -467,6 +476,7 @@ etc/permissions/features_com.android.virt.xml
 etc/permissions/handheld_core_hardware.xml
 etc/permissions/vendor.android.hardware.camera.preview-dis.xml
 etc/powerhint.json
+etc/selinux/genfs_labels_version.txt
 etc/selinux/plat_pub_versioned.cil
 etc/selinux/plat_sepolicy_vers.txt
 etc/selinux/precompiled_sepolicy
@@ -489,6 +499,7 @@ etc/spatializer/mode_6_ch
 etc/spatializer/mode_xaural
 etc/sysconfig/component-overrides.xml
 etc/task_profiles.json
+etc/telephony/satellite_access_config.json
 etc/telephony/sats2.dat
 etc/thermal_info_config.json
 etc/thermal_info_config_backup.json
@@ -513,11 +524,11 @@ etc/vintf/manifest/android.hardware.power-service.pixel.xml
 etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml
 etc/vintf/manifest/android.hardware.secure_element_gto.xml
 etc/vintf/manifest/android.hardware.security.keymint-service.rust.trusty.xml
+etc/vintf/manifest/android.hardware.security.secretkeeper.trusty.xml
 etc/vintf/manifest/android.hardware.sensors-multihal.xml
 etc/vintf/manifest/android.hardware.thermal-service.pixel.xml
 etc/vintf/manifest/android.hardware.usb-service.xml
 etc/vintf/manifest/android.hardware.usb.gadget-service.xml
-etc/vintf/manifest/android.hardware.vibrator-service.cs40l26.xml
 etc/vintf/manifest/android.hardware.wifi-service.xml
 etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 etc/vintf/manifest/android.hardware.wifi.supplicant.xml
@@ -568,6 +579,7 @@ lib/modules/arm_dsu_pmu.ko
 lib/modules/bbd_pps_gpio.ko
 lib/modules/bcm_dbg.ko
 lib/modules/bcmdhd4390.ko
+lib/modules/cdev_uclamp.ko
 lib/modules/cfg80211.ko
 lib/modules/cl_dsp-core.ko
 lib/modules/cp_thermal_zone.ko
@@ -576,7 +588,6 @@ lib/modules/cs40l26-i2c.ko
 lib/modules/dbgcore-dump.ko
 lib/modules/exynos-seclog.ko
 lib/modules/fpc1020_platform_tee.ko
-lib/modules/ftm5.ko
 lib/modules/goodix_brl_touch.ko
 lib/modules/goodixfp.ko
 lib/modules/goog_touch_interface.ko
@@ -600,8 +611,10 @@ lib/modules/nitrous.ko
 lib/modules/pa_kill.ko
 lib/modules/panel-boe-nt37290.ko
 lib/modules/pinctrl-slg51002.ko
+lib/modules/pwm-exynos.ko
 lib/modules/qm35.ko
 lib/modules/rio.ko
+lib/modules/rt4539_bl.ko
 lib/modules/rt6160-regulator.ko
 lib/modules/rt9471_charger.ko
 lib/modules/sec_touch.ko
@@ -615,11 +628,10 @@ lib/modules/sscoredump_sample_test.ko
 lib/modules/sscoredump_test.ko
 lib/modules/st33spi.ko
 lib/modules/stmvl53l1.ko
+lib/modules/sts4x_ambient_i2c.ko
 lib/modules/syna_touch.ko
 lib/modules/vh_preemptirq_long.ko
 lib/modules/wlan_ptracker.ko
-lib64/PixelVibratorFlagsL26.so
-lib64/PixelVibratorStats.so
 lib64/android.frameworks.sensorservice-V1-ndk.so
 lib64/android.frameworks.stats-V1-ndk.so
 lib64/android.frameworks.stats-V2-ndk.so
@@ -638,8 +650,7 @@ lib64/android.hardware.graphics.allocator-V2-ndk.so
 lib64/android.hardware.graphics.allocator@2.0.so
 lib64/android.hardware.graphics.allocator@3.0.so
 lib64/android.hardware.graphics.allocator@4.0.so
-lib64/android.hardware.graphics.common-V3-ndk.so
-lib64/android.hardware.graphics.common-V5-ndk.so
+lib64/android.hardware.graphics.common-V6-ndk.so
 lib64/android.hardware.graphics.common@1.0.so
 lib64/android.hardware.graphics.common@1.1.so
 lib64/android.hardware.graphics.common@1.2.so
@@ -654,13 +665,13 @@ lib64/android.hardware.graphics.mapper@2.0.so
 lib64/android.hardware.graphics.mapper@2.1.so
 lib64/android.hardware.graphics.mapper@3.0.so
 lib64/android.hardware.graphics.mapper@4.0.so
-lib64/android.hardware.health-V3-ndk.so
+lib64/android.hardware.health-V4-ndk.so
 lib64/android.hardware.health.storage-V1-ndk.so
 lib64/android.hardware.memtrack-V1-ndk.so
 lib64/android.hardware.nfc-V1-ndk.so
 lib64/android.hardware.power-V1-ndk.so
 lib64/android.hardware.power-V2-ndk.so
-lib64/android.hardware.power-V5-ndk.so
+lib64/android.hardware.power-V6-ndk.so
 lib64/android.hardware.power.stats-V2-ndk.so
 lib64/android.hardware.power.stats-impl.gs-common.so
 lib64/android.hardware.power.stats-impl.pixel.so
@@ -670,33 +681,32 @@ lib64/android.hardware.radio@1.1.so
 lib64/android.hardware.secure_element-V1-ndk.so
 lib64/android.hardware.secure_element.thales.libse.so
 lib64/android.hardware.security.keymint-V1-ndk.so
-lib64/android.hardware.security.keymint-V3-ndk.so
+lib64/android.hardware.security.keymint-V4-ndk.so
 lib64/android.hardware.security.secureclock-V1-ndk.so
-lib64/android.hardware.sensors-V2-ndk.so
+lib64/android.hardware.sensors-V3-ndk.so
 lib64/android.hardware.sensors@1.0.so
 lib64/android.hardware.sensors@2.0-ScopedWakelock.so
 lib64/android.hardware.sensors@2.0.so
 lib64/android.hardware.sensors@2.1.so
 lib64/android.hardware.thermal-V1-ndk.so
-lib64/android.hardware.thermal-V2-ndk.so
+lib64/android.hardware.thermal-V3-ndk.so
 lib64/android.hardware.thermal@1.0.so
 lib64/android.hardware.thermal@2.0.so
 lib64/android.hardware.usb-V3-ndk.so
 lib64/android.hardware.usb.gadget-V1-ndk.so
 lib64/android.hardware.usb.gadget@1.0.so
-lib64/android.hardware.vibrator-V2-ndk.so
-lib64/android.hardware.wifi-V2-ndk.so
-lib64/android.hardware.wifi.common-V1-ndk.so
+lib64/android.hardware.wifi-V3-ndk.so
+lib64/android.hardware.wifi.common-V2-ndk.so
 lib64/android.hardware.wifi.hostapd-V3-ndk.so
 lib64/android.hardware.wifi.supplicant-V4-ndk.so
 lib64/android.hidl.memory@1.0.so
 lib64/android.media.audio.common.types-V4-ndk.so
+lib64/android.media.audio.eraser.types-V1-ndk.so
 lib64/android.system.keystore2-V1-ndk.so
 lib64/android.system.suspend-V1-ndk.so
 lib64/arm.graphics-V1-ndk.so
 lib64/com.google.hardware.pixel.display-V13-ndk.so
 lib64/hw/android.hardware.graphics.allocator-aidl-impl.so
-lib64/hw/android.hardware.vibrator-impl.cs40l26.so
 lib64/hw/android.hidl.memory@1.0-impl.so
 lib64/hw/audio.primary.default.so
 lib64/hw/gralloc.default.so
@@ -765,7 +775,6 @@ lib64/libspeexresampler.so
 lib64/libssl.so
 lib64/libstagefright_foundation.so
 lib64/libstd.dylib.so
-lib64/libtinyalsa.so
 lib64/libtinyxml2.so
 lib64/libtrusty.so
 lib64/libui.so
@@ -808,6 +817,13 @@ lib64/soundfx/libvisualizeraidl.so
 odm/etc/build.prop
 odm/etc/group
 odm/etc/passwd
+odm/etc/selinux/odm_file_contexts
+odm/etc/selinux/odm_hwservice_contexts
+odm/etc/selinux/odm_mac_permissions.xml
+odm/etc/selinux/odm_property_contexts
+odm/etc/selinux/odm_seapp_contexts
+odm/etc/selinux/odm_sepolicy.cil
+odm/etc/selinux/odm_service_contexts
 odm_dlkm/etc/build.prop
 vendor_dlkm/etc/build.prop
 vendor_dlkm/etc/debug_api/init.insmod.comet.cfg
@@ -878,6 +894,7 @@ lib64/libhidlmemory.so
 lib64/libmediautils_vendor.so
 lib64/libmemunreachable.so
 lib64/libnbaio_mono.so
+lib64/libtinyalsa.so
 lib64/libtinyalsav2.so
 
 # Audio
@@ -938,8 +955,15 @@ lib64/libstagefright_xmlparser.so
 
 # Contexthub
 lib64/android.hardware.contexthub-V3-ndk.so
+lib64/android.hardware.contexthub-V4-ndk.so
 lib64/chre_atoms_log.so
 lib64/chremetrics-cpp.so
+
+# Experiments
+bin/pixel-experiments-recovery.sh
+etc/init/pixel-apf-experiment.rc
+etc/init/pixel-experiments-recovery.rc
+etc/init/pixel-kswapd-experiment.rc
 
 # Fingerprint
 etc/permissions/android.hardware.fingerprint.xml
@@ -962,6 +986,7 @@ lib64/libsoft_attestation_cert.so
 lib64/libjson.so
 
 # Nos
+lib64/android.hardware.security.keymint-V3-ndk.so
 lib64/lib_android_keymaster_keymint_utils.so
 lib64/libcppbor.so
 lib64/libcppcose_rkp.so
@@ -969,6 +994,7 @@ lib64/libkeymaster_messages.so
 lib64/libkeymaster_portable.so
 lib64/libkeymint.so
 lib64/libkeymint_support.so
+lib64/libkeymint_support_V3.so
 lib64/libnos.so
 lib64/libnos_client_citadel.so
 lib64/libnos_datagram.so
@@ -1043,6 +1069,8 @@ lib64/android.hardware.radio@1.5.so
 lib64/android.hardware.radio@1.6.so
 lib64/android.hardware.security.rkp-V3-ndk.so
 lib64/android.hardware.security.sharedsecret-V1-ndk.so
+lib64/android.hardware.thermal-V2-ndk.so
+lib64/android.hardware.vibrator-V3-ndk.so
 lib64/android.hardware.weaver-V2-ndk.so
 lib64/android.hidl.token@1.0-utils.so
 lib64/android.hidl.token@1.0.so
