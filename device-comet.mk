@@ -26,7 +26,12 @@ RELEASE_GOOGLE_BOOTLOADER_COMET_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
 RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_COMET_DIR)
 $(call soong_config_set,comet_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_COMET_DIR))
 
+ifdef RELEASE_KERNEL_COMET_VERSION
+TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_COMET_VERSION)
+else
 TARGET_LINUX_KERNEL_VERSION ?= 6.1
+endif
+
 ifdef RELEASE_KERNEL_COMET_DIR
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_COMET_DIR)
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_COMET_DIR)/kernel-headers
@@ -65,7 +70,6 @@ endif
 
 include device/google/comet/audio/comet/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/predump_gti_dual.mk
 include device/google/gs-common/display/dump_second_display.mk
@@ -285,10 +289,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_transaural_enabled_default=false \
        persist.vendor.audio.spatializer.speaker_enabled=true
 
-# declare use of stereo spatialization
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.stereo_spatialization_enabled=true
-
 ifneq ($(USE_AUDIO_HAL_AIDL),true)
 # HIDL Sound Dose
 PRODUCT_PACKAGES += \
@@ -458,11 +458,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
         bluetooth.profile.ccp.server.enabled=true \
         bluetooth.profile.vcp.controller.enabled=true
 
-ifeq ($(RELEASE_PIXEL_BROADCAST_ENABLED), true)
+# Bluetooth LE Audio Broadcast
 PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.bap.broadcast.assist.enabled=true \
 	bluetooth.profile.bap.broadcast.source.enabled=true
-endif
 
 # LE Audio switcher in developer options
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -492,7 +491,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # LE Audio Unicast Allowlist
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.leaudio.allow_list=SM-R510,WF-1000XM5
+    persist.bluetooth.leaudio.allow_list=SM-R510,WF-1000XM5,SM-R630
+
+SUPPORT_VENDOR_SATELLITE_SERVICE := true
+
+# Support NTN(satellite) with dual SIM
+NTN_DUAL_SIM := true
 
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
@@ -542,3 +546,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/google/comet/bluetooth/audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json
+
+# Enable APF by default
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.powerhal.apf_disabled=false \
+    vendor.powerhal.apf_enabled=true
