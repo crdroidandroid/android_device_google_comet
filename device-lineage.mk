@@ -32,6 +32,9 @@ PRODUCT_SYSTEM_SERVER_JARS += \
 PRODUCT_PACKAGES += \
     Iwlan
 
+# Pixel overlays
+$(call inherit-product-if-exists, vendor/pixeloverlays/config.mk)
+
 # Pixel Parts
 $(call inherit-product-if-exists, packages/apps/PixelParts/device.mk)
 
