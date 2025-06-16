@@ -730,7 +730,6 @@ lib64/libregex.dylib.so
 lib64/libregex_syntax.dylib.so
 lib64/libril.so
 lib64/librilutils.so
-lib64/libspeechenhancer.so
 lib64/libspeexresampler.so
 lib64/libssl.so
 lib64/libstagefright_foundation.so

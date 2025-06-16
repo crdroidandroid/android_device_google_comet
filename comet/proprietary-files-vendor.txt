@@ -3052,6 +3052,7 @@ vendor/lib64/libsitril-client.so
 vendor/lib64/libsitril-gps.so
 vendor/lib64/libsitril-ims.so
 vendor/lib64/libsitril.so
+vendor/lib64/libspeechenhancer.so
 vendor/lib64/libstreset24.so
 vendor/lib64/libsueznanoappclients.so
 vendor/lib64/libtachyon_core.so
