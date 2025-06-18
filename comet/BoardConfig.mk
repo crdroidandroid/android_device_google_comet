@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ifeq (,$(filter %comet23,$(PRODUCT_NAME)))
 
 TARGET_BOARD_INFO_FILE := device/google/comet/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := comet
@@ -37,12 +36,6 @@ include device/google/comet/wifi/BoardConfig-wifi.mk
 
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 -include device/google/common/etm/6_1/BoardUserdebugModules.mk
-endif
-
-else
-
-include device/google/comet23/comet23/BoardConfig.mk
-
 endif
 
 DEVICE_PATH := device/google/comet

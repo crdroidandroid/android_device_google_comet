@@ -47,9 +47,7 @@ LOCAL_PATH := device/google/comet
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
     USE_UWBFIELDTESTQM := true
 endif
-ifeq ($(filter factory_comet, $(TARGET_PRODUCT)),)
-    include device/google/comet/uwb/uwb_calibration.mk
-endif
+include device/google/comet/uwb/uwb_calibration.mk
 
 $(call inherit-product-if-exists, vendor/google_devices/comet/prebuilts/device-vendor-comet.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
@@ -57,10 +55,6 @@ $(call inherit-product-if-exists, vendor/google_devices/zumapro/proprietary/devi
 $(call inherit-product-if-exists, vendor/google_devices/comet/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/comet/proprietary/comet/device-vendor-comet.mk)
 $(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
-
-ifeq ($(filter factory_comet, $(TARGET_PRODUCT)),)
-    $(call inherit-product-if-exists, vendor/google_devices/comet/proprietary/WallpapersComet.mk)
-endif
 
 DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
 
@@ -128,12 +122,10 @@ PRODUCT_COPY_FILES += \
 	device/google/comet/comet/panel_config_google-ct3d_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3d_cal1.pb \
         device/google/comet/comet/panel_config_google-ct3e_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3e_cal1.pb
 
-ifeq ($(filter factory_comet, $(TARGET_PRODUCT)),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.xrr.version=2.1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=20:120,30:60,:1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.headsup_ns=30000000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.timeout_ns=500000000
-endif
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.powerstats.entity_name=Inner-Display
 
