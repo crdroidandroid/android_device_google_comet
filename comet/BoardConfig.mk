@@ -34,10 +34,6 @@ include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk
 include device/google/comet/sepolicy/comet-sepolicy.mk
 include device/google/comet/wifi/BoardConfig-wifi.mk
 
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
--include device/google/common/etm/6_1/BoardUserdebugModules.mk
-endif
-
 DEVICE_PATH := device/google/comet
 VENDOR_PATH := vendor/google/comet
 include $(DEVICE_PATH)/$(TARGET_BOOTLOADER_BOARD_NAME)/BoardConfigLineage.mk

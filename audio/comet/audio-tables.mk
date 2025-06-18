@@ -85,26 +85,6 @@ PRODUCT_PACKAGES += \
     uplink_wired_headset_aec_off_config.pb \
     uplink_wired_headset_aec_on_config.pb
 
-
-# eng specific
-PRODUCT_PACKAGES_ENG += \
-    BLUETOOTH.mods \
-    HANDSFREE.mods \
-    HANDSET.mods \
-    HEADSET.mods \
-    template.xml \
-    tuning_constraints_combination.xml \
-    test_config.ini \
-    test_preset.mps \
-    speaker_post_processing_volume_spec.xml
-
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-# Mixer Path Configuration for Audio Speaker Calibration Tool crus_sp_cal
-PRODUCT_COPY_FILES += \
-    device/google/comet/audio/$(AUDIO_TABLE_FOLDER)/cs35l41/crus_sp_cal_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/crus_sp_cal_mixer_paths.xml
-
-endif
-
 # Offload spatializer config
 PRODUCT_PACKAGES += \
     vendor.google.whitechapel.audio.hal.effect.spatializer.base \

@@ -44,9 +44,6 @@ TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_RIGHT
 
 LOCAL_PATH := device/google/comet
 
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-    USE_UWBFIELDTESTQM := true
-endif
 include device/google/comet/uwb/uwb_calibration.mk
 
 $(call inherit-product-if-exists, vendor/google_devices/comet/prebuilts/device-vendor-comet.mk)
@@ -191,11 +188,6 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_speaker_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_speaker_estimation_model.tflite \
         $(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_lpm_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_lpm.json \
 
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-	PRODUCT_COPY_FILES += \
-		$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_comet_wingboard.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_wingboard.json
-endif
-
 PRODUCT_PACKAGES += \
 	init_thermal_config
 
@@ -224,18 +216,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=3 \
     ro.gms.dck.se_capability=1
 
-# Bluetooth hci_inject test tool
-PRODUCT_PACKAGES_ENG += \
-    hci_inject
-
-# Bluetooth SAR test tool
-PRODUCT_PACKAGES_ENG += \
-    sar_test
-
-# Bluetooth EWP test tool
-PRODUCT_PACKAGES_ENG += \
-    ewp_tool
-
 # Bluetotoh Auto On feature
 PRODUCT_PRODUCT_PROPERTIES +=\
     bluetooth.server.automatic_turn_on=true
@@ -249,19 +229,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hfp.swb.supported=true
 
 # Override BQR mask to enable LE Audio Choppy report, remove BTRT logging
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.bqr.event_mask=295006 \
-    persist.bluetooth.bqr.vnd_quality_mask=29 \
-    persist.bluetooth.bqr.vnd_trace_mask=0 \
-    persist.bluetooth.vendor.btsnoop=true
-else
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.bqr.event_mask=295006 \
     persist.bluetooth.bqr.vnd_quality_mask=16 \
     persist.bluetooth.bqr.vnd_trace_mask=0 \
     persist.bluetooth.vendor.btsnoop=false
-endif
 
 # Support LE & Classic concurrent encryption (b/330704060)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -500,11 +472,6 @@ PRODUCT_COPY_FILES += \
 # Exynos RIL and telephony
 # Support RIL Domain-selection
 SUPPORT_RIL_DOMAIN_SELECTION := true
-
-# ETM
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-$(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
-endif
 
 # Connectivity Resources Overlay for Thread host settings
 PRODUCT_PACKAGES += \

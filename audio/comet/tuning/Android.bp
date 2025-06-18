@@ -43,18 +43,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "template.xml",
-    src: "bluenote/template.xml",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
-    name: "tuning_constraints_combination.xml",
-    src: "bluenote/tuning_constraints_combination.xml",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
     name: "compens_spk_l_1.conf",
     src: "compensation/compens_spk_l_1.conf",
     soc_specific: true,
@@ -85,20 +73,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "BLUETOOTH.mods",
-    src: "fortemedia/BLUETOOTH.mods",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
     name: "HANDSFREE.dat",
     src: "fortemedia/HANDSFREE.dat",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
-    name: "HANDSFREE.mods",
-    src: "fortemedia/HANDSFREE.mods",
     defaults: ["aoc_defaults"],
 }
 
@@ -109,20 +85,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "HANDSET.mods",
-    src: "fortemedia/HANDSET.mods",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
     name: "HEADSET.dat",
     src: "fortemedia/HEADSET.dat",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
-    name: "HEADSET.mods",
-    src: "fortemedia/HEADSET.mods",
     defaults: ["aoc_defaults"],
 }
 
@@ -253,12 +217,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "speaker_post_processing_volume_spec.xml",
-    src: "pts/speaker_post_processing_volume_spec.xml",
-    defaults: ["aoc_defaults"],
-}
-
-prebuilt_etc {
     name: "waves_config_nx.ini",
     src: "waves/waves_config_nx.ini",
     soc_specific: true,
@@ -267,18 +225,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "waves_preset_nx.mps",
     src: "waves/waves_preset_nx.mps",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "test_config.ini",
-    src: "waves/tests/test_config.ini",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "test_preset.mps",
-    src: "waves/tests/test_preset.mps",
     soc_specific: true,
 }
 
