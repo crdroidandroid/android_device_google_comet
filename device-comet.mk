@@ -46,13 +46,6 @@ LOCAL_PATH := device/google/comet
 
 include device/google/comet/uwb/uwb_calibration.mk
 
-$(call inherit-product-if-exists, vendor/google_devices/comet/prebuilts/device-vendor-comet.mk)
-$(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/zumapro/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/comet/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/comet/proprietary/comet/device-vendor-comet.mk)
-$(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
-
 DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
 
 ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
@@ -326,9 +319,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_461982767755080
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801152=true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801153=1000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801153=false
-
-# Trusty liboemcrypto.so
-PRODUCT_SOONG_NAMESPACES += vendor/google_devices/comet/prebuilts
 
 # UWB
 PRODUCT_SOONG_NAMESPACES += \
