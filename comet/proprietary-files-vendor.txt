@@ -11,7 +11,6 @@ vendor/bin/cbd
 vendor/bin/dmd
 vendor/bin/dump/dump_tpu
 vendor/bin/factory/qm35_poll
-vendor/bin/flood.control.hal
 vendor/bin/gia
 vendor/bin/hw/android.hardware.audio.service-aidl.aoc
 vendor/bin/hw/android.hardware.authsecret-service.citadel
@@ -234,7 +233,6 @@ vendor/etc/init/fingerprint-fpc42_fw49.rc
 vendor/etc/init/google.hardware.media.c2@2.0-service.rc
 vendor/etc/init/hwc3-pixel.rc
 vendor/etc/init/init.camera.set-interrupts-ownership.rc
-vendor/etc/init/init.flood.control.rc
 vendor/etc/init/init.gnss.rc
 vendor/etc/init/init.liboemservice_proxy.rc
 vendor/etc/init/init.modem_logging_control.rc
@@ -315,7 +313,6 @@ vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml
 vendor/etc/vintf/manifest/com.google.edgetpu.tachyon-service.xml
 vendor/etc/vintf/manifest/dmd.xml
 vendor/etc/vintf/manifest/fingerprint-fpc42_fw49.xml
-vendor/etc/vintf/manifest/flood_control.xml
 vendor/etc/vintf/manifest/hwc3-default.xml
 vendor/etc/vintf/manifest/liboemservice_proxy.xml
 vendor/etc/vintf/manifest/manifest.xml
