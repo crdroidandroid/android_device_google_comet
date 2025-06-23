@@ -21,6 +21,8 @@ genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/error_count
 genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/error_count_unknown                  u:object_r:sysfs_display:s0
 genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/power_mode                           u:object_r:sysfs_display:s0
 genfscon sysfs /devices/platform/19471000.drmdecon/dqe1/atc                                               u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/frame_interval_ns                    u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/expected_present_time_ns             u:object_r:sysfs_display:s0
 
 # Battery
 genfscon sysfs /devices/platform/10ca0000.hsi2c/i2c-10/10-0036/power_supply                               u:object_r:sysfs_batteryinfo:s0
