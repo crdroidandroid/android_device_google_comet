@@ -72,7 +72,7 @@ include device/google/comet/audio/comet/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/predump_gti_dual.mk
-include device/google/gs-common/display/dump_second_display.mk
+include device/google/gs-common/display/dump_exynos_second_display.mk
 include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
@@ -197,6 +197,7 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_backup_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_backup.json \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_speaker_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_speaker_estimation_model.tflite \
+        $(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_lpm_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_lpm.json \
 
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 	PRODUCT_COPY_FILES += \
@@ -343,7 +344,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # UWB Overlay
 PRODUCT_PACKAGES += \
-	UwbOverlayCT3
+	UwbOverlayCT3 \
+	UwbOverlayCT3Gsi
 
 # WiFi Overlay
 PRODUCT_PACKAGES += \
@@ -415,8 +417,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Haptics
 # Placeholders for updates later, need to update:
-# remove ro.vendor.vibrator.hal.dbc.enable (needed for setting pm.activetimeout)
-# remove pm.activetimeout
 # ro.vendor.vibrator.hal.loc.coeff.folded currently unused
 $(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VERSION)))
 ACTUATOR_MODEL := luxshare_ict_081545
@@ -426,8 +426,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.vibrator.hal.device.mass=0.2605 \
     ro.vendor.vibrator.hal.loc.coeff.folded=3.15 \
     ro.vendor.vibrator.hal.loc.coeff=2.58 \
-    ro.vendor.vibrator.hal.dbc.enable=1 \
-    ro.vendor.vibrator.hal.pm.activetimeout=5 \
     persist.vendor.vibrator.hal.context.enable=false \
     persist.vendor.vibrator.hal.context.scale=60 \
     persist.vendor.vibrator.hal.context.fade=true \

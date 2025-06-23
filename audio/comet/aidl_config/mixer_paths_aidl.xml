@@ -964,6 +964,8 @@
   </path>
 
   <path name="spatializer-offload-playback-0 -> usb">
+    <!-- Auxel Module id: 27 -->
+    <ctl name="MultiChannel Processor Switch" value="27" />
     <ctl name="USB_RX Mixer EP4" value="1" />
   </path>
 
