@@ -48,9 +48,7 @@ include device/google/comet/uwb/uwb_calibration.mk
 
 DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
 
-ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
 USE_AUDIO_HAL_AIDL := true
-endif
 
 include device/google/comet/audio/comet/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
@@ -246,13 +244,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_enabled=true \
        ro.audio.spatializer_transaural_enabled_default=false \
        persist.vendor.audio.spatializer.speaker_enabled=true
-
-ifneq ($(USE_AUDIO_HAL_AIDL),true)
-# HIDL Sound Dose
-PRODUCT_PACKAGES += \
-	android.hardware.audio.sounddose-vendor-impl \
-	audio_sounddose_aoc
-endif
 
 # Audio CCA property
 PRODUCT_PROPERTY_OVERRIDES += \
