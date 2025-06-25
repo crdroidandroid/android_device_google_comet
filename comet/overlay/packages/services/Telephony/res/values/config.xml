@@ -27,6 +27,8 @@
             translatable="false">
         <!-- b/393518741 -->
         <item>cz</item>
+        <item>gr</item>
+        <item>hr</item>
         <item>in</item>
         <item>il</item>
         <item>tw</item>
@@ -45,6 +47,8 @@
         <!-- b/393518741 -->
         <item>cz,01,156</item>
         <item>cz,03,156</item>
+        <item>gr,,100,108,166,199,1056</item>
+        <item>hr,,192,193,194,195,1987</item>
         <item>in,,101,102,103,108</item>
         <item>il,,101,102</item>
         <item>tw,,110,119</item>

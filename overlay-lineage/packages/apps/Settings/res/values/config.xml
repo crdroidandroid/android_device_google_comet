@@ -49,7 +49,7 @@
     </string-array>
 
     <!-- The ratio to use when using the two-pane settings layout -->
-    <item name="config_activity_embed_split_ratio" format="float" type="dimen">0.5</item>
+    <item name="config_activity_embed_split_ratio" type="dimen">0.5</item>
 
     <!-- The smallest value of current width of the window when the split should be used. -->
     <integer name="config_activity_embed_split_min_cur_dp">600</integer>

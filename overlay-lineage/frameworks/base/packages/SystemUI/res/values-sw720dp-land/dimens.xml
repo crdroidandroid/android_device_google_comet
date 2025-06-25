@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <item name="status_view_margin_horizontal" type="dimen">@dimen/comet_unfolded_status_view_margin_horizontal</item>
+
+    <!-- Side padding on the side of notifications -->
+    <item name="notification_side_paddings" type="dimen">@dimen/comet_unfolded_notification_side_paddings</item>
+
+    <!-- gap on either side of status bar notification icons -->
+    <item name="status_bar_icon_horizontal_margin" type="dimen">@dimen/comet_unfolded_status_bar_icon_horizontal_margin</item>
+
+    <!-- Height of status bar in split shade mode - visible only on large screens -->
+    <item name="large_screen_shade_header_height" type="dimen">@dimen/comet_unfolded_large_screen_shade_header_height</item>
+    <item name="large_screen_shade_header_left_padding" type="dimen">@dimen/comet_unfolded_large_screen_shade_header_left_padding</item>
+    <item name="notification_panel_margin_bottom" type="dimen">@dimen/comet_unfolded_notification_panel_margin_bottom</item>
+    <item name="split_shade_notifications_scrim_margin_bottom" type="dimen">@dimen/comet_unfolded_split_shade_notifications_scrim_margin_bottom</item>
+    <item name="notification_panel_margin_horizontal" type="dimen">@dimen/comet_unfolded_notification_panel_margin_horizontal</item>
+    <item name="qqs_layout_padding_bottom" type="dimen">@dimen/comet_unfolded_qqs_layout_padding_bottom</item>
+
+    <!-- Most of the time it should be the same as notification_side_paddings as it's vertically
+         aligned with notifications. The exception is split shade when this value becomes
+         independent  -->
+    <item name="qs_horizontal_margin" type="dimen">@dimen/comet_unfolded_qs_horizontal_margin</item>
+
+    <!-- Most of the time it should be the same as notification_shade_content_margin_horizontal as
+         it's vertically aligned with notifications. The exception is split shade when this value
+         becomes independent  -->
+    <item name="qs_content_horizontal_padding" type="dimen">@dimen/comet_unfolded_qs_content_horizontal_padding</item>
+
+    <!-- Most of the time it should be the same as notification_side_paddings as it's vertically
+        aligned with notifications. That's not the case on large screen when we have either split
+        shade and QS is not above notifications or in portrait shade when notification scrim is no
+        longer full width and next page of tiles should be at the edge of the screen -->
+    <item name="qs_tiles_page_horizontal_margin" type="dimen">@dimen/comet_unfolded_qs_tiles_page_horizontal_margin</item>
+
+    <!-- The height of the gap between adjacent notification sections. -->
+    <item name="notification_section_divider_height" type="dimen">@dimen/comet_unfolded_notification_section_divider_height</item>
+
+    <!-- The margin from the top of the screen to notifications and keyguard status view in
+         split shade on keyguard-->
+    <item name="keyguard_split_shade_top_margin" type="dimen">@dimen/comet_unfolded_keyguard_split_shade_top_margin</item>
+
+    <!-- Biometric Auth pattern view size, better to align keyguard_security_width -->
+    <item name="biometric_auth_pattern_view_size" type="dimen">@dimen/comet_unfolded_biometric_auth_pattern_view_size</item>
+    <item name="qs_media_session_height_expanded" type="dimen">@dimen/comet_unfolded_qs_media_session_height_expanded</item>
+    <item name="controls_header_horizontal_padding" type="dimen">@dimen/comet_unfolded_controls_header_horizontal_padding</item>
+    <item name="controls_content_margin_horizontal" type="dimen">@dimen/comet_unfolded_controls_content_margin_horizontal</item>
+    <item name="controls_content_padding" type="dimen">@dimen/comet_unfolded_controls_content_padding</item>
+    <item name="control_list_vertical_spacing" type="dimen">@dimen/comet_unfolded_control_list_vertical_spacing</item>
+    <item name="control_list_horizontal_spacing" type="dimen">@dimen/comet_unfolded_control_list_horizontal_spacing</item>
+    <item name="controls_panel_corner_radius" type="dimen">@dimen/comet_unfolded_controls_panel_corner_radius</item>
+
+    <!-- The amount of vertical offset for the keyguard during the full shade transition. -->
+    <item name="lockscreen_shade_keyguard_transition_vertical_offset" type="dimen">@dimen/comet_unfolded_lockscreen_shade_keyguard_transition_vertical_offset</item>
+
+    <!-- Maximum over scroll amount for the shade when transition to the full shade. -->
+    <item name="lockscreen_shade_max_over_scroll_amount" type="dimen">@dimen/comet_unfolded_lockscreen_shade_max_over_scroll_amount</item>
+</resources>

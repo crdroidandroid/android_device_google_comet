@@ -24,9 +24,6 @@
      entries do not follow the convention, but all new entries should. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- IWLAN-->
-    <string name="config_qualified_networks_service_package">com.android.qns</string>
-
     <!-- If true, allows rotation resolver service to help resolve screen rotation. -->
     <bool name="config_allowRotationResolver">false</bool>
 
@@ -52,6 +49,7 @@
      state. Default is empty. -->
     <integer-array name="config_rearDisplayDeviceStates">
         <item>3</item>
+        <item>5</item>
     </integer-array>
 
     <!-- The device states (supplied by DeviceStateManager) that should be treated as concurrent
@@ -59,6 +57,10 @@
     <integer-array name="config_concurrentDisplayDeviceStates">
         <item>4</item>
     </integer-array>
+
+    <!-- Indicates whether the window manager reacts to half-fold device states by overriding
+     rotation. -->
+    <bool name="config_windowManagerHalfFoldAutoRotateOverride">false</bool>
 
     <!-- Indicates whether the window manager pauses autorotation when folding or unfolding
      a foldable device based on hinge angle sensor events and physical display switch events. -->
@@ -101,11 +103,15 @@
         <item>3:0:0</item>
     </string-array>
 
+    <!-- Whether to show Fold lock behavior setting feature in Settings App -->
+    <bool name="config_fold_lock_behavior">true</bool>
+
     <!-- Device states where the sensor based rotation values should be reversed around the Z axis
          for the default display.
          TODO(b/265312193): Remove this workaround when this bug is fixed.-->
     <integer-array name="config_deviceStatesToReverseDefaultDisplayRotationAroundZAxis">
         <item>3</item>
+        <item>5</item>
     </integer-array>
 
     <!-- Boolean indicating whether secondary built-in displays should have their orientation
@@ -117,7 +123,7 @@
 
     <!-- Class name of the device specific implementation of DeviceStatePolicy.Provider
         or empty if the default should be used. -->
-    <string translatable="false" name="config_deviceSpecificDeviceStatePolicyProvider">com.google.android.server.policy.CometDeviceStatePolicyProvider</string>
+    <string name="config_deviceSpecificDeviceStatePolicyProvider" translatable="false">com.google.android.server.policy.CometDeviceStatePolicyProvider</string>
 
     <!-- Set to true to offset the wallpaper when using multiple displays so that it's centered
          at the same position as in the largest display.-->
@@ -128,12 +134,13 @@
 
     <!-- Map of System DeviceState supplied by DeviceStateManager to WM Jetpack posture. Must be in
          the format [System DeviceState]:[WM Jetpack Posture], for example: "0:1". -->
-    <string-array name="config_device_state_postures">
+    <string-array name="config_device_state_postures" translatable="false">
         <item>0:1</item>
         <item>1:2</item>
         <item>2:3</item>
         <item>3:1</item>
         <item>4:1000</item>
+        <item>5:1</item>
     </string-array>
 
     <!-- Which Surface rotations are considered as tabletop posture (horizontal hinge) when the
@@ -156,7 +163,7 @@
          Note: Activity min/max aspect ratio restrictions will still be respected.
          Therefore this override can control the maximum screen area that can be occupied by
          the app in the letterbox mode. -->
-    <item name="config_fixedOrientationLetterboxAspectRatio" format="float" type="dimen">1.001</item>
+    <item name="config_fixedOrientationLetterboxAspectRatio" type="dimen">1.333</item>
 
     <!-- Corners radius for activity presented the letterbox mode. Values < 0 enable rounded
          corners with radius equal to min between device bottom corner radii. Default 0 value turns
@@ -167,7 +174,7 @@
         0 corresponds to the upper side of the screen and 1 to the lower side. If given value < 0
         or > 1 it is ignored and for non-tabletop mode central position is used (0.5); for
          tabletop mode top (0.0) is used. -->
-    <item type="dimen" name="config_letterboxVerticalPositionMultiplier">0.5</item>
+    <item name="config_letterboxVerticalPositionMultiplier" type="dimen">0.5</item>
 
     <!-- Whether horizontal reachability repositioning is allowed for letterboxed fullscreen apps.
     -->
@@ -183,6 +190,9 @@
 
     <!-- Whether displaying letterbox education is enabled for letterboxed fullscreen apps. -->
     <bool name="config_letterboxIsEducationEnabled">true</bool>
+
+    <!-- Whether using split screen aspect ratio as a default aspect ratio for unresizable apps. -->
+    <bool name="config_letterboxIsSplitScreenAspectRatioForUnresizableAppsEnabled">true</bool>
 
     <!-- Whether the specific behaviour for translucent activities letterboxing is enabled.
          TODO(b/255532890) Enable when ignoreOrientationRequest is set -->
@@ -204,10 +214,6 @@
         orientation activities connected to the camera in fullscreen and showing a tooltip in
         split screen. -->
     <bool name="config_isWindowManagerCameraCompatTreatmentEnabled">true</bool>
-
-    <!-- Whether a camera compat controller is enabled to allow the user to apply or revert
-         treatment for stretched issues in camera viewfinder. -->
-    <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">true</bool>
 
     <!-- List of the labels of requestable device state config values -->
     <string-array name="config_deviceStatesAvailableForAppRequests">
