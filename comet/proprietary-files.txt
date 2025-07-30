@@ -19,7 +19,7 @@ product/etc/firmware/music_detector.sound_model_tflite
 
 # Camera extensions
 product/etc/permissions/androidx.camera.extensions.impl.xml
-#product/priv-app/PixelCameraServices/PixelCameraServices.apk;PRESIGNED
+product/priv-app/PixelCameraServicesConnectivityClient/PixelCameraServicesConnectivityClient.apk;PRESIGNED
 
 # Camera services
 product/etc/permissions/com.google.pixel.camera.connectivity.impl.xml
