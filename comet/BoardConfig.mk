@@ -17,14 +17,8 @@
 TARGET_BOARD_INFO_FILE := device/google/comet/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := comet
 TARGET_SCREEN_DENSITY := 390
-BOARD_USES_GENERIC_AUDIO := true
-USES_DEVICE_GOOGLE_COMET := true
-
-#Display
-USES_IDISPLAY_INTF_SEC := true
 
 include device/google/zumapro/BoardConfig-common.mk
-include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk
 include device/google/comet/sepolicy/comet-sepolicy.mk
 include device/google/comet/wifi/BoardConfig-wifi.mk
 
