@@ -23,11 +23,12 @@ TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 
 TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_RIGHT
 
-include device/google/comet/uwb/uwb_calibration.mk
-
 DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
 
-include device/google/comet/audio/comet/audio-tables.mk
+# Audio
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
 include device/google/zumapro/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/predump_gti_dual.mk
@@ -44,21 +45,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
 
-# Init files
-PRODUCT_COPY_FILES += \
-	device/google/comet/conf/init.comet.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.comet.rc
-
 # Recovery files
 PRODUCT_COPY_FILES += \
         device/google/comet/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.comet.rc
-
-# Display brightness curve
-PRODUCT_COPY_FILES += \
-	device/google/comet/comet/panel_config_google-ct3a_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3a_cal0.pb \
-	device/google/comet/comet/panel_config_google-ct3b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3b_cal0.pb \
-	device/google/comet/comet/panel_config_google-ct3c_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3c_cal1.pb \
-	device/google/comet/comet/panel_config_google-ct3d_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3d_cal1.pb \
-        device/google/comet/comet/panel_config_google-ct3e_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3e_cal1.pb
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.xrr.version=2.1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=20:120,30:60,:1
@@ -78,24 +67,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.display.png.premultiplied=true
 
-# Coex Config
-PRODUCT_SOONG_NAMESPACES += device/google/comet/radio/coex
-PRODUCT_PACKAGES += \
-		display_secondary_mipi_coex_table \
-		camera_front_inner_mipi_coex_table \
-		camera_front_outer_mipi_coex_table \
-		camera_rear_tele_mipi_coex_table \
-		camera_rear_wide_mipi_coex_table
-
 # NFC
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
 	frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
 	frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
 	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
-	device/google/comet/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
-	device/google/comet/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
 PRODUCT_PACKAGES += \
 	Tag \
@@ -108,48 +86,21 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
-	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
-	device/google/comet/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
+	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
 #Thermal VT estimator
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
 # Thermal Config
-ifeq (,$(TARGET_VENDOR_THERMAL_CONFIG_PATH))
-TARGET_VENDOR_THERMAL_CONFIG_PATH := device/google/comet/thermal
-endif
-
-PRODUCT_COPY_FILES += \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_backup_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_backup.json \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_speaker_estimation_model_comet.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_speaker_estimation_model.tflite \
-        $(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_lpm_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_lpm.json \
-
 PRODUCT_PACKAGES += \
 	init_thermal_config
 
-# Power HAL config
-PRODUCT_COPY_FILES += \
-	device/google/comet/powerhint-comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 # Bluetooth HAL
-PRODUCT_COPY_FILES += \
-	device/google/comet/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.a2dp_offload.supported=true \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
-
-# Bluetooth Tx power caps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
-    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
-    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
-    $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_comet_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -230,16 +181,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801153=1000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801153=false
 
-# UWB
-PRODUCT_SOONG_NAMESPACES += \
-    device/google/comet/uwb
-
-# Location
-PRODUCT_SOONG_NAMESPACES += device/google/comet/location
 # For GPS property
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
-$(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
-PRODUCT_PACKAGES += gps.cfg
 
 # Display
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -248,7 +191,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Install product specific framework compatibility matrix
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/comet/device_framework_matrix_product.xml
-
 
 PRODUCT_VENDOR_PROPERTIES += \
 	persist.device_config.configuration.disable_rescue_party=true
@@ -303,7 +245,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.kb_pad_port_b=11.2 \
           ro.com.google.ime.height_ratio=1.18
 
-
 # Bluetooth LE Audio
 # Unicast
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -334,10 +275,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
         persist.bluetooth.leaudio.notify.idle.during.call=true
 
-# LE Audio Offload Capabilities setting
-PRODUCT_COPY_FILES += \
-    device/google/comet/bluetooth/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml
-
 # Disable LE Audio dual mic SWB call support
 # This may depend on the BT controller capability or the launch strategy
 # For example, P22 BT chip is not able to support 32k dual mic
@@ -352,14 +289,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
-
-# Battery Mitigation Config
-ifeq (,$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH))
-TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH := device/google/comet/battery_mitigation
-endif
-
-PRODUCT_COPY_FILES += \
-	$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH)/bm_config_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json
 
 # Connectivity Resources Overlay for Thread host settings
 PRODUCT_PACKAGES += \
@@ -381,13 +310,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES +=\
     bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-
-# LE Audio configuration scenarios
-PRODUCT_COPY_FILES += \
-    device/google/comet/bluetooth/audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json
-
-PRODUCT_COPY_FILES += \
-    device/google/comet/bluetooth/audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json
 
 # Enable APF by default
 PRODUCT_VENDOR_PROPERTIES += \
