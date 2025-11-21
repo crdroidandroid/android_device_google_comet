@@ -47,17 +47,10 @@ prebuilt_etc {
     ],
 }
 
-prebuilt_etc {
-    name: "mixer_paths_aidl.xml",
-    src: "mixer_paths_aidl.xml",
-    soc_specific: true,
-}
-
 phony {
     name: "audio_aidl_configs",
     soc_specific: true,
     required: [
         "audio_platform_configuration.xml",
-        "mixer_paths_aidl.xml"
     ],
 }

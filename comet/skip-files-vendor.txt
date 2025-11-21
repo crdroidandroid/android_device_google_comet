@@ -394,7 +394,6 @@ etc/media_codecs.xml
 etc/media_codecs_c2.xml
 etc/media_codecs_performance.xml
 etc/media_codecs_performance_c2.xml
-etc/mixer_paths_aidl.xml
 etc/mkshrc
 etc/modem/Pixel_stability.cfg
 etc/modem/Pixel_stability.nprf
