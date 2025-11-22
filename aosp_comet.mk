@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-TARGET_LINUX_KERNEL_VERSION := 6.1
-
 $(call inherit-product, device/google/zumapro/aosp_common.mk)
 $(call inherit-product, device/google/comet/device-comet.mk)
 
