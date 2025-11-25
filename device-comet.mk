@@ -1,5 +1,7 @@
 #
 # SPDX-FileCopyrightText: 2021 The Android Open-Source Project
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: The Calyx Institute
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -13,6 +15,7 @@ TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_RIGHT
 
 DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/comet/overlay-lineage
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -293,3 +296,56 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.apf_disabled=false \
     vendor.powerhal.apf_enabled=true
+
+# ANGLE - Almost Native Graphics Layer Engine
+PRODUCT_PACKAGES += \
+    ANGLE \
+    libEGL_angle \
+    libGLESv1_CM_angle \
+    libGLESv2_angle
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    dump_gsc.sh
+
+# EUICC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
+
+PRODUCT_PACKAGES += \
+    EuiccSupportPixelOverlay
+
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
+# Fold extensions
+PRODUCT_SYSTEM_SERVER_JARS += \
+    system_ext:comet-services
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.location.gps.prebuilt.xml
+
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.comet.touch.rc
+
+# Overlays
+PRODUCT_PACKAGES += \
+    PixelDisplayServiceOverlayComet
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
+
+# Satellite
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/conf/allowlist_satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_satellite.xml
+
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.dynamic_sensor_hal
+
+# Wireless charging
+include device/google/gs-common/wireless_charger/wireless_charger.mk
