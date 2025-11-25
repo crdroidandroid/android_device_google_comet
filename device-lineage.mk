@@ -22,10 +22,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_SERVER_JARS += \
     system_ext:comet-services
 
-# IWLAN
-PRODUCT_PACKAGES += \
-    Iwlan
-
 # Satellite
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/conf/allowlist_satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_satellite.xml
@@ -45,9 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.location.gps.prebuilt.xml \
-    liblzma.vendor \
-    libunwindstack.vendor
+    android.hardware.location.gps.prebuilt.xml
 
 # Graphics
 PRODUCT_PACKAGES += \
