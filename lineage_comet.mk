@@ -5,7 +5,6 @@
 #
 
 # Inherit some common stuff
-TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_foldable_book_telephony.mk)
 
 # Inherit device configuration
