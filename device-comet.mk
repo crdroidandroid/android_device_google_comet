@@ -31,18 +31,6 @@ PRODUCT_PACKAGES += \
 DEVICE_MANIFEST_FILE += device/google/gs-common/bcmbt/manifest_bluetooth.xml
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/bcmbt/compatibility_matrix.xml
 
-# Touch
-PRODUCT_PACKAGES += \
-    dump_touch.sh \
-    predump_gti0.sh \
-    predump_gti1.sh \
-    predump_touch.sh \
-    touch_gti_ical
-
-# Display
-PRODUCT_PACKAGES += \
-    dump_exynos_second_display
-
 # Google RIL
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/gril/hidl/1.7/compatibility_matrix.xml
 
@@ -153,10 +141,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HdMic Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.app.audio.gsenet.version=1
-
-# PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += \
-    device/google/comet/powerstats/comet
 
 # UWB Overlay
 PRODUCT_PACKAGES += \
@@ -298,10 +282,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=false
 
-# Camera concurrent foldable dual front feature support
-PRODUCT_PACKAGES += \
-    concurrent_foldable_dual_front_xml
-
 # Bluetooth device id
 # Comet: 0x4113
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -322,10 +302,6 @@ PRODUCT_PACKAGES += \
     libEGL_angle \
     libGLESv1_CM_angle \
     libGLESv2_angle
-
-# Dumpstate
-PRODUCT_PACKAGES += \
-    dump_gsc.sh
 
 # EUICC
 PRODUCT_COPY_FILES += \
