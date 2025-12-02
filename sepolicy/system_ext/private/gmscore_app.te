@@ -1,2 +1,0 @@
-# Allow to read setupwizard_feature_prop
-get_prop(gmscore_app, setupwizard_feature_prop)

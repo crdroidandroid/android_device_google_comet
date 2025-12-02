@@ -1,3 +1,0 @@
-# TODO (b/264266705) Remove this and make it specific to the app
-# allow SystemUIGoogle to access fingerprint hal
-hal_client_domain(systemui_app, hal_fingerprint)

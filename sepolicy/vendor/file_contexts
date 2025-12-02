@@ -1,29 +1,27 @@
-# Devices
-/dev/lwis-act-cornerfolk                                                    u:object_r:lwis_device:s0
-/dev/lwis-act-jotnar                                                        u:object_r:lwis_device:s0
-/dev/lwis-act-nessie                                                        u:object_r:lwis_device:s0
-/dev/lwis-eeprom-jotnar                                                     u:object_r:lwis_device:s0
-/dev/lwis-eeprom-nessie                                                     u:object_r:lwis_device:s0
-/dev/lwis-eeprom-smaug-imentet                                              u:object_r:lwis_device:s0
-/dev/lwis-eeprom-smaug-svarog                                               u:object_r:lwis_device:s0
-/dev/lwis-eeprom-smaug-svarog-outer                                         u:object_r:lwis_device:s0
-/dev/lwis-flash-lm3644                                                      u:object_r:lwis_device:s0
-/dev/lwis-ois-jotnar                                                        u:object_r:lwis_device:s0
-/dev/lwis-ois-nessie                                                        u:object_r:lwis_device:s0
-/dev/lwis-sensor-dokkaebi-tele                                              u:object_r:lwis_device:s0
-/dev/lwis-sensor-imentet                                                    u:object_r:lwis_device:s0
-/dev/lwis-sensor-oksoko                                                     u:object_r:lwis_device:s0
-/dev/lwis-sensor-svarog                                                     u:object_r:lwis_device:s0
-/dev/lwis-sensor-svarog-outer                                               u:object_r:lwis_device:s0
-/dev/lwis-tof-tarasque                                                      u:object_r:lwis_device:s0
-
-# Services
-/vendor/bin/init_thermal_config                                u:object_r:init_thermal_config_exec:s0
-# FPC AIDL HAL
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.fpc42_fw49    u:object_r:hal_fingerprint_capacitance_exec:s0
-
-# FPC HIDL HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.qorvo\.uwb-service u:object_r:hal_uwb_default_exec:s0
+/(vendor|system/vendor)/bin/hw/qorvo\.uci-bridge u:object_r:qorvo-uci-daemon_exec:s0
+/(vendor|system/vendor)/bin/hw/qorvo\.uci-daemon u:object_r:qorvo-uci-daemon_exec:s0
+/dev/lwis-act-cornerfolk u:object_r:lwis_device:s0
+/dev/lwis-act-jotnar u:object_r:lwis_device:s0
+/dev/lwis-act-nessie u:object_r:lwis_device:s0
+/dev/lwis-eeprom-jotnar u:object_r:lwis_device:s0
+/dev/lwis-eeprom-nessie u:object_r:lwis_device:s0
+/dev/lwis-eeprom-smaug-imentet u:object_r:lwis_device:s0
+/dev/lwis-eeprom-smaug-svarog u:object_r:lwis_device:s0
+/dev/lwis-eeprom-smaug-svarog-outer u:object_r:lwis_device:s0
+/dev/lwis-ois-jotnar u:object_r:lwis_device:s0
+/dev/lwis-ois-nessie u:object_r:lwis_device:s0
+/dev/lwis-sensor-dokkaebi-tele u:object_r:lwis_device:s0
+/dev/lwis-sensor-imentet u:object_r:lwis_device:s0
+/dev/lwis-sensor-oksoko u:object_r:lwis_device:s0
+/dev/lwis-sensor-svarog u:object_r:lwis_device:s0
+/dev/lwis-sensor-svarog-outer u:object_r:lwis_device:s0
+/dev/lwis-tof-tarasque u:object_r:lwis_device:s0
+/dev/touch_offload_outer u:object_r:touch_offload_device:s0
+/vendor/bin/dump/dump_exynos_second_display u:object_r:dump_exynos_second_display_exec:s0
+/vendor/bin/dump_touch/predump_gti1\.sh u:object_r:predump_touch_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.fpc42_fw49 u:object_r:hal_fingerprint_capacitance_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:fingerprint_factory_service_exec:s0
-
-# Touch
-/dev/touch_offload_outer                                                    u:object_r:touch_offload_device:s0
+/vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service u:object_r:mediacodec_exec:s0
+/vendor/bin/hw/vendor\.google\.radioext@1\.0-service u:object_r:hal_radioext_default_exec:s0
+/vendor/bin/init_thermal_config u:object_r:init_thermal_config_exec:s0

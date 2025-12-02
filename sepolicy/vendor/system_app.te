@@ -1,2 +1,1 @@
-# TODO (b/306087355) Remove this and make it specific to the app
 hal_client_domain(system_app, hal_fingerprint)

@@ -1,5 +1,6 @@
 type init_thermal_config, domain;
-type init_thermal_config_exec, exec_type, vendor_file_type, file_type;
-init_daemon_domain(init_thermal_config);
+type init_thermal_config_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(init_thermal_config)
 
 set_prop(init_thermal_config, vendor_thermal_prop)
