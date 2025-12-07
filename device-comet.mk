@@ -28,37 +28,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.prebuilt.xml \
     android.hardware.bluetooth_le.prebuilt.xml
 
-# Increment the SVN for any official public releases
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=40
-
-# Set device family property for SMR
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.device_family=CT3
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
-
 # Recovery files
 PRODUCT_COPY_FILES += \
     device/google/comet/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.comet.rc
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.xrr.version=2.1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=20:120,30:60,:1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.headsup_ns=30000000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.timeout_ns=500000000
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.powerstats.entity_name=Inner-Display
-
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.primarydisplay.op.hs_hz=120 \
-    vendor.primarydisplay.op.ns_hz=120
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	vendor.camera.debug.enable_software_post_sharpen_node=false
-
-# Display Config
-PRODUCT_PROPERTY_OVERRIDES += \
-	vendor.display.png.premultiplied=true
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -83,17 +55,6 @@ PRODUCT_COPY_FILES += \
 # Thermal Config
 PRODUCT_PACKAGES += \
 	init_thermal_config
-
-# Bluetooth HAL
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bluetooth.a2dp_offload.supported=true \
-    persist.bluetooth.a2dp_offload.disabled=false \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
-
-# DCK properties based on target
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3 \
-    ro.gms.dck.se_capability=1
 
 # Bluetotoh Auto On feature
 PRODUCT_PRODUCT_PROPERTIES +=\
@@ -122,20 +83,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.finder.supported=true
 
-# declare use of spatial audio
-PRODUCT_PROPERTY_OVERRIDES += \
-       ro.audio.spatializer_enabled=true \
-       ro.audio.spatializer_transaural_enabled_default=false \
-       persist.vendor.audio.spatializer.speaker_enabled=true
-
-# Audio CCA property
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.vendor.audio.cca.enabled=false
-
-# HdMic Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.app.audio.gsenet.version=1
-
 # UWB Overlay
 PRODUCT_PACKAGES += \
 	UwbOverlayCT3 \
@@ -152,64 +99,6 @@ PRODUCT_PACKAGES += \
 # Settings Overlay
 PRODUCT_PACKAGES += \
     SettingsCometOverlay
-
-# Graphics
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801152=80
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801152=true
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.set_idle_timer_ms_4619827677550801153=1000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.support_kernel_idle_timer_4619827677550801153=false
-
-# For GPS property
-PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
-
-# Display
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	vendor.display.lbe.supported=1 \
-	vendor.display.async_off.supported=true
-
-PRODUCT_VENDOR_PROPERTIES += \
-	persist.device_config.configuration.disable_rescue_party=true
-
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.udfps.als_feed_forward_supported=true \
-    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
-
-# Allow external binning setting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.allow_external_binning_setting=true
-
-# Camera Vendor property
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.front_720P_always_binning=true
-
-# Enable camera exif model/make reporting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.exif_reveal_make_model=true
-
-# Media Performance Class 14
-PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=34
-
-# OIS with system imu
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.ois_with_system_imu=true
-
-# Haptics
-# Placeholders for updates later, need to update:
-# ro.vendor.vibrator.hal.loc.coeff.folded currently unused
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.vibrator.hal.chirp.enabled=1 \
-    ro.vendor.vibrator.hal.device.mass=0.2605 \
-    ro.vendor.vibrator.hal.loc.coeff.folded=3.15 \
-    ro.vendor.vibrator.hal.loc.coeff=2.58 \
-    persist.vendor.vibrator.hal.context.enable=false \
-    persist.vendor.vibrator.hal.context.scale=60 \
-    persist.vendor.vibrator.hal.context.fade=true \
-    persist.vendor.vibrator.hal.context.cooldowntime=1600 \
-    persist.vendor.vibrator.hal.context.settlingtime=5000
-
-# Override Output Distortion Gain
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.audio.hapticgenerator.distortion.output.gain=0.45
 
 # Hinge angle sensor
 PRODUCT_COPY_FILES += \
@@ -281,11 +170,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES +=\
     bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-
-# Enable APF by default
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.powerhal.apf_disabled=false \
-    vendor.powerhal.apf_enabled=true
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \

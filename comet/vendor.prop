@@ -1,12 +1,70 @@
 # AOC
 persist.vendor.aoc.firmware.disable_monitor_mode=true
 
+# Audio
+persist.vendor.app.audio.gsenet.version=1
+persist.vendor.audio.cca.enabled=false
+persist.vendor.audio.spatializer.speaker_enabled=true
+ro.audio.spatializer_enabled=true
+ro.audio.spatializer_transaural_enabled_default=false
+
+# Bluetooth
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+persist.bluetooth.a2dp_offload.disabled=false
+ro.bluetooth.a2dp_offload.supported=true
+
+# Camera
+persist.vendor.camera.allow_external_binning_setting=true
+persist.vendor.camera.exif_reveal_make_model=true
+persist.vendor.camera.front_720P_always_binning=true
+persist.vendor.camera.ois_with_system_imu=true
+vendor.camera.debug.enable_software_post_sharpen_node=false
+
+# DCK
+ro.gms.dck.eligible_wcc=3
+ro.gms.dck.se_capability=1
+
+# Device family
+ro.build.device_family=CT3
+
+# Display
+debug.sf.set_idle_timer_ms_4619827677550801152=80
+debug.sf.set_idle_timer_ms_4619827677550801153=1000
+debug.sf.support_kernel_idle_timer_4619827677550801152=true
+debug.sf.support_kernel_idle_timer_4619827677550801153=false
+ro.surface_flinger.ignore_hdr_camera_layers=true
+ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=20:120,30:60,:1
+ro.vendor.primarydisplay.powerstats.entity_name=Inner-Display
+ro.vendor.primarydisplay.vrr.expected_present.headsup_ns=30000000
+ro.vendor.primarydisplay.vrr.expected_present.timeout_ns=500000000
+ro.vendor.primarydisplay.xrr.version=2.1
+vendor.display.async_off.supported=true
+vendor.display.lbe.supported=1
+vendor.display.png.premultiplied=true
+vendor.primarydisplay.op.hs_hz=120
+vendor.primarydisplay.op.ns_hz=120
+
 # DRM
 drm.service.enabled=true
 media.mediadrmservice.enable=true
 
+# Edge TPU
+vendor.google.silicon.enable_iif_for_priv_app=1
+
+# Fingerprint
+persist.vendor.udfps.als_feed_forward_supported=true
+persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
+
 # GPS
 persist.vendor.gps.hal.service.name=vendor
+ro.vendor.gps.pps.enabled=true
+
+# Media
+ro.odm.build.media_performance_class=33
+
+# Power
+vendor.powerhal.apf_disabled=false
+vendor.powerhal.apf_enabled=true
 
 # Radio
 persist.vendor.ril.ecc.use.xml=1
@@ -15,5 +73,23 @@ persist.vendor.ril.use_radio_hal=2.1
 ro.vendor.config.build_carrier=europen
 vendor.rild.libpath=libsitril.so
 
+# Rescue party
+persist.device_config.configuration.disable_rescue_party=true
+
+# SVN
+ro.vendor.build.svn=40
+
 # USB
 ro.usb.uvc.enabled=true
+
+# Vibrator
+persist.vendor.vibrator.hal.context.cooldowntime=1600
+persist.vendor.vibrator.hal.context.enable=false
+persist.vendor.vibrator.hal.context.fade=true
+persist.vendor.vibrator.hal.context.scale=60
+persist.vendor.vibrator.hal.context.settlingtime=5000
+ro.vendor.vibrator.hal.chirp.enabled=1
+ro.vendor.vibrator.hal.device.mass=0.2605
+ro.vendor.vibrator.hal.loc.coeff.folded=3.15
+ro.vendor.vibrator.hal.loc.coeff=2.58
+vendor.audio.hapticgenerator.distortion.output.gain=0.45
