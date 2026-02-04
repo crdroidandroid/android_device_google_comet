@@ -24,9 +24,6 @@ vendor.camera.debug.enable_software_post_sharpen_node=false
 ro.gms.dck.eligible_wcc=3
 ro.gms.dck.se_capability=1
 
-# Device family
-ro.build.device_family=CT3
-
 # Display
 debug.sf.set_idle_timer_ms_4619827677550801152=80
 debug.sf.set_idle_timer_ms_4619827677550801153=1000
@@ -77,7 +74,7 @@ vendor.rild.libpath=libsitril.so
 persist.device_config.configuration.disable_rescue_party=true
 
 # SVN
-ro.vendor.build.svn=47
+ro.vendor.build.svn=49
 
 # USB
 ro.usb.uvc.enabled=true
