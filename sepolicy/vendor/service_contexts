@@ -1,1 +1,2 @@
 com.google.hardware.pixel.display.IDisplay/secondary u:object_r:hal_pixel_display_service:s0
+com.google.pixel.moseyservice.IMoseyService/default u:object_r:mosey_service:s0

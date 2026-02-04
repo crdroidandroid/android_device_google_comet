@@ -25,3 +25,4 @@
 /vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/vendor\.google\.radioext@1\.0-service u:object_r:hal_radioext_default_exec:s0
 /vendor/bin/init_thermal_config u:object_r:init_thermal_config_exec:s0
+/vendor/bin/mosey_server u:object_r:mosey_server_exec:s0

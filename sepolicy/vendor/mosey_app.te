@@ -1,0 +1,3 @@
+binder_call(mosey_app, mosey_server)
+
+allow mosey_app mosey_service:service_manager find;
