@@ -157,6 +157,11 @@ system_ext/priv-app/ShannonRcs/ShannonRcs.apk;PRESIGNED
 # Permissions
 system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
+# Quick Share extension
+system_ext/etc/default-permissions/default-permissions-com.google.android.mosey.xml
+system_ext/etc/permissions/privapp-permissions-com.google.android.mosey.xml
+system_ext/priv-app/MoseyApp/MoseyApp.apk
+
 # Radio
 system_ext/etc/default-permissions/default-permissions-euiccpixel.xml
 system_ext/etc/permissions/com.android.omadm.radioconfig.xml
