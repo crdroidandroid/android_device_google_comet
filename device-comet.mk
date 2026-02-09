@@ -129,6 +129,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
+
 # VINTF
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest.xml
