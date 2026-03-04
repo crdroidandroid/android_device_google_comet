@@ -26,9 +26,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.hinge_angle.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hinge_angle.xml
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    device/google/comet/overlay-lineage
-
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCometOverride \
     DMServiceOverlayVendorComet \
