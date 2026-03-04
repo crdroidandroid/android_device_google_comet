@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Automatsko rotiranje kada je uređaj sklopljen</string>
-    <string name="setting_auto_rotate_unfolded">Automatsko rotiranje kada uređaj nije sklopljen</string>
-</resources>

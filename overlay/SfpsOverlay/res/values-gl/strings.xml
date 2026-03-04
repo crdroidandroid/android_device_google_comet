@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">Desbloqueo dactilar para o traballo</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">Toca o botón de acendido</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">O sensor de impresión dixital está no botón de acendido.\n\nTócao con suavidade sen premelo.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">Levanta o dedo e volve tocar o sensor, movendo un pouco o dedo cada vez</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">Toca o sensor</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">O sensor de impresión dixital está no botón de acendido.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">Usa o desbloqueo dactilar</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Cando usas o desbloqueo dactilar, utilízanse imaxes para actualizar o modelo da túa impresión dixital. As imaxes que se utilizan para crear o modelo de impresión dixital non se almacenan en ningún caso, pero este gárdase de maneira segura no teu teléfono e nunca sae del. Todo o procesamento ten lugar de maneira fiable no teléfono.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Cando usa o desbloqueo dactilar, utilízanse imaxes para actualizar o modelo da súa impresión dixital. As imaxes que se utilizan para crear o modelo da impresión dixital do teu fillo ou filla non se almacenan en ningún caso, pero este gárdase de maneira segura no teléfono e nunca sae del. Todo o procesamento ten lugar de maneira fiable no teléfono.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Podes eliminar o teu modelo de impresión dixital ou desactivar o desbloqueo dactilar en calquera momento desde Configuración. Os modelos de impresión dixital almacénanse no teléfono ata que os elimines.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">O teu fillo ou filla e mais ti podedes eliminar o modelo da súa impresión dixital ou desactivar o desbloqueo dactilar cando queirades en Configuración. Os modelos de impresión dixital almacenaranse no teléfono ata que se eliminen.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">O sensor de impresión dixital está no botón de acendido. É o botón máis pequeno no lateral do teléfono.</string>
+</resources>

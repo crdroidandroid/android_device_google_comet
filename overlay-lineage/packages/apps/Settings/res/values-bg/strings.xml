@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Автоматично завъртане, когато устройството е сгънато</string>
-    <string name="setting_auto_rotate_unfolded">Автоматично завъртане, когато устройството е разгънато</string>
-</resources>

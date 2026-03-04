@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">ביטול הנעילה בטביעת אצבע לעבודה</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">צריך לגעת בכפתור ההפעלה</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">חיישן טביעות האצבע נמצא בכפתור ההפעלה.\n\n צריך לגעת קלות בכפתור וללא ללחוץ לחיצה ארוכה.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">הרמה, ונגיעה. יש להזיז מעט את האצבע בכל פעם.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">יש לגעת בחיישן במקום זאת</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">חיישן טביעת האצבע נמצא על כפתור ההפעלה.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">שימוש ב\'ביטול הנעילה בטביעת אצבע\'</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">כשמשתמשים בתכונה \"פתיחה בטביעת אצבע\" נעשה שימוש בתמונות כדי לעדכן את התבנית של טביעת האצבע. התמונות שמשמשות ליצירת התבנית של טביעת האצבע אף פעם לא נשמרות, אבל התבנית של טביעת האצבע נשמרת באופן מאובטח בטלפון שלך ואף פעם לא נשלחת או מועברת ממנו. כל פעולות העיבוד מתבצעות בטלפון באופן מאובטח.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">כשמשתמשים בתכונה \'ביטול הנעילה בטביעת אצבע\', התבנית של טביעת האצבע מתעדכנת באמצעות תמונות. התמונות המשמשות ליצירת התבנית של טביעת האצבע של הילד או הילדה אף פעם לא נשמרות. התבנית של טביעת האצבע נשמרת באופן מאובטח בטלפון ואף פעם לא נשלחת או מועברת ממנו. כל פעולות העיבוד מתבצעות בטלפון באופן מאובטח.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">בכל שלב אפשר למחוק את התבנית של טביעת האצבע או להשבית את \"פתיחה בטביעת האצבע\" בהגדרות. התבניות של טביעת האצבע נשמרות בטלפון עד שמוחקים אותן.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">האפשרות למחוק את התבנית של טביעת האצבע, או להשבית את הפיצ\'ר \'ביטול הנעילה בטביעת אצבע\', זמינה לך ולילד או לילדה שלך בכל שלב בהגדרות. התבניות של טביעת האצבע נשמרות בטלפון עד שהן נמחקות.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">חיישן טביעות האצבע נמצא על כפתור ההפעלה. כפתור ההפעלה הוא הכפתור הקצר יותר בצד של הטלפון.</string>
+</resources>

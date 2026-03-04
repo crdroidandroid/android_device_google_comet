@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Message shown during fingerprint acquisision when the fingerprint cannot be recognized -->
+    <string name="fingerprint_acquired_partial">आफ्नो औँलाले सेन्सर ओगटेको छ भन्ने कुरा सुनिश्चित गर्नुहोस्</string>
+
+    <!-- Message shown during fingerprint acquisision when the user removes their finger from the sensor too quickly -->
+    <string name="fingerprint_acquired_too_fast">आफ्नो औँला अलि बढी समयसम्म सेन्सरमा राख्नुहोस्</string>
+
+    <!-- Message shown during fingerprint acquisition when a Power press has been detected.[CHAR LIMIT=50] -->
+    <string name="fingerprint_acquired_power_press">सेटअप जारी राख्न सेन्सरमा बिस्तारै छुनुहोस्</string>
+
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item>@string/fingerprint_acquired_immobile</item>
+    </string-array>
+
+    <!-- Generic error message shown when the power button has been pressed. [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_power_pressed">पुष्टि गर्ने प्रक्रिया अन्त्य भयो। अर्को पटक बिस्तारै छोई हेर्नुहोस्।</string>
+</resources>

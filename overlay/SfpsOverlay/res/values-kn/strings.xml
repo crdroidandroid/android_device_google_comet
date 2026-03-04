@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">ಕೆಲಸಕ್ಕಾಗಿ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್‌ಲಾಕ್</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">ಪವರ್ ಬಟನ್ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರ್ ಪವರ್ ಬಟನ್‌ನಲ್ಲಿದೆ.\n\nಬಟನ್ ಅನ್ನು ಕೆಳಗೆ ಒತ್ತದೆ ಲಘುವಾಗಿ ಸ್ಪರ್ಶಿಸಿ.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">ಬೆರಳನ್ನು ಎತ್ತಿ, ನಂತರ ಸ್ಪರ್ಶಿಸಿ. ಪ್ರತಿ ಬಾರಿ ನಿಮ್ಮ ಬೆರಳನ್ನು ಸ್ವಲ್ಪಸ್ವಲ್ಪ ಸರಿಸಿ.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">ಬದಲಿಗೆ ಸೆನ್ಸರ್ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರ್‌‌ ಪವರ್ ಬಟನ್‌ನಲ್ಲಿದೆ.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್‌ಲಾಕ್ ಅನ್ನು ಬಳಸಿ</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">ನೀವು ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್‌ಲಾಕ್ ಬಳಸುವಾಗ, ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಚಿತ್ರಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ರಚಿಸಲು ಬಳಸುವ ಚಿತ್ರಗಳನ್ನು ಎಂದಿಗೂ ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ, ಆದರೆ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅದು ಫೋನ್‌ನಲ್ಲಿಯೇ ಉಳಿಯುತ್ತದೆ. ಎಲ್ಲಾ ಪ್ರಕ್ರಿಯೆಗಳು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಭವಿಸುತ್ತವೆ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">ಅವರು ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್‌ಲಾಕ್ ಬಳಸುವಾಗ, ಅವರ ಫಿಂಗರ್‌ ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಚಿತ್ರಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಮಗುವಿನ ಫಿಂಗರ್‌ ಪ್ರಿಂಟ್ ಅನ್ನು ರಚಿಸಲು ಬಳಸುವ ಚಿತ್ರಗಳನ್ನು ಎಂದಿಗೂ ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ, ಆದರೆ ಫಿಂಗರ್‌ ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ಫೋನ್‌ನಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅದು ಫೋನ್‌ನಿಂದ ಹೊರಹೋಗುವುದಿಲ್ಲ. ಎಲ್ಲಾ ಪ್ರಕ್ರಿಯೆಗಳು ಫೋನ್‌ನಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಭವಿಸುತ್ತವೆ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಯಾವಾಗ ಬೇಕಾದರೂ ನೀವು ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ಅಳಿಸಬಹುದು ಅಥವಾ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್‌ಲಾಕ್ ಅನ್ನು ಆಫ್ ಮಾಡಬಹುದು. ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್‌ಗಳನ್ನು ನೀವು ಅಳಿಸುವವೆರೆಗೂ ಫೋನ್‌ನಲ್ಲಿಯೇ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಯಾವಾಗ ಬೇಕಾದರೂ ಅವರ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್ ಅನ್ನು ನೀವು ಮತ್ತು ನಿಮ್ಮ ಮಗು ಅಳಿಸಬಹುದು ಅಥವಾ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್‌ಲಾಕ್ ಅನ್ನು ಆಫ್ ಮಾಡಬಹುದು. ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾಡೆಲ್‌ಗಳನ್ನು ಅಳಿಸುವವರೆಗೆ ಫೋನ್‌ನಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರ್ ಪವರ್ ಬಟನ್‌ನಲ್ಲಿದೆ. ಇದು ಫೋನ್‌ನ ಬದಿಯಲ್ಲಿರುವ ಚಿಕ್ಕ ಬಟನ್ ಆಗಿದೆ.</string>
+</resources>

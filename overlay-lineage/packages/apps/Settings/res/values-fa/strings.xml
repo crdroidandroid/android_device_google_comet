@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">چرخش خودکار در حالت تاشده</string>
-    <string name="setting_auto_rotate_unfolded">چرخش خودکار در حالت باز</string>
-</resources>

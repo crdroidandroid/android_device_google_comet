@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Set to true to enable the user switcher on the keyguard. -->
+    <bool name="config_keyguardUserSwitcher">false</bool>
+
+    <!-- If true, show multiuser switcher by default unless the user specifically disables it. -->
+    <bool name="config_showUserSwitcherByDefault">false</bool>
+</resources>

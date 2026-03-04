@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">Розблокування відбитком пальця для роботи</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">Торкніться кнопки живлення</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">Сканер відбитків пальців вбудовано в кнопку живлення.\n\nЗлегка торкніться її, не натискаючи.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">Піднімайте й знову торкайтеся, щоразу трохи переміщуючи палець</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">Натомість торкніться сканера</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">Сканер відбитків пальців розташовано на кнопці живлення.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">Використовувати розблокування відбитком пальця</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Коли ви користуєтеся функцією розблокування відбитком пальця, модель відбитка постійно оновлюється на основі отриманих зображень. Ці зображення ніколи не залишаються на телефоні, але сама модель надійно зберігається й нікуди не передається. Усі дані безпечно обробляються на телефоні.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Коли дитина користується функцією розблокування відбитком пальця, модель відбитка пальця оновлюється на основі отриманих зображень. Ці зображення ніколи не залишаються на телефоні, але сама модель надійно зберігається та нікуди не передається. Усі процедури обробки безпечно відбуваються на телефоні.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Ви будь-коли можете видалити модель свого відбитка пальця або вимкнути функцію розблокування відбитком пальця в налаштуваннях. Моделі відбитків пальців зберігаються на телефоні, доки ви їх не видалите.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">Ви або дитина можете будь-коли видалити модель відбитка пальця або вимкнути цю функцію в налаштуваннях. Моделі відбитків пальців зберігаються на телефоні, доки ви їх не видалите.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">Сканер відбитків пальців розташовано на кнопці живлення. Це менша кнопка на бічній панелі телефона.</string>
+</resources>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">"Rotation automatique lorsque l'appareil est plié"</string>
-    <string name="setting_auto_rotate_unfolded">"Rotation automatique lorsque l'appareil est déplié"</string>
-</resources>

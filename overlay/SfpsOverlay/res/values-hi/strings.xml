@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">वर्क प्रोफ़ाइल के लिए फ़िंगरप्रिंट अनलॉक</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">फ़िंगरप्रिंट अनलॉक सुविधा को सेट अप करने पर, आपके फ़िंगरप्रिंट का एक मॉडल बनाया जाता है. इससे आपकी पहचान की पुष्टि करने में मदद मिलती है. फ़िंगरप्रिंट का मॉडल बनाने के लिए, आपको अलग-अलग ऐंगल से अपने फ़िंगरप्रिंट की इमेज कैप्चर करनी होंगी.</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">पावर बटन को छुएं</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">फ़िंगरप्रिंट सेंसर, पावर बटन पर मौजूद है.\n\nबटन को ज़ोर से दबाने की जगह, हल्के हाथ से छुएं.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">सेंसर से उंगली हटाएं. फिर उसे दोबारा टच करें. हर बार सेंसर पर उंगली थोड़ा इधर-उधर घुमाएं.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">इसके बजाय, सेंसर को छुएं</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">फ़िंगरप्रिंट सेंसर, पावर बटन पर होता है.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">फ़िंगरप्रिंट अनलॉक का इस्तेमाल करें</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">फ़िंगरप्रिंट अनलॉक सुविधा में, आपके फ़िंगरप्रिंट की इमेज इस्तेमाल की जाती हैं. इनकी मदद से फ़िंगरप्रिंट के मॉडल को अपडेट किया जाता है. आपके फ़िंगरप्रिंट का मॉडल बनाते समय इस्तेमाल की गई इमेज कभी भी सेव नहीं की जाती हैं. हालांकि, फ़िंगरप्रिंट के मॉडल को आपके फ़ोन में सुरक्षित तरीके से सेव किया जाता है और इसे किसी के साथ शेयर नहीं किया जाता है. फ़िंगरप्रिंट को सेव करने की पूरी प्रोसेस, आपके फ़ोन में सुरक्षित तरीके से की जाती है.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">जब आपका बच्चा फ़िंगरप्रिंट अनलॉक करने की सुविधा का इस्तेमाल करता है, तब उसके फ़िंगरप्रिंट के मॉडल को अपडेट करने के लिए, उसके फ़िंगरप्रिंट की इमेज इस्तेमाल की जाती हैं. आपके बच्चे के फ़िंगरप्रिंट का मॉडल बनाते समय इस्तेमाल की गई इमेज कभी भी सेव नहीं की जाती हैं. हालांकि, फ़िंगरप्रिंट के मॉडल को फ़ोन में सुरक्षित तरीके से सेव किया जाता है और इसे किसी के साथ शेयर नहीं किया जाता है. फ़िंगरप्रिंट को सेव करने की पूरी प्रोसेस, आपके फ़ोन में सुरक्षित तरीके से होती है.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">सेटिंग में जाकर, अपने फ़िंगरप्रिंट के मॉडल को कभी भी मिटाया जा सकता है. फ़ोन में ये मॉडल तब तक सेव रहते हैं, जब तक इन्हें नहीं मिटा दिया जाता. आपके पास फ़िंगरप्रिंट अनलॉक की सुविधा को बंद करने की सुविधा भी है.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">आपका बच्चा और आप जब चाहें, \'सेटिंग\' में जाकर फ़िंगरप्रिंट का मॉडल मिटा सकते हैं. इसके अलावा, फ़िंगरप्रिंट अनलॉक को बंद कर सकते हैं. फ़िंगरप्रिंट के मॉडल, फ़ोन में तब तक सेव रहते हैं, जब तक उन्हें नहीं मिटाया जाता.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">फ़िंगरप्रिंट सेंसर, पावर बटन पर होता है. यह फ़ोन की साइड में मौजूद एक छोटा बटन होता है.</string>
+</resources>

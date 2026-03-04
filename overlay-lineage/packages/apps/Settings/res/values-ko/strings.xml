@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">접힌 경우 자동 회전</string>
-    <string name="setting_auto_rotate_unfolded">펼쳐진 경우 자동 회전</string>
-</resources>

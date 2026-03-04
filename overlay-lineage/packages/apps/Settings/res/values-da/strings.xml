@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Roter automatisk, når enheden er foldet sammen</string>
-    <string name="setting_auto_rotate_unfolded">Roter automatisk, når enheden er foldet ud</string>
-</resources>

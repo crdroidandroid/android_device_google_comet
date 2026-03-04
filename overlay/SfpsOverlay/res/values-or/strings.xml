@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">ୱାର୍କ ପାଇଁ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଅନଲକ</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">ପାୱାର ବଟନକୁ ସ୍ପର୍ଶ କରନ୍ତୁ</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">ଟିପଚିହ୍ନ ସେନ୍ସର ପାୱାର ବଟନରେ ଅଛି।\n\nବଟନକୁ ତଳକୁ ନ ଦବାଇ ଏହାକୁ ଧୀରେ ସ୍ପର୍ଶ କରନ୍ତୁ।</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">ଉଠାନ୍ତୁ, ତା\'ପରେ ସ୍ପର୍ଶ କରନ୍ତୁ। ପ୍ରତ୍ୟେକ ଥର ଆପଣଙ୍କ ଆଙ୍ଗୁଠିକୁ ସାମାନ୍ୟ ମୁଭ କରନ୍ତୁ।</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">ଏହା ପରିବର୍ତ୍ତେ ସେନ୍ସରକୁ ସ୍ପର୍ଶ କରନ୍ତୁ</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">ଟିପଚିହ୍ନ ସେନ୍ସର ପାୱାର ବଟନରେ ଅଛି।</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଅନଲକ ବ୍ୟବହାର କରନ୍ତୁ</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">ଆପଣ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଅନଲକ ବ୍ୟବହାର କରିବା ସମୟରେ, ଆପଣଙ୍କ ଟିପଚିହ୍ନ ମଡେଲକୁ ଅପଡେଟ କରିବା ପାଇଁ ଇମେଜଗୁଡ଼ିକୁ ବ୍ୟବହାର କରାଯାଏ। ଆପଣଙ୍କ ଟିପଚିହ୍ନ ମଡେଲ ତିଆରି କରିବା ପାଇଁ ବ୍ୟବହୃତ ଇମେଜଗୁଡ଼ିକୁ କେବେ ବି ଷ୍ଟୋର କରାଯାଏ ନାହିଁ, କିନ୍ତୁ ଟିପଚିହ୍ନ ମଡେଲକୁ ଆପଣଙ୍କ ଫୋନରେ ସୁରକ୍ଷିତ ଭାବେ ଷ୍ଟୋର କରାଯାଏ ଏବଂ କେବେ ବି ଫୋନରୁ କାଢ଼ି ଦିଆଯାଏ ନାହିଁ। ସମସ୍ତ ପ୍ରକ୍ରିୟାକରଣ ସୁରକ୍ଷିତ ଭାବେ ଆପଣଙ୍କ ଫୋନରେ କରାଯାଏ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">ସେ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଅନଲକ ବ୍ୟବହାର କରିବା ସମୟରେ, ତା’ର ଟିପଚିହ୍ନ ମଡେଲକୁ ଅପଡେଟ କରିବା ପାଇଁ ଇମେଜଗୁଡ଼ିକୁ ବ୍ୟବହାର କରାଯାଏ। ଆପଣଙ୍କ ପିଲାର ଟିପଚିହ୍ନ ମଡେଲ ତିଆରି କରିବା ପାଇଁ ବ୍ୟବହୃତ ଇମେଜଗୁଡ଼ିକୁ କେବେ ବି ଷ୍ଟୋର କରାଯାଏ ନାହିଁ, କିନ୍ତୁ ଟିପଚିହ୍ନ ମଡେଲକୁ ଫୋନରେ ସୁରକ୍ଷିତ ଭାବେ ଷ୍ଟୋର କରାଯାଇଥାଏ ଏବଂ ଏହାକୁ କେବେ ବି ଫୋନରୁ କାଢ଼ି ଦିଆଯାଏ ନାହିଁ। ସମସ୍ତ ପ୍ରକ୍ରିୟାକରଣ ସୁରକ୍ଷିତ ଭାବେ ଫୋନରେ କରାଯାଇଥାଏ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">ଆପଣ ଆପଣଙ୍କ ଟିପଚିହ୍ନ ମଡେଲକୁ ଡିଲିଟ କରିପାରିବେ କିମ୍ବା ଯେ କୌଣସି ସମୟରେ ସେଟିଂସରେ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଅନଲକକୁ ବନ୍ଦ କରିପାରିବେ। ଟିପଚିହ୍ନ ମଡେଲଗୁଡ଼ିକୁ ଆପଣ ଡିଲିଟ ନକରିବା ପର୍ଯ୍ୟନ୍ତ ସେଗୁଡ଼ିକ ଫୋନରେ ଷ୍ଟୋର ହୋଇ ରହିଥାଏ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">ଆପଣ ଏବଂ ଆପଣଙ୍କ ପିଲା ତା\'ର ଟିପଚିହ୍ନ ମଡେଲକୁ ଡିଲିଟ କରିପାରିବେ କିମ୍ବା ଯେ କୌଣସି ସମୟରେ ସେଟିଂସରେ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଅନଲକ ବନ୍ଦ କରିପାରିବେ। ଟିପଚିହ୍ନ ମଡେଲଗୁଡ଼ିକୁ ଡିଲିଟ ନକରିବା ପର୍ଯ୍ୟନ୍ତ ସେଗୁଡ଼ିକ ଫୋନରେ ଷ୍ଟୋର ହୋଇ ରହିଥାଏ।</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">ଟିପଚିହ୍ନ ସେନ୍ସର ପାୱାର ବଟନରେ ଅଛି। ଏହା ଫୋନର ପାର୍ଶ୍ୱରେ ଥିବା ଛୋଟ ବଟନ ଅଟେ।</string>
+</resources>

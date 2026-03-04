@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">ফোল্ড করা হলে নিজে থেকে ঘুরবে</string>
-    <string name="setting_auto_rotate_unfolded">আনফোল্ড করা হলে নিজে থেকে ঘুরবে</string>
-</resources>

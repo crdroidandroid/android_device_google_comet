@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">በጣት አሻራ መክፈት ለሥራ</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">በጣት አሻራ መክፈቻ እርስዎ መሆንዎን ለማረጋገጥ የጣት አሻራዎ ልዩ ሞዴል ይፈጥራል። በሚዋቀርበት ጊዜ ይህን የጣት አሻራ ሞዴል ለመፍጠር የጣት አሻራዎ ምስሎችን ከተለያዩ ቦታዎች ያነሳሉ።</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">የማብሪያ/ማጥፊያ ቁልፉን ይንኩ</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">የጣት አሻራ ዳሳሹ በማብሪያ/ማጥፊያ ቁልፉ ላይ ነው።\n\nአዝራሩን ወደ ታች ሳይጫኑ በትንሹ ይንኩ።</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">ከፍ ያድርጉ፣ በመቀጠል ይንኩት። በእያንዳንዱ ጊዜ ላይ ጣትዎን በዝግታ ያንቀሳቅሱ።</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">በምትኩ ዳሳሹን ይንኩ</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">የጣት አሻራ ዳሳሹ የማብሪያ/ማጥፊያ ቁልፉ ላይ ነው።</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">በጣት አሻራ መክፈቻን ይጠቀሙ</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">በጣት አሻራ መክፈቻን ሲጠቀሙ ምስሎች የእርስዎን የጣት አሻራ ሞዴል ለማዘመን ሥራ ላይ ይውላሉ። የእርስዎን የጣት አሻራ ሞዴል ለመፍጠር ሥራ ላይ የዋሉ ምስሎች በጭራሽ አይከማቹም፣ ነገር ግን የጣት አሻራ ሞዴሉ በስልክዎ ላይ ደህንነቱ በተጠበቀ ሁኔታ ይከማቻል እና በጭራሽ ከስልኩ አይወጣም። ሁሉም ማሰናዳት በስልክዎ ላይ ደህንነቱ በተጠበቀ ሁኔታ ይከናወናል።</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">በጣት አሻራ መክፈቻን ሲጠቀሙ የጣት አሻራቸውን ሞዴል ለማዘመን ምስሎች ሥራ ላይ ይውላሉ። የልጅዎን የጣት አሻራ ሞዴል ለመፍጠር ሥራ ላይ የዋሉ ምስሎች በጭራሽ አይከማቹም ነገር ግን የጣት አሻራ ሞዴሉ በስልኩ ላይ ደህንነቱ በተጠበቀ ሁኔታ ይከማቻል እና በጭራሽ ከስልኩ አይወጣም። ሁሉም ማሰናዳት በስልኩ ላይ ደህንነቱ በተጠበቀ ሁኔታ ይከናወናል።</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">የጣት አሻራዎን ሞዴል መሰረዝ ወይም በቅንብሮች ውስጥ በማንኛውም ጊዜ በጣት አሻራ መክፈቻን ማጥፋት ይችላሉ። የጣት አሻራ ሞዴሎች እስኪሰርዟቸው ድረስ በስልኩ ላይ ይከማቻሉ።</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">እርስዎ እና ልጅዎ የጣት አሻራቸውን ሞዴል መሰረዝ ወይም በቅንብሮች ውስጥ በማንኛውም ጊዜ በጣት አሻራ መክፈቻን ማጥፋት ትችላላችሁ። የጣት አሻራ ሞዴሎች እስኪሰረዙ ድረስ በስልኩ ላይ ይከማቻሉ።</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">የጣት አሻራ ዳሳሹ ያለው የማብሪያ/ማጥፊያ ቁልፉ ላይ ነው። በስልኩ ጎን በኩል አጠር ያለው አዝራር ነው።</string>
+</resources>

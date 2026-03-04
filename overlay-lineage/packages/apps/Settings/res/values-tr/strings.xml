@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Katlandığında otomatik döndür</string>
-    <string name="setting_auto_rotate_unfolded">Açıldığında otomatik döndür</string>
-</resources>

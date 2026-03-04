@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Message shown during fingerprint acquisision when the fingerprint cannot be recognized -->
+    <string name="fingerprint_acquired_partial">သင်၏လက်ချောင်းက အာရုံခံကိရိယာကို ဖုံးထားကြောင်း သေချာပါစေ</string>
+
+    <!-- Message shown during fingerprint acquisision when the user removes their finger from the sensor too quickly -->
+    <string name="fingerprint_acquired_too_fast">သင်၏လက်ချောင်းကို အာရုံခံကိရိယာပေါ် ကြာကြာထားပါ</string>
+
+    <!-- Message shown during fingerprint acquisition when a Power press has been detected.[CHAR LIMIT=50] -->
+    <string name="fingerprint_acquired_power_press">စနစ်ဆက်လက်ထည့်သွင်းရန် အာရုံခံကိရိယာကို အသာအယာထိပါ</string>
+
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item>@string/fingerprint_acquired_immobile</item>
+    </string-array>
+
+    <!-- Generic error message shown when the power button has been pressed. [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_power_pressed">အတည်ပြုခြင်း ရပ်သွားသည်။ နောက်တစ်ကြိမ်တွင် အသာအယာထိကြည့်ပါ။</string>
+</resources>

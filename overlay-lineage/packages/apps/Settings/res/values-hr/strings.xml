@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Automatsko zakretanje prilikom zatvaranja</string>
-    <string name="setting_auto_rotate_unfolded">Automatsko zakretanje prilikom otvaranja</string>
-</resources>

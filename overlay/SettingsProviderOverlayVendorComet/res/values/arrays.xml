@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- NOTE: if you change this, you must also add the corresponding scale key and lookup table to
+     frameworks/base/core/java/android/content/res/FontScaleConverterFactory.java
+     TODO(b/341235102): Remove font_scale array duplication
+     -->
+    <string-array name="entryvalues_font_size">
+        <item>1.0</item>
+        <item>1.05</item>
+        <item>1.1</item>
+        <item>1.20</item>
+        <item>1.30</item>
+        <item>1.50</item>
+        <item>1.80</item>
+        <item>2.0</item>
+    </string-array>
+</resources>

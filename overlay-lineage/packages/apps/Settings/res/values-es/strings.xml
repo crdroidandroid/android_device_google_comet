@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Girar automáticamente cuando esté plegado</string>
-    <string name="setting_auto_rotate_unfolded">Girar automáticamente cuando esté abierto</string>
-</resources>

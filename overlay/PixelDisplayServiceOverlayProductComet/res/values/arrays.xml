@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string-array name="config_AmbientSensorArray">
+        <item>TCS3720 Ambient Light</item>
+        <item>TMD3733 Ambient Light</item>
+    </string-array>
+
+    <string-array name="config_DisplayIdArray">
+        <item>local:4619827677550801152</item>
+        <item>local:4619827677550801153</item>
+    </string-array>
+
+    <string-array name="config_HalServiceArray">
+        <item>default</item>
+        <item>secondary</item>
+    </string-array>
+
+    <array name="config_compensation_brightness_conditions">
+        <item>0.013887776</item>
+    </array>
+
+    <array name="config_compensation_temperature_conditions_0">
+        <item>0.0</item>
+    </array>
+
+    <array name="config_compensation_temperature_conditions_list">
+        <item>@array/config_compensation_temperature_conditions_0</item>
+    </array>
+
+    <string-array name="config_demura_compensation_images">
+        <item>DCI_1_cal0.png</item>
+        <item>DCI_0_cal0.png</item>
+    </string-array>
+
+    <array name="config_demura_compensation_thresholds">
+        <item>0.000946894</item>
+        <item>0.013887776</item>
+    </array>
+
+    <array name="config_thermal_compensation_images">
+        <item>@drawable/TCI_0_cal0</item>
+    </array>
+
+    <array name="config_za_compensation_brightness_thresholds_list">
+        <item>@array/config_za_primary_display_brightness_thresholds_list</item>
+        <item>@array/config_za_secondary_display_brightness_thresholds_list</item>
+    </array>
+
+    <array name="config_za_compensation_images_list">
+        <item>@array/config_za_primary_display_compensation_images_list</item>
+        <item>@array/config_za_secondary_display_compensation_images_list</item>
+    </array>
+
+    <array name="config_za_compensation_opr_thresholds_list">
+        <item>@array/config_za_primary_display_opr_thresholds_list</item>
+        <item>@array/config_za_secondary_display_opr_thresholds_list</item>
+    </array>
+
+    <array name="config_za_primary_display_brightness_thresholds_list">
+        <item>@array/config_za_primary_display_condition1_brightness_thresholds</item>
+        <item>@array/config_za_primary_display_condition2_brightness_thresholds</item>
+    </array>
+
+    <array name="config_za_primary_display_compensation_images_list">
+        <item>@array/config_za_primary_display_condition1_compensation_images</item>
+        <item>@array/config_za_primary_display_condition2_compensation_images</item>
+    </array>
+
+    <array name="config_za_primary_display_condition1_brightness_thresholds">
+        <item>0.53125</item>
+        <item>0.546875</item>
+        <item>0.5625</item>
+        <item>0.578125</item>
+        <item>0.59375</item>
+        <item>0.65625</item>
+        <item>0.71875</item>
+        <item>0.75</item>
+        <item>0.78125</item>
+        <item>0.84375</item>
+        <item>0.875</item>
+        <item>0.9375</item>
+        <item>0.96875</item>
+        <item>1.0</item>
+    </array>
+
+    <array name="config_za_primary_display_condition1_compensation_images">
+        <item>@drawable/ZACI_0_4_ZA8938</item>
+        <item>@drawable/ZACI_0_6_ZA8712</item>
+        <item>@drawable/ZACI_0_7_ZA8488</item>
+        <item>@drawable/ZACI_0_8_ZA8262</item>
+        <item>@drawable/ZACI_0_10_ZA7925</item>
+        <item>@drawable/ZACI_0_11_ZA7812</item>
+        <item>@drawable/ZACI_0_12_ZA7700</item>
+        <item>@drawable/ZACI_0_13_ZA7588</item>
+        <item>@drawable/ZACI_0_14_ZA7475</item>
+        <item>@drawable/ZACI_0_16_ZA7250</item>
+        <item>@drawable/ZACI_0_17_ZA7138</item>
+        <item>@drawable/ZACI_0_18_ZA6912</item>
+        <item>@drawable/ZACI_0_19_ZA6800</item>
+        <item>@drawable/ZACI_0_20_ZA6667</item>
+    </array>
+
+    <array name="config_za_primary_display_condition1_opr_thresholds_list">
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+    </array>
+
+    <array name="config_za_primary_display_condition2_brightness_thresholds">
+        <item>0.5</item>
+        <item>0.53125</item>
+        <item>0.5625</item>
+        <item>0.59375</item>
+        <item>0.625</item>
+        <item>0.65625</item>
+        <item>0.6875</item>
+        <item>0.71875</item>
+        <item>0.75</item>
+        <item>0.78125</item>
+        <item>0.8125</item>
+        <item>0.84375</item>
+        <item>0.875</item>
+        <item>0.90625</item>
+        <item>0.9375</item>
+        <item>0.96875</item>
+        <item>1.0</item>
+    </array>
+
+    <array name="config_za_primary_display_condition2_compensation_images">
+        <item>@drawable/ZACI_0_0_ZA9500</item>
+        <item>@drawable/ZACI_0_1_ZA9275</item>
+        <item>@drawable/ZACI_0_2_ZA9162</item>
+        <item>@drawable/ZACI_0_3_ZA9050</item>
+        <item>@drawable/ZACI_0_5_ZA8825</item>
+        <item>@drawable/ZACI_0_6_ZA8712</item>
+        <item>@drawable/ZACI_0_7_ZA8488</item>
+        <item>@drawable/ZACI_0_8_ZA8262</item>
+        <item>@drawable/ZACI_0_9_ZA8150</item>
+        <item>@drawable/ZACI_0_10_ZA7925</item>
+        <item>@drawable/ZACI_0_11_ZA7812</item>
+        <item>@drawable/ZACI_0_12_ZA7700</item>
+        <item>@drawable/ZACI_0_14_ZA7475</item>
+        <item>@drawable/ZACI_0_15_ZA7362</item>
+        <item>@drawable/ZACI_0_17_ZA7138</item>
+        <item>@drawable/ZACI_0_18_ZA6912</item>
+        <item>@drawable/ZACI_0_19_ZA6800</item>
+    </array>
+
+    <array name="config_za_primary_display_condition2_opr_thresholds_list">
+        <item>0.5</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+    </array>
+
+    <array name="config_za_primary_display_opr_thresholds_list">
+        <item>@array/config_za_primary_display_condition1_opr_thresholds_list</item>
+        <item>@array/config_za_primary_display_condition2_opr_thresholds_list</item>
+    </array>
+
+    <array name="config_za_secondary_display_brightness_thresholds_list">
+        <item>@array/config_za_secondary_display_condition1_brightness_thresholds</item>
+        <item>@array/config_za_secondary_display_condition2_brightness_thresholds</item>
+    </array>
+
+    <array name="config_za_secondary_display_compensation_images_list">
+        <item>@array/config_za_secondary_display_condition1_compensation_images</item>
+        <item>@array/config_za_secondary_display_condition2_compensation_images</item>
+    </array>
+
+    <array name="config_za_secondary_display_condition1_brightness_thresholds">
+        <item>0.4722222</item>
+        <item>0.4861111</item>
+        <item>0.5</item>
+        <item>0.5277778</item>
+        <item>0.5555556</item>
+        <item>0.6111111</item>
+        <item>0.6666667</item>
+        <item>0.7222222</item>
+        <item>0.7777778</item>
+        <item>0.8333333</item>
+        <item>0.8888889</item>
+        <item>1.0</item>
+    </array>
+
+    <array name="config_za_secondary_display_condition1_compensation_images">
+        <item>@drawable/ZACI_1_2_ZA9162</item>
+        <item>@drawable/ZACI_1_4_ZA8938</item>
+        <item>@drawable/ZACI_1_6_ZA8712</item>
+        <item>@drawable/ZACI_1_7_ZA8488</item>
+        <item>@drawable/ZACI_1_9_ZA8150</item>
+        <item>@drawable/ZACI_1_13_ZA7700</item>
+        <item>@drawable/ZACI_1_14_ZA7588</item>
+        <item>@drawable/ZACI_1_15_ZA7362</item>
+        <item>@drawable/ZACI_1_16_ZA7138</item>
+        <item>@drawable/ZACI_1_18_ZA6800</item>
+        <item>@drawable/ZACI_1_20_ZA6533_6333_05</item>
+        <item>@drawable/ZACI_1_21_ZA6533_6333_03</item>
+    </array>
+
+    <array name="config_za_secondary_display_condition1_opr_thresholds_list">
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+    </array>
+
+    <array name="config_za_secondary_display_condition2_brightness_thresholds">
+        <item>0.4722222</item>
+        <item>0.4861111</item>
+        <item>0.5</item>
+        <item>0.5277778</item>
+        <item>0.5555556</item>
+        <item>0.5833333</item>
+        <item>0.6111111</item>
+        <item>0.6388889</item>
+        <item>0.6666667</item>
+        <item>0.6944444</item>
+        <item>0.7222222</item>
+        <item>0.75</item>
+        <item>0.7777778</item>
+        <item>0.8055556</item>
+        <item>0.8333333</item>
+        <item>0.8611111</item>
+        <item>0.8888889</item>
+        <item>0.9722222</item>
+        <item>1.0</item>
+    </array>
+
+    <array name="config_za_secondary_display_condition2_compensation_images">
+        <item>@drawable/ZACI_1_0_ZA9388</item>
+        <item>@drawable/ZACI_1_1_ZA9275</item>
+        <item>@drawable/ZACI_1_2_ZA9162</item>
+        <item>@drawable/ZACI_1_3_ZA9050</item>
+        <item>@drawable/ZACI_1_5_ZA8825</item>
+        <item>@drawable/ZACI_1_6_ZA8712</item>
+        <item>@drawable/ZACI_1_7_ZA8488</item>
+        <item>@drawable/ZACI_1_8_ZA8375</item>
+        <item>@drawable/ZACI_1_9_ZA8150</item>
+        <item>@drawable/ZACI_1_11_ZA7925</item>
+        <item>@drawable/ZACI_1_12_ZA7812</item>
+        <item>@drawable/ZACI_1_14_ZA7588</item>
+        <item>@drawable/ZACI_1_15_ZA7362</item>
+        <item>@drawable/ZACI_1_16_ZA7138</item>
+        <item>@drawable/ZACI_1_17_ZA7025</item>
+        <item>@drawable/ZACI_1_18_ZA6800</item>
+        <item>@drawable/ZACI_1_19_ZA6667</item>
+        <item>@drawable/ZACI_1_20_ZA6533_6333_05</item>
+        <item>@drawable/ZACI_1_21_ZA6533_6333_03</item>
+    </array>
+
+    <array name="config_za_secondary_display_condition2_opr_thresholds_list">
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+        <item>0.3</item>
+    </array>
+
+    <array name="config_za_secondary_display_opr_thresholds_list">
+        <item>@array/config_za_secondary_display_condition1_opr_thresholds_list</item>
+        <item>@array/config_za_secondary_display_condition2_opr_thresholds_list</item>
+    </array>
+</resources>

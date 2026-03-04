@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">סיבוב אוטומטי כשהמכשיר מקופל</string>
-    <string name="setting_auto_rotate_unfolded">סיבוב אוטומטי כשהמכשיר לא מקופל</string>
-</resources>

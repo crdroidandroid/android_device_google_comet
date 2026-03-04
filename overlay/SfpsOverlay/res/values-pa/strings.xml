@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਲਈ ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਤੁਹਾਡੀ ਪਛਾਣ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦਾ ਇੱਕ ਵਿਲੱਖਣ ਮਾਡਲ ਬਣਾਉਂਦਾ ਹੈ। ਸੈੱਟਅੱਪ ਦੌਰਾਨ ਇਸ ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਾਡਲ ਨੂੰ ਬਣਾਉਣ ਲਈ, ਤੁਸੀਂ ਵੱਖ-ਵੱਖ ਕੋਣਾਂ ਤੋਂ ਆਪਣੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੇ ਚਿੱਤਰ ਲਓਗੇ।</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">ਪਾਵਰ ਬਟਨ ਨੂੰ ਸਪਰਸ਼ ਕਰੋ</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਂਸਰ ਪਾਵਰ ਬਟਨ \'ਤੇ ਹੈ।\n\nਬਟਨ ਨੂੰ ਜ਼ੋਰ ਨਾਲ ਦਬਾਏ ਬਿਨਾਂ ਉਸ ਨੂੰ ਹਲਕਾ ਜਿਹਾ ਸਪਰਸ਼ ਕਰੋ।</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">ਉਂਗਲ ਚੁੱਕੋ, ਫਿਰ ਸਪਰਸ਼ ਕਰੋ। ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਹਰ ਵਾਰ ਹਲਕਾ ਜਿਹਾ ਹਿਲਾਓ।</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">ਇਸਦੀ ਬਜਾਏ ਸੈਂਸਰ ਨੂੰ ਸਪਰਸ਼ ਕਰੋ</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਂਸਰ ਪਾਵਰ ਬਟਨ \'ਤੇ ਹੈ।</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">ਜਦੋਂ ਤੁਸੀਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਵਰਤਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਡੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੇ ਮਾਡਲ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਲਈ ਚਿੱਤਰ ਵਰਤੇ ਜਾਂਦੇ ਹਨ। ਤੁਹਾਡੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦਾ ਮਾਡਲ ਬਣਾਉਣ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਚਿੱਤਰ ਕਦੇ ਵੀ ਸਟੋਰ ਨਹੀਂ ਕੀਤੇ ਜਾਂਦੇ, ਪਰ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੇ ਮਾਡਲ ਨੂੰ ਤੁਹਾਡੇ ਫ਼ੋਨ \'ਤੇ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਸਟੋਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇਹ ਕਦੇ ਵੀ ਫ਼ੋਨ ਤੋਂ ਬਾਹਰ ਨਹੀਂ ਜਾਂਦਾ। ਸਾਰੀ ਪ੍ਰਕਿਰਿਆ ਤੁਹਾਡੇ ਫ਼ੋਨ \'ਤੇ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਵਾਪਰਦੀ ਹੈ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">ਜਦੋਂ ਤੁਹਾਡਾ ਬੱਚਾ ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਵਰਤਦਾ ਹੈ, ਤਾਂ ਉਸਦੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੇ ਮਾਡਲ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਲਈ ਚਿੱਤਰ ਵਰਤੇ ਜਾਂਦੇ ਹਨ। ਤੁਹਾਡੇ ਬੱਚੇ ਦੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦਾ ਮਾਡਲ ਬਣਾਉਣ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਚਿੱਤਰ ਕਦੇ ਵੀ ਸਟੋਰ ਨਹੀਂ ਕੀਤੇ ਜਾਂਦੇ, ਪਰ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੇ ਮਾਡਲ ਨੂੰ ਉਸਦੇ ਫ਼ੋਨ \'ਤੇ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਸਟੋਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇਹ ਕਦੇ ਵੀ ਫ਼ੋਨ ਤੋਂ ਬਾਹਰ ਨਹੀਂ ਜਾਂਦਾ। ਸਾਰੀ ਪ੍ਰਕਿਰਿਆ ਫ਼ੋਨ \'ਤੇ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਵਾਪਰਦੀ ਹੈ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">ਤੁਸੀਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕਿਸੇ ਵੇਲੇ ਵੀ ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਾਡਲ ਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹੋ ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ। ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਾਡਲ ਫ਼ੋਨ \'ਤੇ ਉਦੋਂ ਤੱਕ ਸਟੋਰ ਰਹਿੰਦੇ ਹਨ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਉਨ੍ਹਾਂ ਨੂੰ ਮਿਟਾਉਂਦੇ ਨਹੀਂ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">ਤੁਸੀਂ ਅਤੇ ਤੁਹਾਡਾ ਬੱਚਾ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕਿਸੇ ਵੇਲੇ ਵੀ ਆਪਣੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਾਡਲ ਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹਨ ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦੇ ਹਨ। ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਾਡਲ ਫ਼ੋਨ \'ਤੇ ਉਦੋਂ ਤੱਕ ਸਟੋਰ ਰਹਿੰਦੇ ਹਨ ਜਦੋਂ ਤੱਕ ਉਨ੍ਹਾਂ ਨੂੰ ਮਿਟਾਇਆ ਨਹੀਂ ਜਾਂਦਾ।</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਂਸਰ ਪਾਵਰ ਬਟਨ \'ਤੇ ਹੈ। ਇਹ ਫ਼ੋਨ ਦੇ ਇੱਕ ਪਾਸੇ ਦਿੱਤਾ ਛੋਟਾ ਜਿਹਾ ਬਟਨ ਹੈ।</string>
+</resources>

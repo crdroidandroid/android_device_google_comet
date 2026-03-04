@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">ഔദ്യോഗിക പ്രൊഫൈലിനുള്ള ഫിംഗർപ്രിന്റ് അൺലോക്ക്</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">പവർ ബട്ടണിൽ സ്‌പർശിക്കുക</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">ഫിംഗർപ്രിന്റ് സെൻസർ പവർ ബട്ടണിലാണ്.\n\nബട്ടൺ താഴേക്ക് അമർത്താതെ അതിൽ പതുക്കെ സ്‌പർശിക്കുക.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">വിരലെടുത്ത ശേഷം സ്പർശിക്കുക. ഓരോ തവണയും വിരൽ അൽപം നീക്കുക.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">പകരം സെൻസറിൽ സ്‌പർശിക്കുക</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">പവർ ബട്ടണിലാണ് ഫിംഗർപ്രിന്റ് സെൻസർ ഉള്ളത്.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ഫിംഗർപ്രിന്റ് അൺലോക്ക് ഉപയോഗിക്കുക</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">നിങ്ങൾ ഫിംഗർപ്രിന്റ് അൺലോക്ക് ഉപയോഗിക്കുമ്പോൾ, നിങ്ങളുടെ ഫിംഗർപ്രിന്റ് മോഡൽ അപ്ഡേറ്റ് ചെയ്യാൻ ചിത്രങ്ങൾ ഉപയോഗിക്കുന്നു. നിങ്ങളുടെ ഫിംഗർപ്രിന്റ് മോഡൽ സൃഷ്ടിക്കാൻ ഉപയോഗിക്കുന്ന ചിത്രങ്ങൾ സംഭരിക്കില്ലെങ്കിലും ഫിംഗർപ്രിന്റ് മോഡൽ സുരക്ഷിതമായി നിങ്ങളുടെ ഫോണിൽ സംഭരിക്കുന്നു, അത് ഒരിക്കലും ഫോണിൽ നിന്ന് പുറത്ത് പോകില്ല. എല്ലാ പ്രോസസിംഗും നിങ്ങളുടെ ഫോണിൽ സുരക്ഷിതമായി നടക്കുന്നു.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">അവർ ഫിംഗർപ്രിന്റ് അൺലോക്ക് ഉപയോഗിക്കുമ്പോൾ, അവരുടെ ഫിംഗർപ്രിന്റ് മോഡൽ അപ്ഡേറ്റ് ചെയ്യാൻ ചിത്രങ്ങൾ ഉപയോഗിക്കുന്നു. നിങ്ങളുടെ കുട്ടിയുടെ ഫിംഗർപ്രിന്റ് മോഡൽ സൃഷ്‌ടിക്കാൻ ഉപയോഗിക്കുന്ന ചിത്രങ്ങൾ സംഭരിക്കില്ലെങ്കിലും ഫിംഗർപ്രിന്റ് മോഡൽ സുരക്ഷിതമായി ഫോണിൽ സംഭരിക്കുന്നു, അത് ഒരിക്കലും ഫോണിൽ നിന്ന് പുറത്ത് പോകില്ല. എല്ലാ പ്രോസസിംഗും ഫോണിൽ സുരക്ഷിതമായി നടക്കുന്നു.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">നിങ്ങൾക്ക് എപ്പോൾ വേണമെങ്കിലും ക്രമീകരണത്തിൽ ഫിംഗർപ്രിന്റ് മോഡൽ ഇല്ലാതാക്കാനോ ഫിംഗർപ്രിന്റ് അൺലോക്ക് ഓഫാക്കാനോ കഴിയും. നിങ്ങൾ ഇല്ലാതാക്കുന്നത് വരെ ഫിംഗർപ്രിന്റ് മോഡലുകൾ ഫോണിൽ സംഭരിക്കുന്നു.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">നിങ്ങൾക്കും നിങ്ങളുടെ കുട്ടിക്കും ക്രമീകരണത്തിൽ ഏതുസമയത്തും ഫിംഗർപ്രിന്റ് മോഡൽ ഇല്ലാതാക്കാനോ ഫിംഗർപ്രിന്റ് അൺലോക്ക് ഓഫാക്കാനോ കഴിയും. ഫിംഗർപ്രിന്റ് മോഡലുകൾ ഇല്ലാതാക്കുന്നത് വരെ അവ ഫോണിൽ സംഭരിക്കുന്നു.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">പവർ ബട്ടണിലാണ് ഫിംഗർപ്രിന്റ് സെൻസർ ഉള്ളത്. ഇതാണ് ഫോണിന്റെ വശത്തുള്ള ചെറിയ ബട്ടൺ.</string>
+</resources>

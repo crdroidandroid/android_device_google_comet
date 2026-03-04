@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Indicates whether to enable an animation when unfolding a device or not -->
+    <bool name="config_unfoldTransitionEnabled">true</bool>
+
+    <!-- Indicates whether to enable hinge angle sensor when using unfold animation -->
+    <bool name="config_unfoldTransitionHingeAngle">true</bool>
+
+    <!-- Indicates that the device supports having more than one internal display on at the same
+         time. Only applicable to devices with more than one internal display. If this option is
+         set to false, DisplayManager will make additional effort to ensure no more than 1 internal
+         display is powered on at the same time. -->
+    <bool name="config_supportsConcurrentInternalDisplays">false</bool>
+
+    <!-- To change the default behavior of how the insets get involved when calculating
+         configuration. This will no longer consider status bar and display cutout, and only
+         exclude navigation bars from the screen sizes. This is useful when the display is close to
+         square and the system bars may cause the orientation with non-preferred value.
+         -->
+    <bool name="config_decoupleStatusBarAndDisplayCutoutFromScreenSize">true</bool>
+
+    <!-- Default screen brightness setting set.
+         -2 is invalid so setting will resort to int value specified above.
+         Must be in the range specified by minimum and maximum. -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.08711423</item>
+
+    <!-- MMS user agent string, for example OemNameDeviceName
+         If the string contains a '%s' format string then that substring will be replaced
+         with the value of Build.MODEL , ie
+         <string name="config_mms_user_agent">OemName%s</string> -->
+    <string name="config_mms_user_agent">ggh2x</string>
+
+    <!-- MMS user agent prolfile url, for example https://uaprof.oem_name.com/DeviceName.xml
+         if the string contains a '%s' format string then that substring will be replaced
+         with the value of Build.MODEL , ie https://uaprof.oem_name.com/%s.xml -->
+    <string name="config_mms_user_agent_profile_url">http://www.gstatic.com/android/sms/GGH2X.xml</string>
+
+    <!-- Type of the ambient tap sensor per device posture (defined by WM Jetpack posture).
+         Unspecified values use config_dozeTapSensor -->
+    <string-array name="config_dozeTapSensorPostureMapping">
+        <item/>
+        <item>com.google.sensor.single_touch</item>
+        <item>com.google.sensor.touch_gesture</item>
+        <item>com.google.sensor.touch_gesture</item>
+    </string-array>
+
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display. Optionally, you can append either `@left` or `@right` to the
+         end of the path string, in order to change the path origin to either the top left,
+         or top right of the display.
+
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+
+         If the display supports multiple resolutions, please define the path config based on the
+         highest resolution so that it can be scaled correctly in each resolution.
+
+         Example for a 10px x 10px square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
+         Example for a 10dp x 10dp square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
+
+         @see https://www.w3.org/TR/SVG/paths.html#PathData
+         -->
+    <string name="config_mainBuiltInDisplayCutout">m 2027,80 a 39.5,39.5 0 0 0 -79,0 39.5,39.5 0 0 0 79,0 z @left</string>
+
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">m 0,0 V 136 h -136 V 0 z @right</string>
+
+    <!-- This string array provide override side of each rotation of the given insets.
+         Array of [side] for rotation 0, 90, 180 and 270 in order.
+         The options of [side] are:
+            - Option 0 - Left.
+            - Option 1 - Top.
+            - Option 2 - Right.
+            - Option 3 - Bottom.
+         When there are cutouts on multiple edges of the display, the override won't take any
+         effect. -->
+    <integer-array name="config_mainBuiltInDisplayCutoutSideOverride">
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+
+    <!-- The max vibration strength allowed in audio haptic channels, must be positive or zero if
+         limit is unknown. -->
+    <item name="config_hapticChannelMaxVibrationAmplitude" format="float" type="dimen">0.335</item>
+
+    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
+         the framework from using higher refresh rates, even if display modes with higher refresh
+         rates are available from hardware composer. Only has an effect if the value is
+         non-zero. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- The width in dp to use to detect vertical thin letterboxing.
+         If W is the available width and w is the letterbox width, an app
+         is thin letterboxed if the value here is < (W - w) / 2
+         If the value is < 0 the thin letterboxing policy is disabled -->
+    <dimen name="config_letterboxThinLetterboxWidthDp">62dp</dimen>
+
+    <!-- The display cutout configs for secondary built-in display. -->
+    <string name="config_secondaryBuiltInDisplayCutout">m 581.5,86 a 41.5,41.5 0 0 0 -83,0 41.5,41.5 0 0 0 83,0 z @left</string>
+    <string name="config_secondaryBuiltInDisplayCutoutRectApproximation">m 484,0 h 112 v 152 h -112 z @left</string>
+    <bool name="config_fillSecondaryBuiltInDisplayCutout">true</bool>
+
+    <!-- An array contains unique ids of all built-in displays and the unique id of a display can be
+         obtained from {@link Display#getUniqueId}. This array should be set for multi-display
+         devices if there are different display related configs(e.g. display cutout, rounded corner)
+         between each built-in display.
+         It is used as an index for multi-display related configs:
+         First look up the index of the unique id of the given built-in display unique id in this
+         array and use this index to get the info in corresponding config arrays such as:
+           - config_displayCutoutPathArray
+           - config_displayCutoutApproximationRectArray
+           - config_fillBuiltInDisplayCutoutArray
+           - config_maskBuiltInDisplayCutoutArray
+           - config_waterfallCutoutArray
+           - config_roundedCornerRadiusArray
+           - config_roundedCornerTopRadiusArray
+           - config_roundedCornerBottomRadiusArray
+           - config_builtInDisplayIsRoundArray (config in SystemUI resource)
+           - config_roundedCornerMultipleRadiusArray (config in SystemUI resource)
+           - config_roundedCornerDrawableArray (config in SystemUI resource)
+           - config_roundedCornerTopDrawableArray (config in SystemUI resource)
+           - config_roundedCornerBottomDrawableArray (config in SystemUI resource)
+
+         Leave this array empty for single display device and the system will load the default main
+         built-in related configs.
+         -->
+    <string-array name="config_displayUniqueIdArray">
+        <item>local:4619827677550801152</item>
+        <item>local:4619827677550801153</item>
+    </string-array>
+
+    <!-- A string config in svg path format for the main display shape.
+         (@see https://www.w3.org/TR/SVG/paths.html#PathData).
+
+         This config must be set unless:
+         1. {@link Configuration#isScreenRound} is true which means the display shape is circular
+            and the system will auto-generate a circular shape.
+         2. The display has no rounded corner and the system will auto-generate a rectangular shape.
+         (@see DisplayShape#createDefaultDisplayShape)
+
+         Note: If the display supports multiple resolutions, please define the path config based on
+         the highest resolution so that it can be scaled correctly in each resolution. -->
+    <string name="config_mainDisplayShape">M 0.041,2004.805 V 146.519 c 0,0 -0.176,-14.867 0.198,-22.287 C 0.663,115.839 1.046,107.394 2.553,99.126 4.225,89.962 6.479,80.819 9.977,72.185 13.68,63.046 18.377,54.207 24.187,46.24 30.028,38.231 36.947,30.898 44.657,24.668 51.905,18.813 60.025,13.937 68.523,10.118 76.345,6.602 84.716,4.282 93.122,2.583 100.634,1.064 108.342,0.675 115.994,0.248 122.769,-0.13 136.349,0.049 136.349,0.049 H 1939.018 c 0,0 14.16,-0.202 21.223,0.211 7.749,0.454 15.557,0.888 23.152,2.487 8.585,1.807 17.13,4.272 25.081,7.979 8.624,4.02 16.811,9.173 24.117,15.269 7.652,6.384 14.512,13.844 20.258,21.986 5.571,7.893 10.035,16.628 13.505,25.645 3.267,8.49 5.266,17.468 6.753,26.443 1.343,8.107 1.427,16.375 1.929,24.577 0.446,7.284 0.965,21.872 0.965,21.872 V 2004.805 c 0,0 -0.51,15.21 -0.965,22.805 -0.497,8.303 -0.455,16.692 -1.929,24.878 -1.656,9.197 -4.254,18.272 -7.717,26.951 -3.61,9.047 -7.794,18.024 -13.505,25.915 -5.942,8.209 -13.336,15.404 -21.223,21.768 -7.088,5.72 -14.838,10.792 -23.152,14.512 -7.944,3.555 -16.527,5.651 -25.081,7.256 -7.615,1.429 -15.423,1.53 -23.152,2.073 -6.745,0.474 -20.258,1.037 -20.258,1.037 H 136.349 c 0,0 -13.835,-0.558 -20.74,-1.037 -7.797,-0.541 -15.701,-0.49 -23.355,-2.073 -8.623,-1.783 -17.078,-4.62 -25.081,-8.293 -8.535,-3.917 -16.934,-8.498 -24.146,-14.512 -7.778,-6.486 -14.272,-14.505 -20.075,-22.805 -5.41,-7.738 -10.07,-16.098 -13.541,-24.878 -3.413,-8.633 -5.434,-17.803 -7.012,-26.951 -1.415,-8.203 -1.775,-16.563 -2.173,-24.878 -0.347,-7.248 -0.185,-21.768 -0.185,-21.768 z</string>
+
+    <!-- A string config in svg path format for the secondary display shape.
+         (@see https://www.w3.org/TR/SVG/paths.html#PathData).
+
+         This config must be set unless:
+         1. {@link Configuration#isScreenRound} is true which means the display shape is circular
+            and the system will auto-generate a circular shape.
+         2. The display has no rounded corner and the system will auto-generate a rectangular shape.
+         (@see DisplayShape#createDefaultDisplayShape)
+
+         Note: If the display supports multiple resolutions, please define the path config based on
+         the highest resolution so that it can be scaled correctly in each resolution. -->
+    <string name="config_secondaryDisplayShape">m 1079.946,2228.66 c 0,0 0.18,21.63 -0.12,32.44 -0.27,9.87 -0.39,19.77 -1.53,29.57 -1.13,9.74 -2.58,19.5 -5.23,28.95 -2.71,9.67 -6.21,19.2 -10.829,28.12 -4.72,9.13 -10.449,17.83 -17.099,25.68 -6.69,7.9 -14.379,15.04 -22.689,21.24 -7.73,5.77 -16.209,10.61 -24.989,14.62 -8.57,3.91 -17.619,6.81 -26.769,9.05 -8.96,2.2 -18.159,3.37 -27.339,4.29 -9.29,0.93 -18.649,1.01 -27.979,1.23 -10.229,0.24 -30.698,0.1 -30.698,0.1 H 195.323 c 0,0 -21.629,0.17 -32.438,-0.12 -9.869,-0.27 -19.769,-0.39 -29.568,-1.53 -9.739,-1.13 -19.499,-2.59 -28.938,-5.23 -9.669,-2.71 -19.199,-6.21 -28.119,-10.83 -9.14,-4.73 -17.829,-10.46 -25.669,-17.1 -7.91,-6.7 -15.039,-14.39 -21.229,-22.69 -5.77,-7.74 -10.619,-16.21 -14.619,-24.99 -3.91,-8.57 -6.81,-17.62 -9.05,-26.77 -2.2,-8.96 -3.37,-18.16 -4.29,-27.34 -0.93,-9.29 -1.01,-18.65 -1.24,-27.98 -0.24,-10.23 -0.1,-30.7 -0.1,-30.7 L 0.054,195.334 c 0,0 -0.18,-21.63 0.12,-32.44 C 0.444,153.024 0.564,143.124 1.703,133.324 2.833,123.584 4.283,113.824 6.933,104.374 9.643,94.704 13.143,85.174 17.763,76.254 22.482,67.124 28.212,58.424 34.862,50.584 41.551,42.684 49.241,35.544 57.551,29.344 65.28,23.574 73.76,18.734 82.539,14.724 91.109,10.824 100.158,7.924 109.308,5.674 c 8.96,-2.2 18.159,-3.37 27.339,-4.29 9.29,-0.93 18.649,-1.01 27.979,-1.23 10.229,-0.24 30.698,-0.1 30.698,-0.1 h 689.314 c 0,0 21.629,-0.18 32.438,0.12 9.869,0.27 19.769,0.39 29.568,1.53 9.739,1.13 19.499,2.59 28.938,5.23 9.669,2.71 19.199,6.21 28.119,10.83 9.14,4.73 17.829,10.46 25.669,17.1 7.91,6.7 15.039,14.39 21.229,22.69 5.77,7.74 10.619,16.21 14.619,24.99 3.91,8.57 6.81,17.62 9.05,26.77 2.2,8.96 3.37,18.16 4.29,27.34 0.93,9.29 1.01,18.65 1.24,27.98 0.24,10.23 0.1,30.7 0.1,30.7 z</string>
+
+    <!-- Whether we should persist the brightness value in nits for the default display even if
+         the underlying display device changes. -->
+    <bool name="config_persistBrightnessNitsForDefaultDisplay">true</bool>
+</resources>

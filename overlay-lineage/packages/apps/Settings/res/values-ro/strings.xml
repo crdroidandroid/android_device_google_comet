@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Rotește automat când dispozitivul este pliat</string>
-    <string name="setting_auto_rotate_unfolded">Rotește automat când dispozitivul este desfăcut</string>
-</resources>

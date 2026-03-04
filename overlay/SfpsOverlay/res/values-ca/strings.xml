@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">Desbloqueig amb empremta digital per a la feina</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Desbloqueig amb empremta digital crea un model únic de la teva empremta digital per verificar la teva identitat. Per crear aquest model durant la configuració, es prendran imatges de la teva empremta digital des de diverses posicions.</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">Toca el botó d\'engegada</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">El sensor d\'empremtes digitals es troba al botó d\'engegada.\n\nToca el botó lleugerament sense prémer-lo.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">Aixeca i, després, toca. Mou el dit lleugerament cada vegada.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">Toca el sensor</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">El sensor d\'empremtes digitals es troba al botó d\'engegada.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">Utilitza Desbloqueig amb empremta digital</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Quan fas servir Desbloqueig amb empremta digital, les imatges s\'utilitzen per actualitzar el teu model d\'empremta digital. Les imatges utilitzades per crear-lo no s\'emmagatzemen mai, però el model d\'empremta digital sí que s\'emmagatzema de manera segura al telèfon i no en surt mai. Tot el procés es fa de manera segura al teu telèfon.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Quan fa servir Desbloqueig amb empremta digital, les imatges s\'utilitzen per actualitzar el seu model d\'empremta digital. Les imatges utilitzades per crear-lo no s\'emmagatzemen mai, però el model d\'empremta digital sí que s\'emmagatzema de manera segura i mai no surt del telèfon. Tot el procés es fa de manera segura al telèfon.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Pots suprimir el model d\'empremta digital o desactivar Desbloqueig amb empremta digital en qualsevol moment a Configuració. Els models d\'empremta digital s\'emmagatzemen al telèfon fins que els suprimeixes.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">Tu i el teu fill o filla podeu suprimir el model de la seva empremta digital o desactivar Desbloqueig amb empremta digital en qualsevol moment a Configuració. Els models d\'empremta digital s\'emmagatzemen al telèfon fins que se suprimeixin.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">El sensor d\'empremtes digitals es troba al botó d\'engegada. És el botó més curt del lateral del telèfon.</string>
+</resources>

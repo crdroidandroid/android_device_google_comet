@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">Откључавање отиском прста за посао</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">Додирните дугме за укључивање</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">Сензор за отисак прста је на дугмету за укључивање.\n\nЛагано додирните дугме, али га не притискајте.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">Подигните, па додирните. Сваки пут помало померите прст.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">Додирните сензор</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">Сензор за отисак прста се налази на дугмету за укључивање.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">Користите откључавање отиском прста</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Када користите откључавање отиском прста, слике се користе за ажурирање модела отиска прста. Слике које се користе за прављење модела отиска прста никада се не чувају, али се модел отиска прста безбедно чува на телефону и остаје само на њему. Цео процес обраде се безбедно одвија на телефону.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Када дете користи откључавање отиском прста, слике се користе за ажурирање модела отиска прста. Слике које се користе за прављење дететовог модела отиска прста никада се не чувају, али се модел отиска прста безбедно чува на телефону и остаје само на њему. Цео процес обраде се безбедно одвија на телефону.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Можете да избришете модел отиска прста или да искључите откључавање отиском прста у било ком тренутку у Подешавањима. Модели отисака прстију се чувају на телефону док их не избришете.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">Ви и дете можете да избришете његов модел отиска прста или да искључите откључавање отиском прста у било ком тренутку у Подешавањима. Модели отисака прстију се чувају на телефону док се не избришу.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">Сензор за отисак прста се налази на дугмету за укључивање. То је краће дугме на бочној страни телефона.</string>
+</resources>

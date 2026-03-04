@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">वर्क प्रोफाइलका लागि फिंगरप्रिन्ट अनलक</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">पावर बटन छुनुहोस्</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">फिंगरप्रिन्ट सेन्सर पावर बटनमा हुन्छ।\n\nबटनमा धेरै थिच्नुको सट्टा हलुका किसिमले छुनुहोस्।</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">औँला उठाउनुहोस् अनि फेरि छुनुहोस्। हरेक पटक आफ्नो औँला थोरै सार्नुहोस्।</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">यसको साटो सेन्सरमा छुनुहोस्</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">फिंगरप्रिन्ट सेन्सर पावर बटनमा हुन्छ।</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">फिंगरप्रिन्ट अनलक प्रयोग गर्नुहोस्</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">तपाईंले फिंगरप्रिन्ट अनलक प्रयोग गर्दा तपाईंको फिंगरप्रिन्ट मोडेल अपडेट गर्न ती फोटोहरू प्रयोग गरिन्छन्। तपाईंको फिंगरप्रिन्ट मोडेल बनाउन प्रयोग गरिने फोटोहरू कहिल्यै पनि भण्डारण गरिँदैन तर यो फिंगरप्रिन्ट मोडेल तपाईंको फोनमा सुरक्षित तरिकाले भण्डारण गरिन्छ र कहिल्यै पनि यो फोनबाहेक अन्यत्र पठाइँदैन। यी सबै कारबाही तपाईंको फोनमा सुरक्षित तरिकाले गरिन्छ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">तपाईंका बच्चाले फिंगरप्रिन्ट अनलक प्रयोग गर्दा उहाँको फिंगरप्रिन्ट मोडेल अपडेट गर्न ती फोटोहरू प्रयोग गरिन्छन्। तपाईंका बच्चाको फिंगरप्रिन्ट मोडेल बनाउन प्रयोग गरिने फोटोहरू कहिल्यै पनि भण्डारण गरिँदैन तर यो फिंगरप्रिन्ट मोडेल यो फोनमा सुरक्षित तरिकाले भण्डारण गरिन्छ र कहिल्यै पनि यो फोनबाहेक अन्यत्र पठाइँदैन। यी सबै कारबाही यो फोनमा सुरक्षित तरिकाले गरिन्छ।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">तपाईं सेटिङमा गई जुनसुकै बेला आफ्नो फिंगरप्रिन्ट मोडेल मेटाउन वा फिंगरप्रिन्ट अनलक अफ गर्न सक्नुहुन्छ। तपाईंले फिंगरप्रिन्ट मोडेलहरू नमेटाउन्जेल ती मोडेल फोनमा नै भण्डारण गरिन्छन्।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">तपाईं र तपाईंका बच्चा सेटिङमा गई जुनसुकै बेला उनको फिंगरप्रिन्ट मोडेल मेटाउन वा फिंगरप्रिन्ट अनलक अफ गर्न सक्नुहुन्छ। फिंगरप्रिन्ट मोडेल नमेटाइन्जेल ती मोडेल फोनमा भण्डारण गरिन्छन्।</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">फिंगरप्रिन्ट सेन्सर पावर बटनमा हुन्छ। यो फोनको छेउमा रहेको छोटो बटन हो।</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Whether the extended restart dialog is enabled -->
+    <bool name="config_letterboxIsRestartDialogEnabled">true</bool>
+
+    <!-- Whether the additional education about reachability is enabled -->
+    <bool name="config_letterboxIsReachabilityEducationEnabled">true</bool>
+
+    <!-- The minimum tolerance of the percentage of activity bounds within its task to hide
+         size compat restart button. Value lower than 0 or higher than 100 will be ignored.
+         100 is the default value where the activity has to fit exactly within the task to allow
+         size compat restart button to be hidden. 0 means size compat restart button will always
+         be hidden. -->
+    <integer name="config_letterboxRestartButtonHideTolerance">85</integer>
+
+    <!-- The number of rows in the QuickSettings -->
+    <integer name="quick_settings_max_rows">5</integer>
+
+    <!-- The number of rows in the paginated grid QuickSettings -->
+    <integer name="quick_settings_paginated_grid_num_rows">5</integer>
+
+    <!-- Flag to activate notification to contents feature -->
+    <bool name="config_notificationToContents">true</bool>
+</resources>

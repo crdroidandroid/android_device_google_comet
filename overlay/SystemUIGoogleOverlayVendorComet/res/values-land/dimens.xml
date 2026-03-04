@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Proportion of the screen height to use to set the maximum height of the bouncer to when
+         the device is in the DEVICE_POSTURE_HALF_OPENED posture, for the PIN/pattern entry. 0 will
+         allow it to use the whole screen space, 0.6 will allow it to use just under half of the
+         screen. -->
+    <item name="half_opened_bouncer_height_ratio" format="float" type="dimen">0.6</item>
+</resources>

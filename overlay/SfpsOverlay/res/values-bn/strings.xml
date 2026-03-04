@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">অফিসের জন্য \'ফিঙ্গারপ্রিন্ট আনলক\'</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">আপনার পরিচয় যাচাই করার জন্য, \'ফিঙ্গারপ্রিন্ট আনলক\' ফিচার আপনার ফিঙ্গারপ্রিন্টের একটি অনন্য মডেল তৈরি করে। সেট-আপ করার সময় এই ফিঙ্গারপ্রিন্ট মডেল তৈরি করতে, বিভিন্ন দিক থেকে আপনাকে ফিঙ্গারপ্রিন্টের ছবি নিতে হবে।</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">পাওয়ার বোতাম টাচ করুন</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">পাওয়ার বোতামের উপরে ফিঙ্গারপ্রিন্ট সেন্সর রয়েছে।\n\nবোতামটি নিচের দিকে প্রেস না করে হালকা টাচ করুন।</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">উপরে তুলে আবার টাচ করুন। প্রতিবার আঙুল সামান্য সরান।</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">এর পরিবর্তে সেন্সরে টাচ করুন</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">পাওয়ার বোতামের উপরে ফিঙ্গারপ্রিন্ট সেন্সর আছে।</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ফিঙ্গারপ্রিন্ট আনলক ব্যবহার করুন</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">আপনি \'ফিঙ্গারপ্রিন্ট আনলক\' ফিচার ব্যবহার করলে, ফিঙ্গারপ্রিন্ট মডেল আপডেট করতে ছবি ব্যবহার করা হয়। আপনার ফিঙ্গারপ্রিন্ট মডেল তৈরির জন্য ব্যবহার করা ছবি কখনই সেভ করে রাখা হয় না, তবে ফিঙ্গারপ্রিন্ট মডেলটি আপনার ফোনে নিরাপদে সেভ করে রাখা হয় যা কখনই ফোন থেকে অন্য কোথাও পাঠানো হয় না। সবকটি প্রসেস নিরাপদে আপনার ফোনেই সম্পন্ন করা হয়।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">বাচ্চা ফিঙ্গারপ্রিন্ট আনলক ব্যবহার করার সময়, ছবিগুলি তার ফিঙ্গারপ্রিন্ট মডেল আপডেট করার জন্য ব্যবহৃত হয়। আপনার বাচ্চার ফিঙ্গারপ্রিন্ট মডেল তৈরির জন্য ব্যবহৃত ছবি কখনও সেভ করে রাখা হয় না, তবে ফোনে ফিঙ্গারপ্রিন্ট মডেল নিরাপদে সেভ করে রাখা হয় এবং কখনও ফোন থেকে মুছে যায় না। ফোনে সবকটি প্রসেস নিরাপদে করা হয়।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">সেটিংস থেকে যেকোনও সময়ে আপনি নিজের ফিঙ্গারপ্রিন্ট মডেল মুছে ফেলতে বা ফিঙ্গারপ্রিন্ট আনলক করার সুবিধা বন্ধ করতে পারবেন। আপনি মুছে না ফেলা পর্যন্ত ফিঙ্গারপ্রিন্ট মডেল সেভ করা থাকে।</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">আপনি ও আপনার সন্তান ফিঙ্গারপ্রিন্টের মডেল মুছে ফেলতে পারবেন অথবা যে কোনও সময় সেটিংস থেকে \'ফিঙ্গারপ্রিন্ট আনলক\' ফিচারটি বন্ধ করে দিতে পারবেন। মুছে না ফেলা পর্যন্ত ফিঙ্গারপ্রিন্ট মডেল ফোনে সেভ করা থাকে।</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">\'পাওয়ার\' বোতামের উপরে ফিঙ্গারপ্রিন্ট সেন্সর আছে। এটি ফোনের পাশের দিকে থাকা তুলনামূলক ছোট বোতাম।</string>
+</resources>

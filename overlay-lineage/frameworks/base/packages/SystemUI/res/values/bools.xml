@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-     SPDX-FileCopyrightText: The LineageOS Project
-     SPDX-License-Identifier: Apache-2.0
--->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <add-resource name="comet_unfolded_config_use_split_notification_shade" type="bool" />
-    <bool name="comet_unfolded_config_use_split_notification_shade">true</bool>
-</resources>

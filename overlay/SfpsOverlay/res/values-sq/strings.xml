@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">\"Shkyçja me gjurmën e gishtit\" për punën</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">Prek butonin e \"Energjisë\"</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">Sensori i gjurmës së gishtit është në butonin e \"Energjisë\".\n\nPreke butonin lehtë pa e shtypur.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">Ngri gishtin, më pas prek. Lëviz paksa gishtin çdo herë.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">Prek sensorin më mirë</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">Sensori i gjurmës së gishtit është në butonin e energjisë.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">Përdor \"Shkyçjen me gjurmën e gishtit\"</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Kur përdor \"Shkyçjen me gjurmën e gishtit\", imazhet përdoren për të përditësuar modelin tënd të gjurmës së gishtit. Imazhet e përdorura për të krijuar modelin e gjurmës sate të gishtit nuk ruhen asnjëherë, por modeli i gjurmës sate të gishtit ruhet në mënyrë të sigurt në telefonin tënd dhe nuk largohet kurrë nga telefoni. I gjithë përpunimi ndodh në mënyrë të sigurt në telefonin tënd.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Kur ai përdor \"Shkyçjen me gjurmën e gishtit\", imazhet përdoren për të përditësuar modelin e tij të gjurmës së gishtit. Imazhet e përdorura për të krijuar modelin e gjurmës së gishtit të fëmijës tënd nuk ruhen asnjëherë, por modeli i gjurmës së gishtit ruhet në mënyrë të sigurt në telefon dhe nuk largohet kurrë nga telefoni. I gjithë përpunimi ndodh në mënyrë të sigurt në telefonin tënd.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Mund ta fshish modelin e gjurmës sate të gishtit ose ta çaktivizosh \"Shkyçjen me gjurmën e gishtit\" në çdo kohë te \"Cilësimet\". Modelet e gjurmëve të gishtave ruhen në telefon derisa t\'i fshish.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">Ti dhe fëmija yt mund ta modelin e gjurmës së tij të gishtit ose ta çaktivizoni \"Shkyçjen me gjurmë gishti\" në çdo kohë te \"Cilësimet\". Modelet e gjurmës së gishtit ruhen në telefon derisa të fshihen.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">Sensori i gjurmës së gishtit është në butonin e energjisë. Është butoni më i shkurtër në pjesën anësore të telefonit.</string>
+</resources>

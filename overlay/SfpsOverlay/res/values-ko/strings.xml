@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">직장용 지문 잠금 해제</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">전원 버튼 터치</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">지문 센서는 전원 버튼에 있습니다.\n\n버튼을 누르지 말고 가볍게 터치하세요.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">손가락을 들었다가 터치하세요. 한 번 터치할 때마다 조금씩 손가락을 움직이세요.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">대신 센서 터치</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">지문 센서는 전원 버튼에 있습니다.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">지문 잠금 해제 사용</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">지문 잠금 해제를 사용하면 지문 모델을 업데이트하는 데 이미지가 활용됩니다. 지문 모델을 만드는 데 사용된 이미지는 저장되지 않으나 지문 모델은 휴대전화에 안전하게 저장되며 기기 외부로 전송되지 않습니다. 모든 처리는 휴대전화 내에서 안전하게 이뤄집니다.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">자녀가 지문 잠금 해제를 사용하면 자녀의 지문 모델을 업데이트하는 데 이미지가 활용됩니다. 자녀의 지문 모델을 만드는 데 사용된 이미지는 저장되지 않지만 지문 모델 자체는 휴대전화에 안전하게 저장되며 휴대전화 외부로 전송되지 않습니다. 모든 처리는 휴대전화 내에서 안전하게 이뤄집니다.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">언제든지 설정에서 지문 모델을 삭제하거나 지문 잠금 해제를 사용 중지할 수 있습니다. 지문 모델은 삭제하기 전까지 휴대전화에 저장됩니다.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">부모와 자녀가 언제든지 설정에서 자녀의 지문 모델을 삭제하거나 지문 잠금 해제를 사용 중지할 수 있습니다. 지문 모델은 삭제하기 전까지 휴대전화에 저장됩니다.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">지문 센서는 전원 버튼에 있습니다. 휴대전화 측면에 있는 더 짧은 버튼입니다.</string>
+</resources>

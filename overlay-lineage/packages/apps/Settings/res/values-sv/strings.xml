@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Rotera automatiskt i hopvikt läge</string>
-    <string name="setting_auto_rotate_unfolded">Rotera automatiskt i utfällt läge</string>
-</resources>

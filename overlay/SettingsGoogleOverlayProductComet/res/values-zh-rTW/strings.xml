@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="setting_auto_rotate_folded">折疊時自動旋轉</string>
+
+    <string name="setting_auto_rotate_unfolded">展開時自動旋轉</string>
+</resources>

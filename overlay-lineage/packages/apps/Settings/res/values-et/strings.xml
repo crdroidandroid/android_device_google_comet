@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Pööra automaatselt, kui on kokku klapitud</string>
-    <string name="setting_auto_rotate_unfolded">Pööra automaatselt, kui on lahti klapitud</string>
-</resources>

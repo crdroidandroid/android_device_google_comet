@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="setting_auto_rotate_folded">ફોલ્ડ કરેલું હોય ત્યારે ઑટો રોટેટ (સ્ક્રીનની ઑટોમૅટિક રીતે ફરવાની ક્રિયા) કરો</string>
+
+    <string name="setting_auto_rotate_unfolded">અનફોલ્ડ કરેલું હોય ત્યારે ઑટો રોટેટ (સ્ક્રીનની ઑટોમૅટિક રીતે ફરવાની ક્રિયા) કરો</string>
+</resources>

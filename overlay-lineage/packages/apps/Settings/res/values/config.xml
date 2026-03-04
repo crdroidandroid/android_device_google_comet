@@ -17,40 +17,4 @@
 <resources>
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">true</bool>
-
-    <!-- App aspect ratio settings screen, user aspect ratio override options. Must be the same
-         length and order as config_userAspectRatioOverrideValues below. -->
-    <string-array name="config_userAspectRatioOverrideEntries" translatable="false">
-        <item>@null</item>
-        <item>@null</item>
-        <item>@null</item>
-        <item>@null</item>
-    </string-array>
-
-    <!-- App aspect ratio settings screen, user aspect ratio override options. Must be the same
-         length and order as config_userAspectRatioOverrideEntries above. The values must
-         correspond to PackageManager.UserMinAspectRatio -->
-    <integer-array name="config_userAspectRatioOverrideValues" translatable="false">
-        <item>0</item> <!-- USER_MIN_ASPECT_RATIO_UNSET -->
-        <item>6</item> <!-- USER_MIN_ASPECT_RATIO_FULLSCREEN -->
-        <item>5</item> <!-- USER_MIN_ASPECT_RATIO_3_2 -->
-        <item>1</item> <!-- USER_MIN_ASPECT_RATIO_SPLIT_SCREEN -->
-    </integer-array>
-
-    <!-- The settings/preference description for each settable device state defined in the array
-         "config_perDeviceStateRotationLockDefaults".
-         The item in position "i" describes the auto-rotation setting for the device state also in
-         position "i" in the array "config_perDeviceStateRotationLockDefaults". -->
-    <string-array name="config_settableAutoRotationDeviceStatesDescriptions">
-        <item>@string/setting_auto_rotate_folded</item>
-        <item>@null</item>
-        <item>@string/setting_auto_rotate_unfolded</item>
-        <item>@null</item>
-    </string-array>
-
-    <!-- The ratio to use when using the two-pane settings layout -->
-    <item name="config_activity_embed_split_ratio" type="dimen">0.5</item>
-
-    <!-- The smallest value of current width of the window when the split should be used. -->
-    <integer name="config_activity_embed_split_min_cur_dp">600</integer>
 </resources>

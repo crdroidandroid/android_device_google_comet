@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Auto-rotate when folded</string>
-    <string name="setting_auto_rotate_unfolded">Auto-rotate when unfolded</string>
-</resources>

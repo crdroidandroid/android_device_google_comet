@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Maximum density scale. The actual scale used depends on the device. -->
+    <fraction name="display_density_max_scale">138.49792%</fraction>
+
+    <dimen name="bottom_sheet_corner_radius">52dp</dimen>
+
+    <!-- Location on the screen of the center of the physical power button. This is a reasonable
+    default that should be overridden by device-specific overlays. -->
+    <dimen name="physical_power_button_center_screen_location_y">765px</dimen>
+
+    <!-- Location on the screen of the center of the fingerprint sensor. For devices with under
+     display fingerprint sensors, this directly corresponds to the fingerprint sensor's location.
+     For devices with sensors on the back of the device, this corresponds to the location on the
+     screen directly in front of the sensor.
+     By default, this is set to @null to use the horizontal center of the screen. -->
+    <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
+
+    <!-- Location on the screen of the center of the fingerprint sensor. For devices with under
+     display fingerprint sensors, this directly corresponds to the fingerprint sensor's location.
+     For devices with sensors on the back of the device, this corresponds to the location on the
+     screen directly in front of the sensor. -->
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">710px</dimen>
+
+    <!-- Weather clock smartspace scaling to apply for the weather clock -->
+    <dimen name="weather_clock_smartspace_translateX">-12dp</dimen>
+    <dimen name="weather_clock_smartspace_translateY">10dp</dimen>
+</resources>

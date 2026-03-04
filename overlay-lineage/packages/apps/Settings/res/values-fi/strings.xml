@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Käännä automaattisesti, kun laite taitetaan</string>
-    <string name="setting_auto_rotate_unfolded">Käännä automaattisesti, kun taitettu laite avataan</string>
-</resources>

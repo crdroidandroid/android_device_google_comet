@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Αυτόματη περιστροφή κατά το δίπλωμα</string>
-    <string name="setting_auto_rotate_unfolded">Αυτόματη περιστροφή κατά το ξεδίπλωμα</string>
-</resources>

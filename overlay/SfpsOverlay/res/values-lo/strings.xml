@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">ປົດລັອກດ້ວຍລາຍນິ້ວມືສຳລັບວຽກ</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">ແຕະໃສ່ປຸ່ມເປີດປິດ</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">ເຊັນເຊີລາຍນິ້ວມືແມ່ນຢູ່ເທິງປຸ່ມເປີດປິດ.\n\nໃຫ້ແຕະໃສ່ປຸ່ມດັ່ງກ່າວຄ່ອຍໆໂດຍບໍ່ຕ້ອງກົດມັນລົງ.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">ຍົກນິ້ວຂຶ້ນແລ້ວແຕະ. ຍັບນິ້ວຂອງທ່ານເລັກນ້ອຍໃນແຕ່ລະເທື່ອ.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">ສຳຜັດເຊັນເຊີແທນ</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">ເຊັນເຊີລາຍນິ້ວມືແມ່ນຢູ່ປຸ່ມເປີດປິດ.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ໃຊ້ການປົດລັອກດ້ວຍລາຍນິ້ວມື</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">ເມື່ອທ່ານປົດລັອກດ້ວຍລາຍນິ້ວມື, ຮູບຈະຖືກໃຊ້ເພື່ອອັບເດດຮູບແບບລາຍນິ້ວມືຂອງທ່ານ. ຮູບທີ່ຖືກໃຊ້ເພື່ອສ້າງຮູບແບບລາຍນິ້ວມືຈະບໍ່ຖືກຈັດເກັບໄວ້, ແຕ່ຮູບແບບລາຍນິ້ວມືແມ່ນຖືກຈັດເກັບໄວ້ຢ່າງປອດໄພຢູ່ໂທລະສັບຂອງທ່ານ ແລະ ຈະບໍ່ຖືກສົ່ງອອກຈາກໂທລະສັບເດັດຂາດ. ການປະມວນຜົນທັງໝົດຈະເກີດຂຶ້ນຢ່າງປອດໄພຢູ່ໂທລະສັບຂອງທ່ານ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">ເມື່ອເຂົາເຈົ້າປົດລັອກດ້ວຍລາຍນິ້ວມື, ຮູບຈະຖືກໃຊ້ເພື່ອອັບເດດຮູບແບບລາຍນິ້ວມືຂອງເຂົາເຈົ້າ. ຮູບທີ່ຖືກໃຊ້ເພື່ອສ້າງຮູບແບບລາຍນິ້ວມືຂອງລູກທ່ານຈະບໍ່ຖືກຈັດເກັບໄວ້, ແຕ່ຮູບແບບລາຍນິ້ວມືແມ່ນຖືກຈັດເກັບໄວ້ຢ່າງປອດໄພຢູ່ໂທລະສັບ ແລະ ຈະບໍ່ຖືກສົ່ງອອກຈາກໂທລະສັບເດັດຂາດ. ການປະມວນຜົນທັງໝົດຈະເກີດຂຶ້ນຢ່າງປອດໄພຢູ່ໂທລະສັບ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">ທ່ານສາມາດລຶບຮູບແບບລາຍນິ້ວມືຂອງທ່ານ ຫຼື ປິດການປົດລັອກດ້ວຍລາຍນິ້ວມືຕອນໃດກໍໄດ້ໃນການຕັ້ງຄ່າ. ຮູບແບບລາຍນິ້ວມືແມ່ນຈັດເກັບໄວ້ຢູ່ໂທລະສັບຈົນກວ່າທ່ານຈະລຶບພວກມັນອອກ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">ທ່ານ ແລະ ລູກຂອງທ່ານສາມາດລຶບຮູບແບບລາຍນິ້ວມືຂອງເຂົາເຈົ້າອອກ ຫຼື ປິດການໃຊ້ການປົດລັອກດ້ວຍລາຍນິ້ວມືຕອນໃດກໍໄດ້ໃນການຕັ້ງຄ່າ. ຮູບແບບລາຍນິ້ວມືແມ່ນຖືກຈັດເກັບໄວ້ຢູ່ໂທລະສັບຈົນກວ່າພວກມັນຈະຖືກລຶບອອກ.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">ເຊັນເຊີລາຍນິ້ວມືແມ່ນຢູ່ປຸ່ມເປີດປິດ. ມັນແມ່ນປຸ່ມທີ່ສັ້ນກວ່າທີ່ຢູ່ທາງຂ້າງຂອງໂທລະສັບ.</string>
+</resources>

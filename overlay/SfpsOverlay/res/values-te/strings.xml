@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">వర్క్ ప్రొఫైల్ కోసం వేలిముద్ర అన్‌లాక్</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">పవర్ బటన్‌ను తాకండి</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">వేలిముద్ర సెన్సార్ అనేది పవర్ బటన్‌పై ఉంటుంది.\n\nబటన్‌ను కిందికి నొక్కకుండా, దాన్ని సున్నితంగా తాకండి.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">పైకి ఎత్తి, టచ్ చేయండి. టచ్ చేసిన ప్రతిసారి వేలిని కొద్ది కొద్దిగా కదపండి.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">బదులుగా, సెన్సార్‌ను తాకండి</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">వేలిముద్ర సెన్సార్ పవర్ బటన్‌పై ఉంది.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">వేలిముద్ర అన్‌లాక్‌ను ఉపయోగించండి</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">మీరు వేలిముద్ర అన్‌లాక్‌ను ఉపయోగించినప్పుడు, మీ వేలిముద్ర మోడల్‌ను అప్‌డేట్ చేయడానికి ఇమేజ్‌లు ఉపయోగించబడతాయి. మీ వేలిముద్ర మోడల్‌ను క్రియేట్ చేయడానికి ఉపయోగించే ఇమేజ్‌లు ఎప్పుడూ స్టోర్ చేయబడవు, కానీ వేలిముద్ర మోడల్ మీ ఫోన్‌లో సురక్షితంగా స్టోర్ చేయబడుతుంది అలాగే ఫోన్ నుండి బయటకు పంపబడదు. మొత్తం ప్రాసెస్ విధానం మీ ఫోన్‌లో సురక్షితంగా జరుగుతుంది.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">వారు వేలిముద్ర అన్‌లాక్‌ను ఉపయోగించినప్పుడు, వారి వేలిముద్ర మోడల్‌ను అప్‌డేట్ చేయడానికి ఇమేజ్‌లు ఉపయోగించబడతాయి. మీ చిన్నారి వేలిముద్ర మోడల్‌ను క్రియేట్ చేయడానికి ఉపయోగించే ఇమేజ్‌లు ఎప్పుడూ స్టోర్ చేయబడవు, కానీ వేలిముద్ర మోడల్ ఫోన్‌లో సురక్షితంగా స్టోర్ చేయబడుతుంది, ఫోన్ నుండి బయటకు పంపబడదు. మొత్తం ప్రాసెస్ విధానం ఫోన్‌లో సురక్షితంగా జరుగుతుంది.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">మీరు సెట్టింగ్‌లలో ఎప్పుడైనా మీ వేలిముద్ర మోడల్‌ను తొలగించవచ్చు లేదా \'వేలిముద్ర అన్‌లాక్\'ను ఆఫ్ చేయవచ్చు. మీరు వేలిముద్ర మోడల్స్‌ను తొలగించే వరకు అవి ఫోన్‌లో స్టోర్ చేయబడతాయి.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">మీరు, మీ చిన్నారి సెట్టింగ్‌లలో ఎప్పుడైనా వారి వేలిముద్ర మోడల్‌ను తొలగించవచ్చు, లేదా వేలిముద్ర అన్‌లాక్‌ను ఆఫ్ చేయవచ్చు. వేలిముద్ర మోడల్స్ తొలగించబడే వరకు అవి ఫోన్‌లో స్టోర్ చేయబడతాయి.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">వేలిముద్ర సెన్సార్ పవర్ బటన్‌పై ఉంది. ఇది ఫోన్‌కు పక్కన ఉండే బటన్‌లలో చిన్నది.</string>
+</resources>

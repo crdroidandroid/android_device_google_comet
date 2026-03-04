@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">කාර්යාලය සඳහා ඇඟිලි සලකුණු අගුළු හැරීම</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">බල බොත්තම ස්පර්ශ කරන්න</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">ඇඟිලි සලකුණු සංවේදකය බල බොත්තමෙහි ඇත.\n\nබොත්තම පහළට එබීමෙන් තොරව සැහැල්ලුවෙන් ස්පර්ශ කරන්න.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">ඔසවා, පසුව ස්පර්ශ කරන්න. එක් එක් වතාවේ ඔබේ ඇඟිල්ල තරමක් ගෙන යන්න.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">ඒ වෙනුවට සංවේදකය ස්පර්ශ කරන්න</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">ඇඟිලි සලකුණු සංවේදකය බල බොත්තම මත ඇත.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">ඇඟිලි සලකුණු අගුලු හැරීම භාවිත කරන්න</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">ඔබ ඇඟිලි සලකුණු අගුළු හැරීම භාවිතා කරන විට, ඔබේ ඇඟිලි සලකුණු ආකෘතිය යාවත්කාලීන කිරීමට රූප භාවිතා වේ. ඔබේ ඇඟිලි සලකුණු ආකෘතිය තැනීමට භාවිතා කරන රූප කිසි විටක ගබඩා නොකරනු ඇති නමුත්, ඇඟිලි සලකුණු ආකෘතිය ඔබේ දුරකථනයෙහි සුරක්ෂිතව ගබඩා කර ඇති අතර කිසි විටක දුරකථනය හැර නොයයි. සියලු සැකසීම් ඔබේ දුරකථනයෙහි සුරක්ෂිතව සිදු වේ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">ඔවුන් ඇඟිලි සලකුණු අගුළු හැරීම භාවිතා කරන විට, ඔවුන්ගේ ඇඟිලි සලකුණු ආකෘතිය යාවත්කාලීන කිරීමට රූප භාවිතා වේ. ඔබගේ දරුවාගේ ඇඟිලි සලකුණු ආකෘතිය තැනීමට භාවිත කරන රූප කිසි විටක ගබඩා නොකරනු ඇත, නමුත් ඇඟිලි සලකුණු ආකෘතිය දුරකථනයේ ආරක්ෂිතව ගබඩා කර ඇති අතර කිසි විටක දුරකථනය හැර නොයයි. සියලු සැකසීම් දුරකථනයේ ආරක්ෂිතව සිදු වේ.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">ඔබට සැකසීම් තුළ ඕනෑම වේලාවක ඔබගේ ඇඟිලි සලකුණු ආකෘතිය මැකීමට හෝ ඇඟිලි සලකුණු අගුළු හැරීම ක්‍රියාවිරහිත කිරීමට හැකිය. ඇඟිලි සලකුණු ආකෘති ඔබ මකන තෙක් දුරකථනයේ ගබඩා කර ඇත.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">ඔබට සහ ඔබගේ දරුවාට සැකසීම් තුළ ඕනෑම වේලාවක සිය ඇඟිලි සලකුණු ආකෘතිය මැකීමට හෝ ඇඟිලි සලකුණු අගුලු හැරීම ක්‍රියාවිරහිත කිරීමට හැකිය. ඇඟිලි සලකුණු ආකෘති ඒ්වා මකන තෙක් දුරකථනයේ ගබඩා කර ඇත.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">ඇඟිලි සලකුණු සංවේදකය බල බොත්තම මත ඇත. එය දුරකථනයේ පැත්තේ ඇති කෙටි බොත්තමයි.</string>
+</resources>

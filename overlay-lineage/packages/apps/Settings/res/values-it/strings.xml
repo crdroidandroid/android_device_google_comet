@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="setting_auto_rotate_folded">Rotazione automatica quando è piegato</string>
-    <string name="setting_auto_rotate_unfolded">Rotazione automatica quando non è piegato</string>
-</resources>

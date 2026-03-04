@@ -14,9 +14,6 @@ TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 
 TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_RIGHT
 
-DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/comet/overlay-lineage
-
 # Audio
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
@@ -41,8 +38,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
 PRODUCT_PACKAGES += \
-	android.hardware.nfc-service.st \
-	NfcOverlayComet
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -56,23 +52,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	init_thermal_config
 
-# UWB Overlay
-PRODUCT_PACKAGES += \
-	UwbOverlayCT3 \
-	UwbOverlayCT3Gsi
-
-# WiFi Overlay
-PRODUCT_PACKAGES += \
-	WifiOverlay2024Mid_CT3
-
-# GRil Overlay
-PRODUCT_PACKAGES += \
-	GRilServiceOverlay_CT3
-
-# Settings Overlay
-PRODUCT_PACKAGES += \
-    SettingsCometOverlay
-
 # Hinge angle sensor
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.sensor.hinge_angle.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hinge_angle.xml
@@ -80,10 +59,6 @@ PRODUCT_COPY_FILES += \
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
-
-# Connectivity Resources Overlay for Thread host settings
-PRODUCT_PACKAGES += \
-    ConnectivityResourcesOverlayCometOverride
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
@@ -93,9 +68,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
-
-PRODUCT_PACKAGES += \
-    EuiccSupportPixelOverlay
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
@@ -114,8 +86,33 @@ PRODUCT_PACKAGES += \
     init.recovery.comet.touch.rc
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/google/comet/overlay-lineage
+
 PRODUCT_PACKAGES += \
-    PixelDisplayServiceOverlayComet
+    ConnectivityResourcesOverlayCometOverride \
+    DMServiceOverlayVendorComet \
+    FrameworkResOverlayProductComet \
+    FrameworkResOverlayVendorComet \
+    GRilServiceOverlay_CT3 \
+    LargeScreenConfigOverlay \
+    LargeScreenSettingsProviderOverlay \
+    NexusLauncherReleaseOverlayVendorComet \
+    PixelDisplayServiceOverlayProductComet \
+    PixelNfcOverlayComet \
+    PixelUwbOverlayCT3 \
+    PixelWifiOverlay2024Comet \
+    SafetyRegulatoryInfoOverlayProductComet \
+    SettingsCometOverlay \
+    SettingsGoogleCometOverlay \
+    SettingsGoogleOverlayProductComet \
+    SettingsGoogleOverlayVendorComet \
+    SettingsProviderOverlayVendorComet \
+    SfpsOverlay \
+    SystemUIGoogleOverlayProductComet \
+    SystemUIGoogleOverlayVendorComet \
+    TeleServiceOverlayVendorComet \
+    TelecomOverlayProductComet
 
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/product.prop

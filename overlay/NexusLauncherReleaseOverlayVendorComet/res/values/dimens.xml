@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Transient taskbar (placeholders to compile in Launcher3 without Quickstep) -->
+    <dimen name="transient_taskbar_stashed_height">24dp</dimen>
+    <dimen name="taskbar_button_margin_split">68dp</dimen>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- App aspect ratio settings screen, user aspect ratio override options. Must be the same
+         length and order as config_userAspectRatioOverrideValues below.
+
+         If changed, also update the Backup & Restore logic for choosing the closest value in
+         com/android/settings/applications/appcompat/UserAspectRatioBackupManager.java -->
+    <string-array name="config_userAspectRatioOverrideEntries">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </string-array>
+
+    <!-- App aspect ratio settings screen, user aspect ratio override options. Must be the same
+         length and order as config_userAspectRatioOverrideEntries above. The values must
+         correspond to PackageManager.UserMinAspectRatio.
+
+         If changed, also update the Backup & Restore logic for choosing the closest value in
+         com/android/settings/applications/appcompat/UserAspectRatioBackupManager.java -->
+    <integer-array name="config_userAspectRatioOverrideValues">
+        <item>0</item>
+        <item>6</item>
+        <item>5</item>
+        <item>1</item>
+    </integer-array>
+
+    <!-- The settings/preference description for each settable device state defined in the array
+         "config_perDeviceStateRotationLockDefaults".
+         The item in position "i" describes the auto-rotation setting for the device state also in
+         position "i" in the array "config_perDeviceStateRotationLockDefaults". -->
+    <string-array name="config_settableAutoRotationDeviceStatesDescriptions">
+        <item>@string/setting_auto_rotate_folded</item>
+        <item>@null</item>
+        <item>@string/setting_auto_rotate_unfolded</item>
+        <item>@null</item>
+    </string-array>
+
+    <!-- The ratio to use when using the two-pane settings layout -->
+    <item name="config_activity_embed_split_ratio" format="float" type="dimen">0.5</item>
+
+    <!-- The smallest value of current width of the window when the split should be used. -->
+    <integer name="config_activity_embed_split_min_cur_dp">600</integer>
+
+    <!-- Whether the toggle for Auto-rotate with Face Detection should be shown. -->
+    <bool name="config_auto_rotate_face_detection_available">false</bool>
+
+    <!-- Whether to display pSIM conversion menu in Settings.-->
+    <bool name="config_psim_conversion_menu_enabled">true</bool>
+
+    <!-- Array of carrier id to allow the pSIM conversion-->
+    <integer-array name="config_psim_conversion_menu_enabled_carrier">
+        <item>1</item>
+        <item>3</item>
+        <item>16</item>
+        <item>576</item>
+        <item>1404</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2122</item>
+    </integer-array>
+</resources>

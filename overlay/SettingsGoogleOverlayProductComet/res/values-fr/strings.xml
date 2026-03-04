@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="setting_auto_rotate_folded">Rotation automatique en mode plié</string>
+
+    <string name="setting_auto_rotate_unfolded">Rotation automatique en mode déplié</string>
+</resources>

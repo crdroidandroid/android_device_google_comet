@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Title shown for work menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
+    <string name="security_settings_work_fingerprint_preference_title">Desbloqueo con huellas dactilares para el trabajo</string>
+
+    <!-- Introduction title shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=29] -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_title">Toca el botón de encendido</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">El sensor de huellas dactilares se encuentra en el botón de encendido.\n\nToca ligeramente el botón sin presionarlo.</string>
+
+    <!-- Title shown in fingerprint enrollment dialog to repeat touching the fingerprint sensor [CHAR LIMIT=40] -->
+    <string name="security_settings_fingerprint_enroll_repeat_title">Levanta el dedo y luego toca. Muévelo un poco cada vez.</string>
+
+    <!-- Dialog title for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=45] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_title">Toca el sensor</string>
+
+    <!-- Dialog message for dialog which shows when user touches the icon on the screen, instead of the sensor at the back [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_enroll_touch_dialog_message">El sensor de huellas dactilares está en el botón de encendido.</string>
+
+    <!-- Title for suggested actions for settings up a fingerprint lock [CHAR LIMIT=46] -->
+    <string name="suggested_fingerprint_lock_settings_title">Usa el Desbloqueo con huellas dactilares</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Cuando usas la función Desbloqueo con huellas dactilares, las imágenes se utilizan para actualizar el modelo de huella dactilar. Las imágenes que se usan para crear tu modelo no se almacenan, a diferencia del modelo en sí, que se almacena de manera segura en el teléfono y nunca sale de él. Todo el proceso se lleva a cabo de manera segura en el dispositivo.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE]-->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Cuando usa la función Desbloqueo con huellas dactilares, las imágenes se utilizan para actualizar el modelo de huella dactilar. Las imágenes que se usan para crear el modelo de tu hijo no se almacenan, a diferencia del modelo en sí, que lo hace de manera segura en el teléfono y nunca sale de él. Todo el proceso se lleva a cabo en el teléfono de forma segura.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Puedes borrar el modelo de la huella dactilar o desactivar esta función cuando quieras en Configuración. Los modelos de huellas dactilares se almacenarán en el teléfono hasta que los borres.</string>
+
+    <!-- Introduction description message shown in fingerprint enrollment introduction screen in setup wizard when asking for parental consent. [CHAR LIMIT=NONE] -->
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">Tú y tu hijo pueden borrar el modelo de su huella dactilar, así como desactivar la función Desbloqueo con huellas dactilares en cualquier momento desde Configuración. Los modelos de la huella dactilar se almacenan en el teléfono hasta que se borran.</string>
+
+    <!-- Message shown in SFPS enrollment dialog to locate the sensor (default) [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sfps_enroll_find_sensor_message">El sensor de huellas dactilares está en el botón de encendido. Es el botón más corto del lateral del teléfono.</string>
+</resources>
