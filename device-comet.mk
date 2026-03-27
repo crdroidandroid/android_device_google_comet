@@ -15,7 +15,7 @@ TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 SHIPPING_API_LEVEL := 34
 
 # Inherit from zumapro
-include device/google/zumapro/device-shipping-common.mk
+include device/google/zumapro/common.mk
 
 # Fold extensions
 PRODUCT_SYSTEM_SERVER_JARS += \
