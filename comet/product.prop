@@ -7,9 +7,6 @@ persist.bluetooth.leaudio_sw_offload=true
 persist.bluetooth.thread_dispatcher.enabled=false
 persist.vendor.audio.leaudio_sw_offload=true
 
-# Device family
-ro.build.device_family=CT3
-
 # Google keyboard
 ro.com.google.ime.height_ratio=1.18
 ro.com.google.ime.kb_pad_port_b=11.2

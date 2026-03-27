@@ -13,6 +13,9 @@ vendor.camera.debug.enable_software_post_sharpen_node=false
 # DCK
 ro.gms.dck.eligible_wcc=3
 
+# Device family
+ro.build.device_family=CT3
+
 # Display
 debug.sf.set_idle_timer_ms_4619827677550801152=80
 debug.sf.set_idle_timer_ms_4619827677550801153=1000
