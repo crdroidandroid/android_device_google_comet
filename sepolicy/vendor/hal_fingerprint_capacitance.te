@@ -1,5 +1,7 @@
 type hal_fingerprint_capacitance, domain;
 type hal_fingerprint_capacitance_exec, exec_type, file_type, vendor_file_type;
+type hal_fingerprint_capacitance_ext_hwservice, hwservice_manager_type;
+type sysfs_fingerprint, fs_type, sysfs_type;
 
 hal_client_domain(hal_fingerprint_capacitance, hal_power)
 
