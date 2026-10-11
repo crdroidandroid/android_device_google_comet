@@ -1,6 +1,8 @@
 genfscon debugfs /bpst u:object_r:vendor_battery_debugfs:s0
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0028/power_supply/vimon/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0036/power_supply/maxfg_base/power/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0036/power_supply/maxfg_base/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0069/power_supply/wlcin-mains/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/10ca0000.hsi2c/i2c-10/10-0036/power/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/10ca0000.hsi2c/i2c-10/10-0036/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/10ca0000.hsi2c/i2c-10/10-0036/power_supply/maxfg_secondary/power/wakeup u:object_r:sysfs_wakeup:s0
@@ -34,6 +36,8 @@ genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/serial_numb
 genfscon sysfs /devices/platform/19450000.drmdsim/19450000.drmdsim.0/time_in_state u:object_r:sysfs_display:s0
 genfscon sysfs /devices/platform/19450000.drmdsim/hs_clock u:object_r:sysfs_display:s0
 genfscon sysfs /devices/platform/19471000.drmdecon/dqe1/atc u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/acpm_mfd_bus@15500000/i2c-7/7-001f/s2mpg14-rtc/rtc/rtc0/alarmtimer.5.auto/power/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/acpm_mfd_bus@15500000/i2c-7/7-001f/s2mpg14-rtc/rtc/rtc0/alarmtimer.5.auto/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/google,dual_batt_gauge/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/google,dual_batt_gauge/power_supply/dualbatt/power/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/google,dual_batt_gauge/power_supply/dualbatt/wakeup u:object_r:sysfs_wakeup:s0
