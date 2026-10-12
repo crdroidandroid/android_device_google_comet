@@ -83,6 +83,13 @@
     <!-- Unique ID of the inner display that contains the camera that needs protection. -->
     <string name="config_protectedInnerScreenUniqueId" translatable="false">local:4619827677550801152</string>
 
+    <!-- The properties of the face auth front camera for outer display in pixels -->
+    <integer-array name="config_face_auth_props">
+        <item>540</item>
+        <item>86</item>
+        <item>54</item>
+    </integer-array>
+
     <!-- The properties of the face auth front camera for inner display in pixels -->
     <integer-array name="config_inner_face_auth_props">
         <item>1988</item>
