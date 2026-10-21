@@ -19,7 +19,6 @@ vendor/bin/dump/dump_exynos_display
 vendor/bin/dump/dump_exynos_second_display
 vendor/bin/dump/dump_fingerprint
 vendor/bin/dump/dump_gsc.sh
-vendor/bin/dump/dump_modem
 vendor/bin/dump/dump_modemlog
 vendor/bin/dump/dump_pcie.sh
 vendor/bin/dump/dump_perf
@@ -33,7 +32,6 @@ vendor/bin/dump/dump_tpu
 vendor/bin/dump/dump_trusty.sh
 vendor/bin/factory/qm35_poll
 vendor/bin/gia
-vendor/bin/gpuflag
 vendor/bin/hw/android.hardware.audio.service-aidl.aoc
 vendor/bin/hw/android.hardware.authsecret-service.citadel
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.fpc42_fw49
@@ -79,7 +77,6 @@ vendor/bin/hw/vendor.dolby.media.c2-default-service
 vendor/bin/hw/vendor.google.aam-service
 vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
 vendor/bin/hw/vendor.google.google_battery-service
-vendor/bin/hw/vendor.google.mte_launcher
 vendor/bin/hw/vendor.google.plat_security-service
 vendor/bin/hw/vendor.google.radioext@1.0-service
 vendor/bin/hw/vendor.google.wireless_charger-default
